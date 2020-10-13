@@ -27,3 +27,5 @@ Write-Host $_
 }
 finally {"Finished!"}
 #Get-ChildItem  -Path C:\Users\Family\Desktop\TempDCT\*.xml | Select Name, @{n='Encoding';e={Get-FileEncoding $_.FullName}}
+
+I changed this
