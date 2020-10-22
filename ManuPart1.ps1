@@ -1,6 +1,6 @@
-﻿#Validate encoding of file based on BOM (Byte Order Mark)
+#Validate encoding of file based on BOM (Byte Order Mark)
 #Based on code from https://gist.github.com/jpoehls/2406504
-Write-Output "First part:"
+Write-Output "First part"
 function Get-FileEncoding {
   [CmdletBinding()] 
   Param (
@@ -16,14 +16,28 @@ function Get-FileEncoding {
     Write-Output 'Wrong encoding or no BOM' 
   }
 }
-$clientName = Read-Host -Prompt "Enter client name: "
-$clientPath = 'C:\Users\Family\Desktop\TempDCT\' +$clientName+ '\*.xml'
+$clientName = Read-Host -Prompt "Enter client name (ex. Five) "
+$clientPath = 'C:\Users\Family\Desktop\TempDCT\' +$clientName
 Write-Host $clientPath
 try {
+$max = ""
+Get-ChildItem -Path $clientPath | ForEach-Object {
+    if ($max -lt $_.Name) {
+        $max = $_.Name
+    }
+}
+$clientPath = $clientPath + "\" + $max
 Get-ChildItem -Path $clientPath -ErrorAction stop | Select Name, @{n='Encoding';e={Get-FileEncoding $_.FullName}}
 } catch [System.Exception] {
-Write-Host "An error occured: "
+Write-Host "An error occured "
 Write-Host $_
 }
-finally {"Finished!"}
 #Get-ChildItem  -Path C:\Users\Family\Desktop\TempDCT\*.xml | Select Name, @{n='Encoding';e={Get-FileEncoding $_.FullName}}
+
+
+#Get-ChildItem -Path $clientPath
+#for ($i = 1; $i -lt $filePath.Count; $i++) {
+#    $temp1 = Get-Content $filePath[$i].Name
+#    $temp2 = Get-Content $filePath[$i+1].Name
+#    Compare-Object -ReferenceObject ( $temp1) -DifferenceObject ($temp2)
+#}
