@@ -40,20 +40,21 @@ $max = $max.Replace(".xml", "")
 Write-Output $max
 Write-Output " "
 if ($tableLine) {
-$compareString = ""
-$ifTrue = "False"
-#$XMLFile = 'C:\Users\Family\Desktop\TempDCT\PracTable.xml'
-#$XMLFile = $ftableLine
-[XML]$tableData = Get-Content $tableFilePath
-foreach($empDetail in $tableData.table.data.row) {
-    #Write-Output $empDetail.value
-    $compareString = $empDetail.value
-    #Write-Host $empDetail.value
-    if ($empDetail.value.Contains($max)) {
-        $ifTrue = "True"
-        break
+    $compareString = ""
+    $ifTrue = "False"
+    #$XMLFile = 'C:\Users\Family\Desktop\TempDCT\PracTable.xml'
+    #$XMLFile = $ftableLine
+    [XML]$tableData = Get-Content $tableFilePath
+    foreach($empDetail in $tableData.table.data.row) {
+        #Write-Output $empDetail.value
+        $compareString = $empDetail.value
+        #Write-Host $empDetail.value
+        if ($empDetail.value.Contains($max)) {
+            $ifTrue = "True"
+            break
+        }
     }
-}
+#only search for most updated product manuscript
 if ($ifTrue -eq "True") {
     Write-Host "Manuscript table was successfully updated"
 } else {
