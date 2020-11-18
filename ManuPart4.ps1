@@ -1,22 +1,19 @@
-Write-Output "Fourth part:"
+Write-Host "Fourth part:"
 #lines about checking if table is present
 $clientLOB = Read-Host -Prompt "Enter LOB "
 $tableLOB = '<table id="Manuscripts' + $clientLOB
-Write-Host $tableLOB
 $clientName = Read-Host -Prompt "Enter client name to verfiy there is a table or not (ex. Five)"
-$clientPath = 'C:\Users\Family\Desktop\TempDCT\' + $clientName + '\*'
-Write-Host $clientPath
-$fileName = $clientLOB + "_Product*.xml"
-$versionNum = Read-Host -Prompt "Enter version number (ex. 10_41_10_0) "
-#$tableFilePath = $clientPath + "\" + $max
-#Write-Host $tableFilePath
-#$tableLine = Get-ChildItem -Path $tableFilePath | Select-String -Pattern $tableLOB -Quiet
-#Write-Host $tableLine
+$version = Read-Host -Prompt "Enter version Number (ex. 10_X_X_X)"
+$clientPath = "C:\Users\ebpag\Desktop\DuckCreek\$clientName\*"
+$fileName = "Carrier_" +$clientLOB + "_Product_*.xml"
 
+$ifTrue = "False"
+
+#Determine path of newest version
 function newestPath($clPath){
     $newestPath = ""
     Get-ChildItem -Path $clPath | ForEach{
-        if ($_.Name -gt $newestPath){
+        if($_.Name -gt $newestPath){
             $newestPath = $_.FullName
         }
     }
@@ -24,55 +21,44 @@ function newestPath($clPath){
 }
 
 Get-ChildItem -Path $clientPath | ForEach{
-    Write-Output $_.Name
+    Write-Host $_.Name
     $old = $_.FullName+"\$fileName"
     $newPath = newestPath($old)
-    if ($newPath -eq ""){
-        Write-Host "NewPath: No valid version found"
-    } else{
+
+    #check for valid product file
+    if($newPath -ne ""){
+        #check for valid table
         $tableLine = Get-ChildItem -Path $newPath | Select-String -Pattern $tableLOB -Quiet
         if ($tableLine) {
-            $compareString = ""
-            $ifTrue = "False"
             [XML]$tableData = Get-Content $newPath
-            foreach($empDetail in $tableData.table.data.row) {
-                $compareString = $empDetail.value
-                if ($empDetail.value.Contains($versionNum)) {
-                    $ifTrue = "True"
-                    break
+            #iterate through xml file
+            foreach($empDetail in $tableData.manuscript.model.table) {
+                $tableName = $empDetail.id
+                $targetName = "Manuscripts"+$clientLOB
+                #look for table with correct name
+                if($tableName -eq $targetName){
+                    #stop and set flag true if valid version numbers found in table
+                    $compareString = $empDetail.data.row.value
+                    if ($compareString -Match $version ) {
+                        $ifTrue = "True"
+                        break
+                    }
                 }
             }
+            #output results of comparison
             if ($ifTrue -eq "True") {
                 Write-Host "Manuscript table was successfully updated"
+                Write-Host " "
             } else {
-                Write-Host "Manuscript table failed to update successfully"
+                Write-Host "Manuscript table failed to update successfully" -ForegroundColor Red
+                Write-Host " "
             }
         } else {
-            Write-Host "No table present"
+            Write-Host "No table present" -ForegroundColor Red
         }
+    }else{
+        #no product file found
+        Write-Host "No product file found" -ForegroundColor Red
     }
 }
 
-#$max = $max.Replace(".xml", "")
-#Write-Output $max
-#Write-Output " "
-#$tableLine = Get-ChildItem -Path $newestPath | Select-String -Pattern $tableLOB -Quiet
-#if ($tableLine) {
-#    $compareString = ""
-#    $ifTrue = "False"
-#    [XML]$tableData = Get-Content $tableFilePath
-#    foreach($empDetail in $tableData.table.data.row) {
-#        $compareString = $empDetail.value
-#        if ($empDetail.value.Contains($max)) {
-#            $ifTrue = "True"
-#            break
-#        }
-#    }
-#    if ($ifTrue -eq "True") {
-#        Write-Host "Manuscript table was successfully updated"
-#    } else {
-#        Write-Host "Manuscript table failed to update successfully"
-#    }
-#} else {
-#    Write-Host "No table present"
-#}
