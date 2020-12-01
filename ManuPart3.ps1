@@ -1,5 +1,5 @@
 Write-Output "Third part:"
-$clientPath = Read-Host -Prompt "Enter client name: (ex. Three)"
+$clientPath = Read-Host -Prompt "Enter client name: (ex. TESTCLIENT)"
 $clientPath = 'C:\Users\Family\Desktop\TempDCT\' + $clientPath
 Write-Host $clientPath
 $fpathName = Read-Host -Prompt "Enter file path for the first file: (ex. PracScript.xml)"
