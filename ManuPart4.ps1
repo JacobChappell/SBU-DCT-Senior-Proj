@@ -4,9 +4,8 @@ $clientLOB = Read-Host -Prompt "Enter LOB "
 $tableLOB = '<table id="Manuscripts' + $clientLOB
 $clientName = Read-Host -Prompt "Enter client name to verfiy there is a table or not (ex. Five)"
 $version = Read-Host -Prompt "Enter version Number (ex. 10_X_X_X)"
-$clientPath = "C:\Users\ebpag\Desktop\DuckCreek\$clientName\*"
+$clientPath = "C:\Users\ebpag\Desktop\DuckCreek\$clientName\$clientLOB"
 $fileName = "Carrier_" +$clientLOB + "_Product_*.xml"
-
 $ifTrue = "False"
 
 #Determine path of newest version
@@ -32,7 +31,7 @@ Get-ChildItem -Path $clientPath | ForEach{
         if ($tableLine) {
             [XML]$tableData = Get-Content $newPath
             #iterate through xml file
-            foreach($empDetail in $tableData.manuscript.model.table) {
+            foreach($empDetail in $tableData.manuscript.model.object.table) {
                 $tableName = $empDetail.id
                 $targetName = "Manuscripts"+$clientLOB
                 #look for table with correct name
@@ -61,4 +60,3 @@ Get-ChildItem -Path $clientPath | ForEach{
         Write-Host "No product file found" -ForegroundColor Red
     }
 }
-
