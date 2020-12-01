@@ -5,7 +5,7 @@ $tableLOB = '<table id="Manuscripts' + $clientLOB
 $clientName = Read-Host -Prompt "Enter client name to verfiy there is a table or not (ex. Five)"
 $version = Read-Host -Prompt "Enter version Number (ex. 10_X_X_X)"
 $clientPath = "C:\Users\ebpag\Desktop\DuckCreek\$clientName\$clientLOB"
-$fileName = "Carrier_" +$clientLOB + "_Product_*.xml"
+$fileName = "*" +$clientLOB + "_Product_*.xml"
 $ifTrue = "False"
 
 #Determine path of newest version
