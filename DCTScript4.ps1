@@ -3,11 +3,12 @@ Write-Host "Fourth part:"
 #of a product file (if any) and verify manuscripts table values
 
 #Prompt user input and create pathing variables
-$clientName = Read-Host -Prompt "Enter client name to verfiy there is a table or not (ex. TESTCLIENT)"
+$clientName = Read-Host -Prompt "Enter client name (ex. TESTCLIENT)"
 $clientLOB = Read-Host -Prompt "Enter LOB "
 $tableLOB = '<table id="Manuscripts' + $clientLOB
 $version = Read-Host -Prompt "Enter version Number (ex. 10_X_X_X)"
-$clientPath = "C:\Users\ebpag\Desktop\DuckCreek\$clientName\$clientLOB"
+$clientPath = 'C:\SaaS\' + $clientName + '\Policy\ManuScripts\DCTTemplates\' + $clientLOB
+#$clientPath = "C:\Users\ebpag\Desktop\DuckCreek\$clientName\$clientLOB"
 $fileName = "*" +$clientLOB + "_Product_*.xml"
 
 #Determine path of newest version
@@ -26,6 +27,10 @@ Get-ChildItem -Path $clientPath | ForEach{
     $ifTrue = "False"
     $old = $_.FullName+"\$fileName"
     $newPath = newestPath($old)
+    $fName = "" 
+    Get-ChildItem -Path $newPath | ForEach{
+        $fName = $_.Name
+    }
 
     #check for valid product file
     if($newPath -ne ""){
@@ -49,23 +54,27 @@ Get-ChildItem -Path $clientPath | ForEach{
             }
             #output results of comparison
             if ($ifTrue -eq "True") {
-                #Write-Host "Manuscript table was successfully updated" -ForegroundColor Green
-                #Write-Host ""
+                Write-Host "Folder: " $_.Name
+                Write-Host "File: " $fName
+                Write-Host "Manuscript table was successfully updated" -ForegroundColor Green
+                Write-Host ""
             } else {
                 Write-Host "Folder: " $_.Name
+                Write-Host "File: " $fName
                 Write-Host "Manuscript table failed to update successfully" -ForegroundColor Red
                 Write-Host ""
             }
         } else {
             #no table was found in product file
             Write-Host "Folder: " $_.Name
+            Write-Host "File: " $fName
             Write-Host "No table present" -ForegroundColor Red
             Write-Host ""
         }
     }else{
         #no product file was found in folder
-        Write-Host "Folder: " $_.Name
-        Write-Host "No product file found" -ForegroundColor Red
-        Write-Host ""
+        #Write-Host "Folder: " $_.Name
+        #Write-Host "No product file found" -ForegroundColor Red
+        #Write-Host ""
     }
 }
