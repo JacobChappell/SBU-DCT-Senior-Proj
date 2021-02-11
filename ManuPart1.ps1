@@ -1,11 +1,33 @@
+Write-Output "First part"
 #Validate encoding of file based on BOM (Byte Order Mark)
 #Based on code from https://gist.github.com/jpoehls/2406504
-Write-Output "First part"
 
 #input from employee of state + version number. only wanting to run say 9/20 state folders
 $clientName = Read-Host -Prompt "Enter client name (ex. TESTCLIENT) "
 $clientLOBName = Read-Host -Prompt "Enter client's LOB folder (ex. property) "
 $clientPath = 'C:\Users\ebpag\Desktop\DuckCreek\' + $clientName + '\'+ $clientLOBName
+
+#Determine the newest version number
+function newestVersion($clPath){
+    $newestVer = ""
+    #Iterate through child folder
+    Get-ChildItem -Path $clPath | ForEach{
+        #separate version number from title
+        $splitArr = ""
+        $splitArr = $_.BaseName.Split("_") 
+        $version = ""
+        for(($i = 0); ($i -lt $splitArr.Length);$i++){
+            if($splitArr[$i] -match "^\d+$"){
+                $version += "_" + $splitArr[$i]
+            }
+        }
+        #Find largest file version 
+        if($newestVer -lt $version){
+            $newestVer = $version
+        }
+    }
+    return $newestVer
+}
 
 #function to check file for UTF-8 encoding
 function getEncoding($fileName){
@@ -20,44 +42,40 @@ function getEncoding($fileName){
     return $ret
 }
 
-#Determine path of newest version
-function newestPath($clPath){
-    $newestPath = ""
-    Get-ChildItem -Path $clPath | ForEach{
-        if($_.Name -gt $newestPath){
-            $newestPath = $_.FullName
-        }
-    }
-    return $newestPath
-}
-
 $flag = 0
 #Iterate through folders in LOB    
 Get-ChildItem -Path $clientPath | ForEach{
-    $old = $_.FullName+"\*.xml"
-    $maxPath = newestPath($old)
-
-    #store output variable names
+    $LobPath = $_.FullName
     $stateName = $_.Name
-    $fileInfo = Get-ChildItem -Path $maxPath
-    $fileName = $fileInfo.Name
+    $outString = "Folder: " + $stateName + "`n"
+    $versionNum = newestVersion($LobPath)
+    $ifFlag = 0
+    Get-ChildItem -Path $LobPath | ForEach{ 
+        if($_.Name -Match $versionNum){
+            #store output variable names
+            $fileInfo = Get-ChildItem -Path $_.FullName
+            $fileName = $fileInfo.Name
     
-    #store file encoding result in variable
-    $encodingCheck = getEncoding($maxPath)
+            #store file encoding result in variable
+            $encodingCheck = getEncoding($_.FullName)
 
-    #check for incorrect encoding
-    if ($encodingCheck -ne 'UTF-8 with BOM') {
-        #check for previous errors
-        if($flag -eq 0){
-            Write-Host "The following files have incorrect encoding:" -ForegroundColor Red
-            $flag++
+            #check for incorrect encoding
+            if ($encodingCheck -ne "UTF-8 with BOM") {
+                #check for previous errors
+                if($flag -eq 0){
+                    Write-Host "The following files have incorrect encoding:" -ForegroundColor Red
+                    $flag++
+                }
+                $outString += $fileName + "`n"
+                $ifFlag++
+            }
         }
-        Write-Host 'Folder: ' $stateName
-        Write-Host $fileName
-        Write-Host
+    }
+    if($ifFlag -ne 0){
+        Write-Host $outString
     }
 }
 #check to see if there were no errors
 if($flag -eq 0){
-        Write-Host "All files have UTF-8 with BOM"
+        Write-Host "All files have UTF-8 with BOM" -ForegroundColor Green
 }
