@@ -16,7 +16,7 @@ if($clientLOB -Match "Carrier"){
 }else{
     $tableLOB = '<table id="Manuscripts' + $clientLOB
 }
-Write-Host $tableLOB
+
 #Determine path of newest version
 function newestVersion($clPath){
     $maxVer = @(0, 0, 0, 0)
@@ -33,14 +33,10 @@ function newestVersion($clPath){
                 $count++
             }
         }
-        Write-Host "Current Version: "$currentVer
-        Write-Host "Max Version: "$maxVer
         $doubleArr[0] = $currentVer
         $doubleArr[1] = $maxVer
         $compVal = compareVer($doubleArr)
-        Write-Host $compVal
         if($compVal -eq 1){
-        Write-Host "Updated MaxVer to " $currentVer
             for($j = 0;$j -lt $maxVer.Length;$j++){
                 $maxVer[$j] = $CurrentVer[$j]
             }
@@ -48,8 +44,6 @@ function newestVersion($clPath){
         }elseif($compVal -ne 2){
             Write-Host "Error in compare output"
         }
-        Write-Host "Next Loop"
-        Write-Host ""
     }
     return $output
 }
@@ -101,7 +95,7 @@ if($newPath -ne ""){
         }
     } else {
         #no table was found in product file
-        Write-Host "Error: No table present" -ForegroundColor Red
+        Write-Host "Error: No Manuscript table present" -ForegroundColor Red
         Write-Host ""
     }
 }else{
