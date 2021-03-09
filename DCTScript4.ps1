@@ -3,78 +3,109 @@ Write-Host "Fourth part:"
 #of a product file (if any) and verify manuscripts table values
 
 #Prompt user input and create pathing variables
-$clientName = Read-Host -Prompt "Enter client name (ex. TESTCLIENT)"
+$clientName = Read-Host -Prompt "Enter client name(ex. TESTCLIENT)"
 $clientLOB = Read-Host -Prompt "Enter LOB "
-$tableLOB = '<table id="Manuscripts' + $clientLOB
 $version = Read-Host -Prompt "Enter version Number (ex. 10_X_X_X)"
-$clientPath = 'C:\SaaS\' + $clientName + '\Policy\ManuScripts\DCTTemplates\' + $clientLOB
-#$clientPath = "C:\Users\ebpag\Desktop\DuckCreek\$clientName\$clientLOB"
-$fileName = "*" +$clientLOB + "_Product_*.xml"
+#$clientPath = "C:\Users\ebpag\Desktop\DuckCreek\$clientName\$clientLOB\US-INH\*_Product_*.xml"
+$clientPath = "C:\SaaS\$clientName\Policy\ManuScripts\DCTTemplates\$clientLOB\US-INH\*_Product_*.xml"
 
+#Create table lob id 
+if($clientLOB -Match "Carrier"){
+    $carrierLOB = $clientLOB -replace "Carrier" 
+    $tableLOB = '<table id="Manuscripts' + $carrierLOB
+}else{
+    $tableLOB = '<table id="Manuscripts' + $clientLOB
+}
+Write-Host $tableLOB
 #Determine path of newest version
-function newestPath($clPath){
-    $newestPath = ""
+function newestVersion($clPath){
+    $maxVer = @(0, 0, 0, 0)
+    $currentVer = @(0, 0, 0, 0)
+    $doubleArr = @($currentVer, $maxVer)
+    $output = ""
     Get-ChildItem -Path $clPath | ForEach{
-        if($_.Name -gt $newestPath){
-            $newestPath = $_.FullName
+        $count = 0
+        $splitArr = ""
+        $splitArr = $_.BaseName.Split("_") 
+        for(($i = 0); ($i -lt $splitArr.Length);$i++){
+            if($splitArr[$i] -match "^\d+$"){
+                $currentVer[$count] = $splitArr[$i]
+                $count++
+            }
+        }
+        Write-Host "Current Version: "$currentVer
+        Write-Host "Max Version: "$maxVer
+        $doubleArr[0] = $currentVer
+        $doubleArr[1] = $maxVer
+        $compVal = compareVer($doubleArr)
+        Write-Host $compVal
+        if($compVal -eq 1){
+        Write-Host "Updated MaxVer to " $currentVer
+            for($j = 0;$j -lt $maxVer.Length;$j++){
+                $maxVer[$j] = $CurrentVer[$j]
+            }
+            $output = $_.FullName
+        }elseif($compVal -ne 2){
+            Write-Host "Error in compare output"
+        }
+        Write-Host "Next Loop"
+        Write-Host ""
+    }
+    return $output
+}
+
+#function to compare version number arrays
+#outputs 1 if first paramater is newer or 2 if second paramater is newer
+function compareVer($inArr){
+    $arr1= $inArr[0]
+    $arr2 = $inArr[1]
+    for($i = 0; $i -lt $arr1.count; $i++){
+        if(($arr1[$i] -gt $arr2[$i])){
+            return 1
+        }elseif($arr2[$i] -gt $arr1[$i]){
+            return 2
         }
     }
-    return $newestPath
 }
-#iterate through client folder
-Get-ChildItem -Path $clientPath | ForEach{
-    #store output variables
-    $ifTrue = "False"
-    $old = $_.FullName+"\$fileName"
-    $newPath = newestPath($old)
-    $fName = "" 
-    Get-ChildItem -Path $newPath | ForEach{
-        $fName = $_.Name
-    }
 
-    #check for valid product file
-    if($newPath -ne ""){
-        #check for valid table
-        $tableLine = Get-ChildItem -Path $newPath | Select-String -Pattern $tableLOB -Quiet
-        if ($tableLine) {
-            [XML]$tableData = Get-Content $newPath
-            #iterate through xml file
-            foreach($empDetail in $tableData.manuscript.model.object.table) {
-                $tableName = $empDetail.id
-                $targetName = "Manuscripts"+$clientLOB
-                #look for table with correct name
-                if($tableName -eq $targetName){
-                    #stop and set flag true if valid version numbers found in table
-                    $compareString = $empDetail.data.row.value
-                    if ($compareString -match $version ) {
-                        $ifTrue = "True"
-                        break
-                    }
+#store output variables
+$ifTrue = "False"
+$newPath = newestVersion($clientPath)
+#check for valid product file
+if($newPath -ne ""){
+    #check for valid table
+    $tableLine = Get-ChildItem -Path $newPath | Select-String -Pattern $tableLOB -Quiet
+    if ($tableLine) {
+        [XML]$tableData = Get-Content $newPath
+        #iterate through xml file
+        foreach($empDetail in $tableData.manuscript.model.object.table) {
+            $tableName = $empDetail.id
+            $targetName = "Manuscripts"+$clientLOB
+            #look for table with correct name
+            if($tableName -eq $targetName){
+                #stop and set flag true if valid version numbers found in table
+                $compareString = $empDetail.data.row.value
+                if ($compareString -match $version ) {
+                    $ifTrue = "True"
+                    break
                 }
             }
-            #output results of comparison
-            if ($ifTrue -eq "True") {
-                Write-Host "Folder: " $_.Name
-                Write-Host "File: " $fName
-                Write-Host "Manuscript table was successfully updated" -ForegroundColor Green
-                Write-Host ""
-            } else {
-                Write-Host "Folder: " $_.Name
-                Write-Host "File: " $fName
-                Write-Host "Manuscript table failed to update successfully" -ForegroundColor Red
-                Write-Host ""
-            }
+        }
+        #output results of comparison
+        if ($ifTrue -eq "True") {
+            Write-Host "Manuscript table was successfully updated" -ForegroundColor Green
+            Write-Host ""
         } else {
-            #no table was found in product file
-            Write-Host "Folder: " $_.Name
-            Write-Host "File: " $fName
-            Write-Host "No table present" -ForegroundColor Red
+            Write-Host "Error: Manuscript table needs updated" -ForegroundColor Red
             Write-Host ""
         }
-    }else{
-        #no product file was found in folder
-        #Write-Host "Folder: " $_.Name
-        #Write-Host "No product file found" -ForegroundColor Red
-        #Write-Host ""
+    } else {
+        #no table was found in product file
+        Write-Host "Error: No table present" -ForegroundColor Red
+        Write-Host ""
     }
+}else{
+    #no product file was found in folder
+    Write-Host "Error: No product file found" -ForegroundColor Red
+    Write-Host ""
 }
