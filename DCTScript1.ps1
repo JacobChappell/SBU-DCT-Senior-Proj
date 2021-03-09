@@ -2,31 +2,89 @@ Write-Output "First part"
 #Validate encoding of file based on BOM (Byte Order Mark)
 #Based on code from https://gist.github.com/jpoehls/2406504
 
-#input from employee of state + version number. only wanting to run say 9/20 state folders
+#input from employee
 $clientName = Read-Host -Prompt "Enter client name (ex. TESTCLIENT) "
-$clientLOBName = Read-Host -Prompt "Enter client's LOB folder (ex. property) "
-$clientPath = 'C:\SaaS\' + $clientName + '\Policy\ManuScripts\DCTTemplates\' + $clientLOBName
+$clientLOB = Read-Host -Prompt "Enter client's LOB folder (ex. property) "
+#$clientPath = 'C:\Users\ebpag\Desktop\DuckCreek\' + $clientName + '\'+ $clientLOB
+$clientPath = "C:\SaaS\$clientName\Policy\ManuScripts\DCTTemplates\$clientLOB"
 
-#Determine the newest version number
-function newestVersion($clPath){
-    $newestVer = ""
-    #Iterate through child folder
+#create arraylist of file names
+function newestFileList($clPath){
+    #usedNames will have a file name and the next index will have its maxversion array 
+    $usedNames = [object][System.Collections.ArrayList]@()
     Get-ChildItem -Path $clPath | ForEach{
+        $maxVer = @(0, 0, 0, 0)
+        $currentVer = @(0, 0, 0, 0)
+        $doubleArr = @($currentVer, $maxVer)
         #separate version number from title
+        $name = ""
+        $count=0
         $splitArr = ""
         $splitArr = $_.BaseName.Split("_") 
-        $version = ""
         for(($i = 0); ($i -lt $splitArr.Length);$i++){
             if($splitArr[$i] -match "^\d+$"){
-                $version += "_" + $splitArr[$i]
+                $currentVer[$count] = $splitArr[$i]
+                $count++
+            }else{
+                if($name -eq ""){
+                    $name += $splitArr[$i]
+                }else{
+                    $name += "_" + $splitArr[$i]
+                }
             }
         }
-        #Find largest file version 
-        if($newestVer -lt $version){
-            $newestVer = $version
+        #update usedNames arraylist with file name and max version 
+        $index = $usedNames.indexOf($name)
+        if($index -lt 0){
+            $usedNames.Add($name)
+            $usedNames.Add($currentVer)
+        }else{
+            $maxVer = $usedNames[$index + 1]
+            $doubleArr[0] = $currentVer
+            $doubleArr[1] = $maxVer
+            $compVal = compareVer($doubleArr)
+            if($compVal -eq 1){
+                for($j = 0;$j -lt $maxVer.Length;$j++){
+                    $maxVer[$j] = $CurrentVer[$j]
+                }
+                $usedNames[$index + 1] = $maxVer
+            }elseif($compVal -ne 2){
+                Write-Host "Error in compare output"
+            }
         }
     }
-    return $newestVer
+    #Write-Host "UsedNames: " $usedNames "`n"
+    $output = createFileList($usedNames)
+    return $output
+}
+
+#function to compare version number arrays
+#outputs 1 if first paramater is newer or 2 if second paramater is newer
+function compareVer($inArr){
+    $arr1= $inArr[0]
+    $arr2 = $inArr[1]
+    for($i = 0; $i -lt $arr1.count; $i++){
+        if(($arr1[$i] -gt $arr2[$i])){
+            return 1
+        }elseif($arr2[$i] -gt $arr1[$i]){
+            return 2
+        }
+    }
+}
+
+#combines array containing file names and its most recent version into single array
+function createFileList($arrList){
+    $outArr = [System.Collections.ArrayList]@()
+    for($i = 0; $i -lt (($arrList.count + 1) / 2); $i+=2){
+    $versionString = ""
+    $verArr = $arrList[$i + 1]
+        for($j = 0; $j -lt $verArr.count;$j++){
+            $versionString += "_" + $verArr[$j]
+        }
+    $fileName = $arrList[$i] + $versionString 
+    $outArr.Add($fileName)
+    }
+    return $outArr
 }
 
 #function to check file for UTF-8 encoding
@@ -48,10 +106,10 @@ Get-ChildItem -Path $clientPath | ForEach{
     $LobPath = $_.FullName
     $stateName = $_.Name
     $outString = "Folder: " + $stateName + "`n"
-    $versionNum = newestVersion($LobPath)
+    $newFiles = newestFileList($LobPath)
     $ifFlag = 0
     Get-ChildItem -Path $LobPath | ForEach{ 
-        if($_.Name -Match $versionNum){
+        if($newFiles -contains $_.BaseName){
             #store output variable names
             $fileInfo = Get-ChildItem -Path $_.FullName
             $fileName = $fileInfo.Name
