@@ -90,7 +90,7 @@ if($newPath -ne ""){
             Write-Host "Manuscript table was successfully updated" -ForegroundColor Green
             Write-Host ""
         } else {
-            Write-Host "Error: Manuscript table needs updated" -ForegroundColor Red
+            Write-Host "Error: Manuscript table is not overwritten" -ForegroundColor Red
             Write-Host ""
         }
     } else {
