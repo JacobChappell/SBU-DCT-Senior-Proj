@@ -12,8 +12,8 @@ function newestFileList($clPath){
     #usedNames will have a file name and the next index will have its maxversion array 
     $usedNames = [object][System.Collections.ArrayList]@()
     Get-ChildItem -Path $clPath | ForEach{
-        $maxVer = @(0, 0, 0, 0)
-        $currentVer = @(0, 0, 0, 0)
+        $maxVer = @(-1, -1, -1, -1)
+        $currentVer = @(-1, -1, -1, -1)
         $doubleArr = @($currentVer, $maxVer)
         #separate version number from title
         $name = ""
@@ -71,6 +71,22 @@ function compareVer($inArr){
     }
 }
 
+#combines array containing file names and its most recent version into single array
+function createFileList($arrList){
+    $outArr = [System.Collections.ArrayList]@()
+    for($i = 0; $i -lt (($arrList.count + 1) / 2); $i+=2){
+    $versionString = ""
+    $verArr = $arrList[$i + 1]
+        for($j = 0; $j -lt $verArr.count;$j++){
+            if($verArr[$j] -ne -1){
+                $versionString += "_" + $verArr[$j]
+            }
+        }
+    $fileName = $arrList[$i] + $versionString 
+    $outArr.Add($fileName)
+    }
+    return $outArr
+}
 
 $flag = 0
 #Iterate through folders in LOB    
