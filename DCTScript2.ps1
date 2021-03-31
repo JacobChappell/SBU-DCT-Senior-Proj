@@ -47,9 +47,10 @@ function newestFileList($clPath){
                     $maxVer[$j] = $CurrentVer[$j]
                 }
                 $usedNames[$index + 1] = $maxVer
-            }elseif($compVal -ne 2){
-                Write-Host "Error in compare output"
             }
+            <#elseif($compVal -ne 2){
+                Write-Host "Error in compare output"
+            }#>
         }
     }
     #Write-Host "UsedNames: " $usedNames "`n"
