@@ -109,7 +109,6 @@ Get-ChildItem -Path $clientPath | ForEach{
     $stateName = $_.Name
     $outString = "Folder: " + $stateName + "`n"
     $newFiles = newestFileList($LobPath)
-    Write-Host "NEW FILES: " $newFiles[0]
     $ifFlag = 0
     Get-ChildItem -Path $LobPath | ForEach{ 
         if($newFiles -contains $_.BaseName){
