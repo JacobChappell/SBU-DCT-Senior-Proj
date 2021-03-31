@@ -13,8 +13,8 @@ function newestFileList($clPath){
     #usedNames will have a file name and the next index will have its maxversion array 
     $usedNames = [object][System.Collections.ArrayList]@()
     Get-ChildItem -Path $clPath | ForEach{
-        $maxVer = @(0, 0, 0, 0)
-        $currentVer = @(0, 0, 0, 0)
+        $maxVer = @(-1, -1, -1, -1)
+        $currentVer = @(-1, -1, -1, -1)
         $doubleArr = @($currentVer, $maxVer)
         #separate version number from title
         $name = ""
@@ -79,7 +79,9 @@ function createFileList($arrList){
     $versionString = ""
     $verArr = $arrList[$i + 1]
         for($j = 0; $j -lt $verArr.count;$j++){
-            $versionString += "_" + $verArr[$j]
+            if($verArr[$j] -ne -1){
+                $versionString += "_" + $verArr[$j]
+            }
         }
     $fileName = $arrList[$i] + $versionString 
     $outArr.Add($fileName)
@@ -107,6 +109,7 @@ Get-ChildItem -Path $clientPath | ForEach{
     $stateName = $_.Name
     $outString = "Folder: " + $stateName + "`n"
     $newFiles = newestFileList($LobPath)
+    Write-Host "NEW FILES: " $newFiles[0]
     $ifFlag = 0
     Get-ChildItem -Path $LobPath | ForEach{ 
         if($newFiles -contains $_.BaseName){
