@@ -11,11 +11,12 @@ $clientPath = "C:\SaaS\$clientName\Policy\ManuScripts\DCTTemplates\$clientLOB\US
 
 #Create table lob id 
 if($clientLOB -Match "Carrier"){
-    $carrierLOB = $clientLOB -replace "Carrier" 
-    $tableLOB = '<table id="Manuscripts' + $carrierLOB
+    $clientLOB = $clientLOB -replace "Carrier" 
+    $tableLOB = '<table id="Manuscripts' + $clientLOB
 }else{
     $tableLOB = '<table id="Manuscripts' + $clientLOB
 }
+
 
 #Determine path of newest version
 function newestVersion($clPath){
