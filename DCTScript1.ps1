@@ -4,7 +4,7 @@ Write-Output "First part"
 
 #input from employee
 $clientName = Read-Host -Prompt "Enter client name (ex. TESTCLIENT) "
-$clientLOB = Read-Host -Prompt "Enter client's LOB folder (ex. property) "
+$clientLOB = Read-Host -Prompt "Enter client's LOB folder (ex. Property) "
 #$clientPath = 'C:\Users\ebpag\Desktop\DuckCreek\' + $clientName + '\'+ $clientLOB
 $clientPath = "C:\SaaS\$clientName\Policy\ManuScripts\DCTTemplates\$clientLOB"
 
@@ -13,8 +13,8 @@ function newestFileList($clPath){
     #usedNames will have a file name and the next index will have its maxversion array 
     $usedNames = [object][System.Collections.ArrayList]@()
     Get-ChildItem -Path $clPath | ForEach{
-        $maxVer = @(-1, -1, -1, -1)
-        $currentVer = @(-1, -1, -1, -1)
+        $maxVer = @($null,$null,$null,$null)
+        $currentVer = @($null,$null,$null,$null)
         $doubleArr = @($currentVer, $maxVer)
         #separate version number from title
         $name = ""
@@ -43,6 +43,7 @@ function newestFileList($clPath){
             $doubleArr[0] = $currentVer
             $doubleArr[1] = $maxVer
             $compVal = compareVer($doubleArr)
+            #Write-Host "COMPARE: " $doubleArr " CompVal: " $compVal
             if($compVal -eq 1){
                 for($j = 0;$j -lt $maxVer.Length;$j++){
                     $maxVer[$j] = $CurrentVer[$j]
@@ -50,7 +51,8 @@ function newestFileList($clPath){
                 $usedNames[$index + 1] = $maxVer
             }
             <#elseif($compVal -ne 2){
-                Write-Host "Error in compare output"
+                Write-Host $doubleArr
+                Write-Host "Error in compare output: " $compVal
             }#>
         }
     }
@@ -65,7 +67,9 @@ function compareVer($inArr){
     $arr1= $inArr[0]
     $arr2 = $inArr[1]
     for($i = 0; $i -lt $arr1.count; $i++){
-        if(($arr1[$i] -gt $arr2[$i])){
+        #Write-Host "A1: " $arr1[$i]
+        #Write-Host "A2: " $arr2[$i]
+        if($arr1[$i] -gt $arr2[$i]){
             return 1
         }elseif($arr2[$i] -gt $arr1[$i]){
             return 2
@@ -80,7 +84,7 @@ function createFileList($arrList){
     $versionString = ""
     $verArr = $arrList[$i + 1]
         for($j = 0; $j -lt $verArr.count;$j++){
-            if($verArr[$j] -ne -1){
+            if($verArr[$j] -ne $null){
                 $versionString += "_" + $verArr[$j]
             }
         }
@@ -110,6 +114,7 @@ Get-ChildItem -Path $clientPath | ForEach{
     $stateName = $_.Name
     $outString = "Folder: " + $stateName + "`n"
     $newFiles = newestFileList($LobPath)
+    #Write-Host $newFiles
     $ifFlag = 0
     Get-ChildItem -Path $LobPath | ForEach{ 
         if($newFiles -contains $_.BaseName){
