@@ -1,0 +1,54 @@
+Write-Output "Fourth part"
+#Fourth part of MS catalog validation scripts
+#Checks if the Carrier rating manuscripts have the correct effective dates in ms catalog.
+
+#input from employee
+$clientName = Read-Host -Prompt "Enter client name (ex. TESTCLIENT) "
+$clientLOB = Read-Host -Prompt "Enter client's LOB folder (ex. Property) "
+$effectiveDates = Read-Host -Prompt "Enter effective dates (ex. AK 37, 7/1/2020, CA 48, 6/1/2020,etc...) "
+$filePath = 'C:\Users\ebpag\Desktop\DuckCreek\' + $clientName + '\' + $clientLOB+ '\ManuScriptCatalog.xml'
+#$filePath = "C:\SaaS\$clientName\Policy\ManuScripts\DCTTemplates\$clientLOB"
+
+#separate effective date input
+$splitArr = $effectiveDates.Split(", ")
+$temp = @($null, $null)
+$datesList = [object][System.Collections.ArrayList]@()
+For($i = 0; $i -lt $splitArr.Lenthg; $i += 2){
+    $temp[0] = $splitArr[$i]
+    $temp[1] = $splitArr[$i + 1]
+    
+    $datesList.Add($temp)
+}
+
+For($j = 0; $j -lt $datesList.Length; $j += 2){
+    
+}
+Write-Host "DatesList:"
+Write-Host $splitArr
+
+#check contents of xml file for effective dates
+[XML] $inFile = Get-Content $filePath
+$compDate = "2020-12-02"
+$flag = $false
+$outString = "Errors in ManuScriptCatalog:`n"
+foreach($empDetail in $inFile.manuscript.entry){
+    $versionDate = $empDetail.versionDate
+    $effectiveDateNew = $empDetail.effectiveDateNew
+    $effectiveDateRenewal = $empDetail.effectiveDateRenewal
+
+    If($versionDate -ne $compDate){
+        $outString += "Incorrect versionDate attribute.`n"
+        $flag  = $true
+    }
+    If($effectiveDateNew -ne $compDate){
+        $outString += "Incorrect effectiveDateNew attribute.`n"
+        $flag  = $true
+    }
+    If($effectiveDateRenewal -ne $compDate){
+        $outString += "Incorrect effectiveDateRenewal attribute.`n"
+        $flag  = $true
+    }
+    If($flag){
+        Write-Host $outString -ForegroundColor Red
+    }
+}
