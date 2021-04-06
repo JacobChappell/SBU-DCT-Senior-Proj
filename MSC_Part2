@@ -1,0 +1,29 @@
+Write-Output "Second part"
+#Second part of MS catalog validation scripts
+#Checks if the URL's in the MS Catalog are correct and no absolute paths exist.
+
+#input from employee
+$clientName = Read-Host -Prompt "Enter client name (ex. TESTCLIENT) "
+$clientLOB = Read-Host -Prompt "Enter client's LOB folder (ex. Property) "
+$filePath = 'C:\Users\ezekial.page\Desktop\ManuScriptCatalog.xml'
+#$filePath = "C:\SaaS\$clientName\shared\ManuScriptCatalog.xml"
+
+[XML] $inFile = Get-Content $filePath
+
+$outString = ""
+$flag = $false
+foreach($empDetail in $inFile.entries.entry){
+    $id = $empDetail.id
+    $url = $empDetail.url
+    If($url -match "Saas"){
+        $outString += "URL of " + $id + " includes an absolute path.`n"
+        $flag = $true
+    }
+}
+
+if($flag){
+    Write-Host "Errors found in the following URLs: "
+    Write-Host $outString
+}else{
+    Write-Host "No erros found in URLs" -ForegroundColor Green
+}
