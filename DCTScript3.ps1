@@ -1,10 +1,9 @@
-﻿Write-Output "Third part:"
+Write-Output "Third part:"
 
 
 #input from employee
 $clientName = Read-Host -Prompt "Enter client name (ex. Three) "
 $clientLOB = Read-Host -Prompt "Enter client's LOB folder (ex. Property) "
-#$clientPath = 'C:\Users\ebpag\Desktop\DuckCreek\' + $clientName + '\'+ $clientLOB
 $clientPath = 'C:\Users\Family\Desktop\TempDCT\' + $clientName + '\'+ $clientLOB
 #$clientPath = "C:\SaaS\$clientName\Policy\ManuScripts\DCTTemplates\$clientLOB"
 
@@ -21,16 +20,9 @@ $manuCheck = 0
 $versionIDCheck = 0
 $notesCheck = 0
 
-#Create manuscripts lob id
-if($clientLOB -Match "Carrier"){
-    $manuscriptsLOB = "Carrier_" + $clientLOB + "_"
-} else {
-    $manuscriptsLOB = $clientLOB + "_"
-}
 
 #create arraylist of file names
 #create global max variable to allow for 1st and 2nd newest files
-$retVal = @($null, $null)
 $maxVal = @($null,$null,$null,$null)
 $recentVal = @($null,$null,$null,$null)
 #funciton for the newest file in the list
@@ -175,7 +167,9 @@ function createFileList($arrList) {
         $versionString = ""
         $verArr = $arrList[$i + 1]
             for ($j = 0; $j -lt $verArr.count;$j++) {
-                $versionString += "_" + $verArr[$j]
+                if($verArr[$j] -ne $null){
+                    $versionString += "_" + $verArr[$j]
+                }
             }
         $fileName = $arrList[$i] + $versionString 
         $outArr.Add($fileName)
@@ -188,7 +182,6 @@ function createFileList($arrList) {
 Get-ChildItem -Path $clientPath | ForEach {
     $LobPath = $_.FullName
     $stateName = $_.Name
-    $manuscriptsLOB = $manuscriptsLOB + $stateName + "_"
     $outString = "Folder: " + $stateName + "`n"
     $newFiles = newestFileList($LobPath)
     $recentFiles = secNewestFileList($LobPath)
@@ -297,6 +290,7 @@ Get-ChildItem -Path $clientPath | ForEach {
             #CHECK
             #FOR
             #CLARIFICATION
+            #dates can be same? - meeting
             $dateArrNew1 = @($null, $null, $null, $null)
             $dateArrNew2 = @($null, $null, $null, $null)
             $dateArrRen1 = @($null, $null, $null, $null)
@@ -362,7 +356,6 @@ Get-ChildItem -Path $clientPath | ForEach {
                     }
                 }
             }
-            Write-Host $manuCheck
             $newManuIDArr1 = @($null, $null, $null, $null)
             $newManuIDArr2 = @($null, $null, $null, $null)
             $doubleArr = @($newManuIDArr1, $newManuIDArr2)
@@ -372,7 +365,7 @@ Get-ChildItem -Path $clientPath | ForEach {
             $manuIDArr2 = $manuID2.split("_")
             if (($manuID1 -notmatch "Carrier") -and ($manuID2 -notmatch "Carrier")) {
                 $count = 0
-                for ($k = 4; $k -lt $manuIDArr1.length; $k++) {
+                for ($k = 3; $k -lt $manuIDArr1.length; $k++) {
                     $newManuIDArr1[$count] = $manuIDArr1[$k]
                     $newManuIDArr2[$count] = $manuIDArr2[$k]
                     if (($manuIDArr1[$k] -ne $maxVal[$count]) -and ($manuIDArr2[$k] -ne $recentVal[$count])) {
@@ -382,7 +375,7 @@ Get-ChildItem -Path $clientPath | ForEach {
                 }
             } elseif (($manuID1 -match "Carrier") -and ($manuID2 -match "Carrier")) {
                 $count = 0
-                for ($k = 5; $k -lt $manuIDArr1.length; $k++) {
+                for ($k = 4; $k -lt $manuIDArr1.length; $k++) {
                     $newManuIDArr1[$count] = $manuIDArr1[$k]
                     $newManuIDArr2[$count] = $manuIDArr2[$k]
                     if (($manuIDArr1[$k] -ne $maxVal[$count]) -and ($manuIDArr2[$k] -ne $recentVal[$count])) {
@@ -431,6 +424,7 @@ Get-ChildItem -Path $clientPath | ForEach {
                 $notesCheck = 1
             }
         }
+
         $outString += "Old File:" + $fileName2 + "`n" + "New File:" + $fileName1 + "`n"
         $ifFlag++
         if ($ifFlag -ne 0 ) {
@@ -443,10 +437,6 @@ Get-ChildItem -Path $clientPath | ForEach {
             if (($numLineCheck -ne 1) -and ($emptyTagCheck -ne 1)) {
                 Write-Host "There are not the same number of lines in each file" -ForegroundColor Red
             }
-            <#check version numbers from file name NOT IMPLEMENTED
-            if ($versNumCheck -eq 1) {
-                Write-Host "The version numbers were different" -ForegroundColor Red
-            }#>
             #check version numbers in the keyinfo attributes
             if ($versionComp -eq 1 ) {
                 Write-Host "The version number(s) are not correct in the keyinfo section" -ForegroundColor Red
@@ -486,37 +476,3 @@ Get-ChildItem -Path $clientPath | ForEach {
         Write-Host ""
     }
 }
-
-
-#double check these
-#VVVVVVVVVV
-
-#pull vers num from name and then use that for all checks
-
-
-
-
-#DONE#
-#######################################################################################################################################################
-#Model section comparison - both same # of lines and same lines
-#same lines = done
-#look up how to check # of lines
-#empty lines do not make a file different
-
-#Carrier_Property_MO_00_54
-#effective date comparison (later versions should have later dates or error)
-#Manuscript < properties < versionDate />
-#Manuscript < properties < keys < keyInfo name="version(literal name not a number)" value="00.54" />
-#Manuscript < properties < keys < keyInfo name="effectiveDateNew/Renewal" value="year-month-day" />
-
-#XML header information
-#versiondate?????
-#Manuscript < properties < manuscriptID="LOB_STATE_VERSION(Carrier_Property_MO_00_54)" versionID="LOB_STATE_vers?says 50 on MO_00_54" /> idk about versionID
-#versionDate, effectiveDateNew, effectiveDateRenewal correct ?
-
-#version number and name should be same
-
-#NOTES section
-
-#VERSIONID
-
