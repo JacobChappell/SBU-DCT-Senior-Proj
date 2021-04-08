@@ -7,19 +7,6 @@ $clientLOB = Read-Host -Prompt "Enter client's LOB folder (ex. Property) "
 $clientPath = 'C:\Users\Family\Desktop\TempDCT\' + $clientName + '\'+ $clientLOB
 #$clientPath = "C:\SaaS\$clientName\Policy\ManuScripts\DCTTemplates\$clientLOB"
 
-$emptyTagCheck = 0
-#$versNumCheck = 0
-$numLineCheck = 0
-$possEmptyTag = 0
-$versionComp = 0
-$dateComp1 = 0
-$dateComp2 = 0
-$nameComp = 0
-$lobComp = 0
-$manuCheck = 0
-$versionIDCheck = 0
-$notesCheck = 0
-
 
 #create arraylist of file names
 #create global max variable to allow for 1st and 2nd newest files
@@ -209,6 +196,17 @@ Get-ChildItem -Path $clientPath | ForEach {
             }
         }
         for ($p = 0; $p -lt $fileArr1.Length; $p++) {
+            $emptyTagCheck = 0
+            $numLineCheck = 0
+            $possEmptyTag = 0
+            $versionComp = 0
+            $dateComp1 = 0
+            $dateComp2 = 0
+            $nameComp = 0
+            $lobComp = 0
+            $manuCheck = 0
+            $versionIDCheck = 0
+            $notesCheck = 0
             $filePath1 = $fileArr1[$p]
             $filePath2 = $fileArr2[$p]
             $fileName1 = $outputArr1[$p]
@@ -425,10 +423,6 @@ Get-ChildItem -Path $clientPath | ForEach {
             if ($notesSec1 -notmatch $notesSec2) {
                 $notesCheck = 1
             }
-        }
-
-        if ("00.45" -gt "00.44") {
-            Write-Host "good"
         }
 
         $outString += "Old File:" + $fileName2 + "`n" + "New File:" + $fileName1 + "`n"
