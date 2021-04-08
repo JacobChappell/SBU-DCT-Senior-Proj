@@ -302,17 +302,17 @@ Get-ChildItem -Path $clientPath | ForEach {
                         $convertDate2 = $emp2Detail.value
                         $dateArrNew1 = $convertDate1.split("-")
                         $dateArrNew2 = $convertDate2.split("-")
-                        if ($dateArrNew2[0] -le $dateArrNew1[0]) {
-                            if ($dateArrNew2[1] -le $dateArrNew1[1]) {
+                        if ($dateArrNew2[0] -eq $dateArrNew1[0]) {
+                            if ($dateArrNew2[1] -eq $dateArrNew1[1]) {
                                 if ($dateArrNew2[2] -ge $dateArrNew1[2]) {
                                     $dateComp1 = 1
                                 }
                             }
-                        } elseif ($dateArrNew2[0] -le $dateArrNew1[0]) {
-                            if ($dateArrNew2[1] -ge $dateArrNew1[1]) {
+                        } elseif ($dateArrNew2[0] -eq $dateArrNew1[0]) {
+                            if ($dateArrNew2[1] -gt $dateArrNew1[1]) {
                                 $dateComp1 = 1
                             }
-                        } elseif ($dateArrNew2[0] -ge $dateArrNew1[0]) {
+                        } elseif ($dateArrNew2[0] -gt $dateArrNew1[0]) {
                             $dateComp1 = 1
                         }
                         $dateArrNew1 = @($null, $null, $null, $null)
@@ -323,17 +323,17 @@ Get-ChildItem -Path $clientPath | ForEach {
                         $convertDate2 = $emp2Detail.value
                         $dateArrNew1 = $convertDate1.split("-")
                         $dateArrNew2 = $convertDate2.split("-")
-                        if ($dateArrNew2[0] -le $dateArrNew1[0]) {
-                            if ($dateArrNew2[1] -le $dateArrNew1[1]) {
+                        if ($dateArrNew2[0] -eq $dateArrNew1[0]) {
+                            if ($dateArrNew2[1] -eq $dateArrNew1[1]) {
                                 if ($dateArrNew2[2] -ge $dateArrNew1[2]) {
                                     $dateComp1 = 1
                                 }
                             }
-                        } elseif ($dateArrNew2[0] -le $dateArrNew1[0]) {
-                            if ($dateArrNew2[1] -ge $dateArrNew1[1]) {
+                        } elseif ($dateArrNew2[0] -eq $dateArrNew1[0]) {
+                            if ($dateArrNew2[1] -gt $dateArrNew1[1]) {
                                 $dateComp1 = 1
                             }
-                        } elseif ($dateArrNew2[0] -ge $dateArrNew1[0]) {
+                        } elseif ($dateArrNew2[0] -gt $dateArrNew1[0]) {
                             $dateComp1 = 1
                         }
                         $dateArrRen1 = @($null, $null, $null, $null)
@@ -404,25 +404,31 @@ Get-ChildItem -Path $clientPath | ForEach {
             $versionDate2 = $sXMLFile.ManuScript.properties.versionDate
             $splitVersDateArr1 = $versionDate1.split("-")
             $splitVersDateArr2 = $versionDate2.split("-")
-            if ($splitVersDateArr2[0] -le $splitVersDateArr1[0]) {
-                if ($splitVersDateArr2[1] -le $splitVersDateArr1[1]) {
+            if ($splitVersDateArr2[0] -eq $splitVersDateArr1[0]) {
+                if ($splitVersDateArr2[1] -eq $splitVersDateArr1[1]) {
                     if ($splitVersDateArr2[2] -ge $splitVersDateArr1[2]) {
                         $dateComp2 = 1
                     }
                 }
-            } elseif ($splitVersDateArr2[0] -le $splitVersDateArr1[0]) {
-                if ($splitVersDateArr2[1] -ge $splitVersDateArr1[1]) {
+            } elseif ($splitVersDateArr2[0] -eq $splitVersDateArr1[0]) {
+                if ($splitVersDateArr2[1] -gt $splitVersDateArr1[1]) {
                     $dateComp2 = 1
                 }
-            } elseif ($splitVersDateArr2[0] -ge $splitVersDateArr1[0]) {
+            } elseif ($splitVersDateArr2[0] -gt $splitVersDateArr1[0]) {
                 $dateComp2 = 1
             }
+            $splitVersDateArr1 = $null
+            $splitVersDateArr2 = $null
 
             $notesSec1 = $fXMLFile.ManuScript.properties.notes
             $notesSec2 = $sXMLFile.ManuScript.properties.notes
             if ($notesSec1 -notmatch $notesSec2) {
                 $notesCheck = 1
             }
+        }
+
+        if ("00.45" -gt "00.44") {
+            Write-Host "good"
         }
 
         $outString += "Old File:" + $fileName2 + "`n" + "New File:" + $fileName1 + "`n"
@@ -443,7 +449,7 @@ Get-ChildItem -Path $clientPath | ForEach {
             }
             #check version dates in the keyinfo attributes
             if ($dateComp1 -eq 1 ) {
-                Write-Host "The date(s) are not correct (both dates were the same or the wrong one was more updated)" -ForegroundColor Red
+                Write-Host "The date(s) are not correct in the keyinfo section" -ForegroundColor Red
             }
             #check state names in keyinfo attributes
             if ($nameComp -eq 1 ) {
