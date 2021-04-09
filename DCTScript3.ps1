@@ -167,11 +167,13 @@ function createFileList($arrList) {
 
 #Iterate through folders in LOB    
 Get-ChildItem -Path $clientPath | ForEach {
+
     $LobPath = $_.FullName
     $stateName = $_.Name
     $outString = "Folder: " + $stateName + "`n"
     $newFiles = newestFileList($LobPath)
     $recentFiles = secNewestFileList($LobPath)
+
     if (($newFiles -ne "") -or ($recentFiles -ne "")) {
         #Write-Host $newFiles
         $ifFlag = 0
@@ -183,18 +185,21 @@ Get-ChildItem -Path $clientPath | ForEach {
         $filePath2 = ""
         $fileName1 = ""
         $fileName2 = ""
+
         Get-ChildItem -Path $LobPath | ForEach { 
             if($newFiles -contains $_.BaseName) {
                 $fileArr1 += $_.FullName
                 $outputArr1 += $_.BaseName
             }
         }
+
         Get-ChildItem -Path $LobPath | ForEach { 
             if($recentFiles -contains $_.BaseName) {
                 $fileArr2 += $_.FullName
                 $outputArr2 += $_.BaseName
             }
         }
+
         for ($p = 0; $p -lt $fileArr1.Length; $p++) {
             $emptyTagCheck = 0
             $numLineCheck = 0
@@ -207,6 +212,9 @@ Get-ChildItem -Path $clientPath | ForEach {
             $manuCheck = 0
             $versionIDCheck = 0
             $notesCheck = 0
+            $modelCheck = 0
+
+
             $filePath1 = $fileArr1[$p]
             $filePath2 = $fileArr2[$p]
             $fileName1 = $outputArr1[$p]
@@ -217,15 +225,28 @@ Get-ChildItem -Path $clientPath | ForEach {
             [XML]$sXMLFile = Get-Content $filePath2
 
 
+            #Compare-Object -ReferenceObject ($filePath1) -DifferenceObject ($filePath2) -IncludeEqual
             $testVar = Compare-Object -ReferenceObject ($filePath1) -DifferenceObject ($filePath2)
             if (($fpathName.Length -eq $spathName.Length-2) -or ($fpathName.Length-2 -eq $spathName.Length)) {
                 $numLineCheck = 1
             }
 
+
+            $modelComp = Compare-Object $filePath1 $filePath2 | Where-Object { ($_.SideIndicator -eq "=>") -or ($_.SideIndicator -eq "<=") } | ForEach-Object { $_.InputObject }
+            $i = 0
+            $modelComp | ForEach {
+                if ($modelComp[$i].SideIndicator -ne $null) {
+                    $modelCheck = 1
+                }
+                $i++
+            }
+
+
             $i = 0
             $varIOArr = @()
             $varSIArr = @()
             $testVar | ForEach {
+                #Write-Host $testVar[0]
                 $varIOArr += $testVar[$i].InputObject
                 $varSIArr += $testVar[$i].SideIndicator
                 $i++
@@ -243,6 +264,7 @@ Get-ChildItem -Path $clientPath | ForEach {
                 }
                 $i++
             }
+
 
             $i = 0
             $j = 1
@@ -285,10 +307,6 @@ Get-ChildItem -Path $clientPath | ForEach {
             }
 
 
-            #CHECK
-            #FOR
-            #CLARIFICATION
-            #dates can be same? - meeting
             $dateArrNew1 = @($null, $null, $null, $null)
             $dateArrNew2 = @($null, $null, $null, $null)
             $dateArrRen1 = @($null, $null, $null, $null)
@@ -302,7 +320,7 @@ Get-ChildItem -Path $clientPath | ForEach {
                         $dateArrNew2 = $convertDate2.split("-")
                         if ($dateArrNew2[0] -eq $dateArrNew1[0]) {
                             if ($dateArrNew2[1] -eq $dateArrNew1[1]) {
-                                if ($dateArrNew2[2] -ge $dateArrNew1[2]) {
+                                if ($dateArrNew2[2] -gt $dateArrNew1[2]) {
                                     $dateComp1 = 1
                                 }
                             }
@@ -323,7 +341,7 @@ Get-ChildItem -Path $clientPath | ForEach {
                         $dateArrNew2 = $convertDate2.split("-")
                         if ($dateArrNew2[0] -eq $dateArrNew1[0]) {
                             if ($dateArrNew2[1] -eq $dateArrNew1[1]) {
-                                if ($dateArrNew2[2] -ge $dateArrNew1[2]) {
+                                if ($dateArrNew2[2] -gt $dateArrNew1[2]) {
                                     $dateComp1 = 1
                                 }
                             }
@@ -354,6 +372,8 @@ Get-ChildItem -Path $clientPath | ForEach {
                     }
                 }
             }
+
+
             $newManuIDArr1 = @($null, $null, $null, $null)
             $newManuIDArr2 = @($null, $null, $null, $null)
             $doubleArr = @($newManuIDArr1, $newManuIDArr2)
@@ -389,13 +409,14 @@ Get-ChildItem -Path $clientPath | ForEach {
                 $manuCheck = 1
             }
 
+
             $versionID1 = $fXMLFile.ManuScript.properties.versionID
             $versionID2 = $sXMLFile.ManuScript.properties.versionID
             if ($versionID1 -ne $versionID2) {
                 $versionIDCheck = 1
             }
 
-            ###
+
             $versDateArr1 = @($null, $null, $null, $null)
             $versDateArr1 = @($null, $null, $null, $null)
             $versionDate1 = $fXMLFile.ManuScript.properties.versionDate
@@ -404,7 +425,7 @@ Get-ChildItem -Path $clientPath | ForEach {
             $splitVersDateArr2 = $versionDate2.split("-")
             if ($splitVersDateArr2[0] -eq $splitVersDateArr1[0]) {
                 if ($splitVersDateArr2[1] -eq $splitVersDateArr1[1]) {
-                    if ($splitVersDateArr2[2] -ge $splitVersDateArr1[2]) {
+                    if ($splitVersDateArr2[2] -gt $splitVersDateArr1[2]) {
                         $dateComp2 = 1
                     }
                 }
@@ -468,6 +489,10 @@ Get-ChildItem -Path $clientPath | ForEach {
             #check if the new file's notes section contains the recent file's notes section
             if ($notesCheck -eq 1 ) {
                 Write-Host "The note sections are not correct in the notes tag" -ForegroundColor Red
+            }
+            #check if the new file's model section is the same as the recent file's model section
+            if ($modelCheck -eq 1 ) {
+                Write-Host "The model section(s) are not the same under the model tag" -ForegroundColor Red
             }
         }
     } else {
