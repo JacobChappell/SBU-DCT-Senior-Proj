@@ -427,7 +427,7 @@ Get-ChildItem -Path $clientPath | ForEach {
 
             $notesSec1 = $fXMLFile.ManuScript.properties.notes
             $notesSec2 = $sXMLFile.ManuScript.properties.notes
-            if ($notesSec1 -notmatch $notesSec2) {
+            if ($notesSec1 -ilike $notesSec2) {
                 $notesCheck = 1
             }
         }
@@ -478,9 +478,9 @@ Get-ChildItem -Path $clientPath | ForEach {
             if ($dateComp2 -eq 1 ) {
                 Write-Host "The versionDate(s) are not correct in the properties tag" -ForegroundColor Red
             }
-            #check if the new file's notes section contains the recent file's notes section
+            #check if the new file's notes section contains the recent file's notes section or if there is a notes sections
             if ($notesCheck -eq 1 ) {
-                Write-Host "The note sections are not correct in the notes tag" -ForegroundColor Red
+                Write-Host "The note section(s) are not correct in the notes tag or there is no notes tag present in the xml file(s)" -ForegroundColor Red
             }
             #check if the new file's model section is the same as the recent file's model section
             if ($modelCheck -eq 1 ) {
