@@ -161,6 +161,7 @@ function createFileList($arrList) {
 
 #Iterate through folders in LOB    
 Get-ChildItem -Path $clientPath | ForEach {
+    Write-Host ""
 
     $LobPath = $_.FullName
     $stateName = $_.Name
@@ -375,7 +376,7 @@ Get-ChildItem -Path $clientPath | ForEach {
             $manuIDArr1 = $manuID1.split("_")
             $manuIDArr2 = $manuID2.split("_")
             $specialCount = 0
-            if ($stateName -eq "US-INH") {
+            if ($stateName -eq "US-INH" -or $stateName -eq "US") {
                 $specialCount = 1
             }
             $count = 0
@@ -489,7 +490,7 @@ Get-ChildItem -Path $clientPath | ForEach {
         }
     } else {
         #no product file was found in folder
-        Write-Host $outString
+        Write-Host $outString2
         Write-Host "Error: No product file(s) found" -ForegroundColor Red
         Write-Host ""
     }
