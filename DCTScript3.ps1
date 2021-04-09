@@ -376,7 +376,7 @@ Get-ChildItem -Path $clientPath | ForEach {
             $manuIDArr1 = $manuID1.split("_")
             $manuIDArr2 = $manuID2.split("_")
             $specialCount = 0
-            if ($stateName -eq "US-INH" -or $stateName -eq "US") {
+            if ($stateName -eq "US-INH" -or $stateName -eq "US" -or $manuID1 -match "Forms") {
                 $specialCount = 1
             }
             $count = 0
