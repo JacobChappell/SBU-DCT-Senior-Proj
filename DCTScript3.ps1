@@ -6,7 +6,6 @@ $clientName = Read-Host -Prompt "Enter client name (ex. Three) "
 $clientLOB = Read-Host -Prompt "Enter client's LOB folder (ex. Property) "
 $clientPath = 'C:\Users\Family\Desktop\TempDCT\' + $clientName + '\'+ $clientLOB
 #$clientPath = "C:\SaaS\$clientName\Policy\ManuScripts\DCTTemplates\$clientLOB"
-Write-Output "Third part:"
 
 
 #create arraylist of file names
