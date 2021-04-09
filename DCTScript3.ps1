@@ -6,6 +6,7 @@ $clientName = Read-Host -Prompt "Enter client name (ex. Three) "
 $clientLOB = Read-Host -Prompt "Enter client's LOB folder (ex. Property) "
 $clientPath = 'C:\Users\Family\Desktop\TempDCT\' + $clientName + '\'+ $clientLOB
 #$clientPath = "C:\SaaS\$clientName\Policy\ManuScripts\DCTTemplates\$clientLOB"
+Write-Output "Third part:"
 
 
 #create arraylist of file names
@@ -213,12 +214,16 @@ Get-ChildItem -Path $clientPath | ForEach {
             $versionIDCheck = 0
             $notesCheck = 0
             $modelCheck = 0
+            $numFileError = 0
 
 
             $filePath1 = $fileArr1[$p]
             $filePath2 = $fileArr2[$p]
             $fileName1 = $outputArr1[$p]
             $fileName2 = $outputArr2[$p]
+            if ($fileName1 -eq $fileName2) {
+                $numFileError = 1
+            }
             $fpathName = Get-Content $filePath1
             $spathName = Get-Content $filePath2
             [XML]$fXMLFile = Get-Content $filePath1
@@ -383,26 +388,14 @@ Get-ChildItem -Path $clientPath | ForEach {
             if ($stateName -eq "US-INH") {
                 $specialCount = 1
             }
-            if (($manuID1 -notmatch "Carrier") -and ($manuID2 -notmatch "Carrier")) {
-                $count = 0
-                for ($k = 3+$specialCount; $k -lt $manuIDArr1.length; $k++) {
-                    $newManuIDArr1[$count] = $manuIDArr1[$k]
-                    $newManuIDArr2[$count] = $manuIDArr2[$k]
-                    if (($manuIDArr1[$k] -ne $maxVal[$count]) -and ($manuIDArr2[$k] -ne $recentVal[$count])) {
-                        $manuCheck = 1
-                    }
-                    $count++
+            $count = 0
+            for ($k = 3+$specialCount; $k -lt $manuIDArr1.length; $k++) {
+                $newManuIDArr1[$count] = $manuIDArr1[$k]
+                $newManuIDArr2[$count] = $manuIDArr2[$k]
+                if (($manuIDArr1[$k] -ne $maxVal[$count]) -and ($manuIDArr2[$k] -ne $recentVal[$count])) {
+                    $manuCheck = 1
                 }
-            } elseif (($manuID1 -match "Carrier") -and ($manuID2 -match "Carrier")) {
-                $count = 0
-                for ($k = 4+$specialCount; $k -lt $manuIDArr1.length; $k++) {
-                    $newManuIDArr1[$count] = $manuIDArr1[$k]
-                    $newManuIDArr2[$count] = $manuIDArr2[$k]
-                    if (($manuIDArr1[$k] -ne $maxVal[$count]) -and ($manuIDArr2[$k] -ne $recentVal[$count])) {
-                        $manuCheck = 1
-                    }
-                    $count++
-                }
+                $count++
             }
             $doubleArr[0] = $newManuIDArr1
             $doubleArr[1] = $newManuIDArr2
@@ -448,53 +441,60 @@ Get-ChildItem -Path $clientPath | ForEach {
             }
         }
 
-        $outString += "Old File:" + $fileName2 + "`n" + "New File:" + $fileName1 + "`n"
+        $outString += "Old File:" + $fileName2 + "`n" + "New File:" + $fileName1
         $ifFlag++
         if ($ifFlag -ne 0 ) {
-            Write-Host $outString
-            #check of possible empty tags such as <data> followed by </data> meaning there was nothing inside the actual tags meaning the files are identical
-            if ($emptyTagCheck -eq 1) {
-                Write-Host "There are a set of empty tags which is not actually a difference" -ForegroundColor Green
-            }
-            #check for same number of lines 
-            if (($numLineCheck -ne 1) -and ($emptyTagCheck -ne 1)) {
-                Write-Host "There are not the same number of lines in each file" -ForegroundColor Red
-            }
-            #check version numbers in the keyinfo attributes
-            if ($versionComp -eq 1 ) {
-                Write-Host "The version number(s) are not correct in the keyinfo section" -ForegroundColor Red
-            }
-            #check version dates in the keyinfo attributes
-            if ($dateComp1 -eq 1 ) {
-                Write-Host "The date(s) are not correct in the keyinfo section" -ForegroundColor Red
-            }
-            #check state names in keyinfo attributes
-            if ($nameComp -eq 1 ) {
-                Write-Host "The state name(s) are not correct in the keyinfo section" -ForegroundColor Red
-            }
-            #check lob names in keyinfo attributes
-            if ($lobComp -eq 1 ) {
-                Write-Host "The lob name(s) are not correct in the keyinfo section" -ForegroundColor Red
-            }
-            #check manuscriptIDs in properties tag
-            if ($manuCheck -eq 1 ) {
-                Write-Host "The manuscriptID(s) are not correct in the properties tag" -ForegroundColor Red
-            }
-            #check versionIDs in properties tag
-            if ($versionIDCheck -eq 1 ) {
-                Write-Host "The versiontID(s) are not correct in the properties tag" -ForegroundColor Red
-            }
-            #check versionDates in properties tag
-            if ($dateComp2 -eq 1 ) {
-                Write-Host "The versionDate(s) are not correct in the properties tag" -ForegroundColor Red
-            }
-            #check if the new file's notes section contains the recent file's notes section
-            if ($notesCheck -eq 1 ) {
-                Write-Host "The note sections are not correct in the notes tag" -ForegroundColor Red
-            }
-            #check if the new file's model section is the same as the recent file's model section
-            if ($modelCheck -eq 1 ) {
-                Write-Host "The model section(s) are not the same under the model tag" -ForegroundColor Red
+            #check if there is only one file and if so print error
+            if ($numFileError = 0) {
+                Write-Host $fileName1
+                Write-Host "There was only one file in the folder so there is no other file to compare"
+            } else {
+                Write-Host $outString
+                #check of possible empty tags such as <data> followed by </data> meaning there was nothing inside the actual tags meaning the files are identical
+                if ($emptyTagCheck -eq 1) {
+                    Write-Host "There are a set of empty tags which is not actually a difference" -ForegroundColor Green
+                }
+                #check for same number of lines 
+                if (($numLineCheck -ne 1) -and ($emptyTagCheck -ne 1)) {
+                    Write-Host "There are not the same number of lines in each file" -ForegroundColor Red
+                }
+                #check version numbers in the keyinfo attributes
+                if ($versionComp -eq 1 ) {
+                    Write-Host "The version number(s) are not correct in the keyinfo section" -ForegroundColor Red
+                }
+                #check version dates in the keyinfo attributes
+                if ($dateComp1 -eq 1 ) {
+                    Write-Host "The date(s) are not correct in the keyinfo section" -ForegroundColor Red
+                }
+                #check state names in keyinfo attributes
+                if ($nameComp -eq 1 ) {
+                    Write-Host "The state name(s) are not correct in the keyinfo section" -ForegroundColor Red
+                }
+                #check lob names in keyinfo attributes
+                if ($lobComp -eq 1 ) {
+                    Write-Host "The lob name(s) are not correct in the keyinfo section" -ForegroundColor Red
+                }
+                #check manuscriptIDs in properties tag
+                if ($manuCheck -eq 1 ) {
+                   Write-Host "The manuscriptID(s) are not correct in the properties tag" -ForegroundColor Red
+                }
+                #check versionIDs in properties tag
+                if ($versionIDCheck -eq 1 ) {
+                    Write-Host "The versiontID(s) are not correct in the properties tag" -ForegroundColor Red
+                }
+                #check versionDates in properties tag
+                if ($dateComp2 -eq 1 ) {
+                    Write-Host "The versionDate(s) are not correct in the properties tag" -ForegroundColor Red
+                }
+                #check if the new file's notes section contains the recent file's notes section
+                if ($notesCheck -eq 1 ) {
+                    Write-Host "The note sections are not correct in the notes tag" -ForegroundColor Red
+                }
+                #check if the new file's model section is the same as the recent file's model section
+                if ($modelCheck -eq 1 ) {
+                    Write-Host "The model section(s) are not the same under the model tag" -ForegroundColor Red
+                }
+                Write-Host ""
             }
         }
     } else {
