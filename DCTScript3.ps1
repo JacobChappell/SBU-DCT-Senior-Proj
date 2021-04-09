@@ -231,17 +231,6 @@ Get-ChildItem -Path $clientPath | ForEach {
                 $numLineCheck = 1
             }
 
-
-            $modelComp = Compare-Object $filePath1 $filePath2 | Where-Object { ($_.SideIndicator -eq "=>") -or ($_.SideIndicator -eq "<=") } | ForEach-Object { $_.InputObject }
-            $i = 0
-            $modelComp | ForEach {
-                if ($modelComp[$i].SideIndicator -ne $null) {
-                    $modelCheck = 1
-                }
-                $i++
-            }
-
-
             $i = 0
             $varIOArr = @()
             $varSIArr = @()
@@ -261,6 +250,15 @@ Get-ChildItem -Path $clientPath | ForEach {
                 }
                 else { 
                     $varIOOldFile += $varIOArr[$i]
+                }
+                $i++
+            }
+
+            $modelComp = Compare-Object $filePath1 $filePath2 | Where-Object { ($_.SideIndicator -eq "=>") -or ($_.SideIndicator -eq "<=") } | ForEach-Object { $_.InputObject }
+            $i = 0
+            $modelComp | ForEach {
+                if ($modelComp[$i].SideIndicator -ne $null) {
+                    $modelCheck = 1
                 }
                 $i++
             }
