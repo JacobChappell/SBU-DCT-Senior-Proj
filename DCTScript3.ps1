@@ -379,9 +379,13 @@ Get-ChildItem -Path $clientPath | ForEach {
             $manuID2 = $sXMLFile.ManuScript.properties.manuscriptID
             $manuIDArr1 = $manuID1.split("_")
             $manuIDArr2 = $manuID2.split("_")
+            $specialCount = 0
+            if ($stateName -eq "US-INH") {
+                $specialCount = 1
+            }
             if (($manuID1 -notmatch "Carrier") -and ($manuID2 -notmatch "Carrier")) {
                 $count = 0
-                for ($k = 3; $k -lt $manuIDArr1.length; $k++) {
+                for ($k = 3+$specialCount; $k -lt $manuIDArr1.length; $k++) {
                     $newManuIDArr1[$count] = $manuIDArr1[$k]
                     $newManuIDArr2[$count] = $manuIDArr2[$k]
                     if (($manuIDArr1[$k] -ne $maxVal[$count]) -and ($manuIDArr2[$k] -ne $recentVal[$count])) {
@@ -391,7 +395,7 @@ Get-ChildItem -Path $clientPath | ForEach {
                 }
             } elseif (($manuID1 -match "Carrier") -and ($manuID2 -match "Carrier")) {
                 $count = 0
-                for ($k = 4; $k -lt $manuIDArr1.length; $k++) {
+                for ($k = 4+$specialCount; $k -lt $manuIDArr1.length; $k++) {
                     $newManuIDArr1[$count] = $manuIDArr1[$k]
                     $newManuIDArr2[$count] = $manuIDArr2[$k]
                     if (($manuIDArr1[$k] -ne $maxVal[$count]) -and ($manuIDArr2[$k] -ne $recentVal[$count])) {
@@ -495,7 +499,8 @@ Get-ChildItem -Path $clientPath | ForEach {
         }
     } else {
         #no product file was found in folder
-        Write-Host "Error: No product file found" -ForegroundColor Red
+        Write-Host $outString
+        Write-Host "Error: No product file(s) found" -ForegroundColor Red
         Write-Host ""
     }
 }
