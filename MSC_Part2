@@ -4,9 +4,8 @@ Write-Output "Second part"
 
 #input from employee
 $clientName = Read-Host -Prompt "Enter client name (ex. TESTCLIENT) "
-$clientLOB = Read-Host -Prompt "Enter client's LOB folder (ex. Property) "
-$filePath = 'C:\Users\ezekial.page\Desktop\ManuScriptCatalog.xml'
-#$filePath = "C:\SaaS\$clientName\shared\ManuScriptCatalog.xml"
+#$filePath = 'C:\Users\ezekial.page\Desktop\ManuScriptCatalog.xml'
+$filePath = "C:\SaaS\$clientName\shared\ManuScriptCatalog.xml"
 
 [XML] $inFile = Get-Content $filePath
 
@@ -15,6 +14,8 @@ $flag = $false
 foreach($empDetail in $inFile.entries.entry){
     $id = $empDetail.id
     $url = $empDetail.url
+
+    #Pathing search criteria
     If($url -match "Saas"){
         $outString += "URL of " + $id + " includes an absolute path.`n"
         $flag = $true
@@ -22,7 +23,7 @@ foreach($empDetail in $inFile.entries.entry){
 }
 
 if($flag){
-    Write-Host "Errors found in the following URLs: "
+    Write-Host "Errors found: " -ForegroundColor Red
     Write-Host $outString
 }else{
     Write-Host "No erros found in URLs" -ForegroundColor Green
