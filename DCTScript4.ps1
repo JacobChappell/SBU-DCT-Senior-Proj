@@ -96,11 +96,11 @@ if($newPath -ne "") {
             Write-Host "Manuscript table was successfully updated" -ForegroundColor Green
             Write-Host ""
         } else {
-            Write-Host "Error: Manuscript table is not overwritten" -ForegroundColor Red
+            Write-Host "Error: Manuscript table was not successfully updated" -ForegroundColor Red
             Write-Host ""
         }
         if ($overrideCheck -eq 1) {
-            Write-Host "Manuscript table was successfully overwritten" -ForegroundColor Green
+            Write-Host "Manuscript table was overwritten" -ForegroundColor Yellow
             Write-Host ""
         } else {
             Write-Host "Caution: Manuscript table was not overwritten" -ForegroundColor Yellow
