@@ -6,7 +6,7 @@ Write-Host "Fourth part:"
 $clientName = Read-Host -Prompt "Enter client name(ex. TESTCLIENT)"
 $clientLOB = Read-Host -Prompt "Enter LOB "
 $version = Read-Host -Prompt "Enter version Number (ex. 10_X_X_X)"
-#$clientPath = "C:\Users\ebpag\Desktop\DuckCreek\$clientName\$clientLOB\US-INH\*_Product_*.xml"
+#$clientPath = "C:\Users\Family\Desktop\TempDCT\$clientName\$clientLOB\US-INH\*_Product_*.xml"
 $clientPath = "C:\SaaS\$clientName\Policy\ManuScripts\DCTTemplates\$clientLOB\US-INH\*_Product_*.xml"
 
 
@@ -75,7 +75,7 @@ if($newPath -ne "") {
         [XML]$tableData = Get-Content $newPath
         $overrideCheck = 0
         #iterate through xml file
-        foreach ($empDetail in $tableData.manuscript.model.object.table) {
+        foreach ($empDetail in $tableData.ManuScript.model.object.table) {
             if ($empDetail.override -eq 1) {
                 $overrideCheck = 1
             }
@@ -94,13 +94,11 @@ if($newPath -ne "") {
         #output results of comparison
         if ($ifTrue -eq "True") {
             Write-Host "Manuscript table was successfully updated" -ForegroundColor Green
-            Write-Host ""
         } else {
             Write-Host "Error: Manuscript table was not successfully updated" -ForegroundColor Red
-            Write-Host ""
         }
         if ($overrideCheck -eq 1) {
-            Write-Host "Manuscript table was overwritten" -ForegroundColor Yellow
+            Write-Host "Manuscript table was successfully overwritten" -ForegroundColor Green
             Write-Host ""
         } else {
             Write-Host "Caution: Manuscript table was not overwritten" -ForegroundColor Yellow
