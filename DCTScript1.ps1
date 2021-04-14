@@ -99,14 +99,10 @@ function getEncoding($fileName){
     $ret = ""
      [byte[]]$byte = get-content -Encoding byte -ReadCount 4 -TotalCount 4 -Path $fileName
     # EF BB BF (UTF8)
-    if (($byte[0] -ne $null) -or ($byte[1] -ne $null) -or ($byte[2] -ne $null)) {
-        if ( $byte[0] -eq 0xef -and $byte[1] -eq 0xbb -and $byte[2] -eq 0xbf ) {
-            $ret =  'UTF-8 with BOM'
-        } else { 
-            $ret = 'Wrong encoding or no BOM'
-        }
-    } else {
-        $ret = 'Null array'
+     if ( $byte[0] -eq 0xef -and $byte[1] -eq 0xbb -and $byte[2] -eq 0xbf ) {
+        $ret =  'UTF-8 with BOM'
+    } else { 
+        $ret = 'Wrong encoding or no BOM'
     }
     return $ret
 }
@@ -130,15 +126,12 @@ Get-ChildItem -Path $clientPath | ForEach{
             $encodingCheck = getEncoding($_.FullName)
 
             #check for incorrect encoding
-            if ($encodingCheck -eq "Null array") {
+            if ($encodingCheck -ne "UTF-8 with BOM") {
                 #check for previous errors
-                Write-Host "The following file has a null array so there is no encoding:" -ForegroundColor Red
-                $outString += $fileName + "`n"
-                $ifFlag++
-            }
-            if ($encodingCheck -eq "Wrong encoding or no BOM") {
-                #check for previous errors
-                Write-Host "The following file has the incorrect encoding:" -ForegroundColor Red
+                if($flag -eq 0){
+                    Write-Host "The following files have incorrect encoding:" -ForegroundColor Red
+                    $flag++
+                }
                 $outString += $fileName + "`n"
                 $ifFlag++
             }
