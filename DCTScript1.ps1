@@ -99,7 +99,7 @@ function getEncoding($fileName){
     $ret = ""
      [byte[]]$byte = get-content -Encoding byte -ReadCount 4 -TotalCount 4 -Path $fileName
     # EF BB BF (UTF8)
-    if (($byte[0] -ne $null) -and ($byte[1] -ne $null) -and ($byte[2] -ne $null)) {
+    if (($byte[0] -ne $null) -or ($byte[1] -ne $null) -or ($byte[2] -ne $null)) {
         if ( $byte[0] -eq 0xef -and $byte[1] -eq 0xbb -and $byte[2] -eq 0xbf ) {
             $ret =  'UTF-8 with BOM'
         } else { 
