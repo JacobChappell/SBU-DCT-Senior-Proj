@@ -26,13 +26,13 @@ function newestVersion($clPath) {
     $doubleArr = @($currentVer, $maxVer)
     $output = ""
     Get-ChildItem -Path $clPath | ForEach {
-        $count = 0
+        $counter = 0
         $splitArr = ""
         $splitArr = $_.BaseName.Split("_") 
         for ($i = 0; $i -lt $splitArr.Length; $i++) {
             if ($splitArr[$i] -match "^\d+$") {
-                $currentVer[$count] = $splitArr[$i]
-                $count++
+                $currentVer[$counter] = $splitArr[$i]
+                $counter++
             }
         }
         $doubleArr[0] = $currentVer
@@ -75,7 +75,7 @@ if($newPath -ne "") {
         [XML]$tableData = Get-Content $newPath
         $overrideCheck = 0
         #iterate through xml file
-        $count = 0
+        $counter = 0
         $valueArr = @($null, $null, $null, $null)
         foreach ($empDetail in $tableData.ManuScript.model.object.table) {
             $tableName = $empDetail.id
@@ -86,16 +86,19 @@ if($newPath -ne "") {
                 if ($empDetail.override -eq 1) {
                     $overrideCheck = 1
                 }
-                #create array of values to check for updates
-                if($count -lt 4){
-                    $valueArr[$count] = $empDetail.data.row.value
-                    $count++
+                foreach($empDetail2 in $empDetail.data.row.value){
+                    #create array of values to check for updates
+                    if($counter -lt 4){
+                        $valueArr[$counter] = $empDetail2
+                        $counter++
+                    }
                 }
+                
             }
         }
         #set flag true if valid version numbers found in table
-        for($i = 0; $i -lt $value.Length; $i++){
-            if ($valueArr[$i] -match $version) {
+        for($i = 0; $i -lt $valueArr.Length; $i++){
+            if (-not($valueArr[$i] -match $version)) {
                     $flag = $false
             }
         }
