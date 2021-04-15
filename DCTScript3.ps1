@@ -74,18 +74,6 @@ function compareVer($inArr) {
     }
 }
 
-function compareVer2($inArr) {
-    $arr1= $inArr[0]
-    $arr2 = $inArr[1]
-    for ($i = 0; $i -lt $arr1.count; $i++) {
-        if (($arr1[$i] -lt $arr2[$i])) {
-            return 1
-        } elseif ($arr2[$i] -lt $arr1[$i]) {
-            return 2
-        }
-    }
-}
-
 #function to get the 2nd newest file in the list
 function secNewestFileList($clPath) {
     #usedNames will have a file name and the next index will have its maxversion array 
@@ -124,9 +112,9 @@ function secNewestFileList($clPath) {
             $compVal = compareVer($doubleArr1)
             $doubleArr2[0] = $currentVer
             $doubleArr2[1] = $maxVal
-            $compCheck = compareVer2($doubleArr2)
+            $compCheck = compareVer($doubleArr2)
             if ($compVal -eq 1) {
-                if ($compCheck -eq 1) {
+                if ($compCheck -eq 2) {
                     for ($j = 0;$j -lt $compVer.Length;$j++) {
                         $compVer[$j] = $currentVer[$j]
                         $recentVal[$j] = $currentVer[$j]
