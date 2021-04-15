@@ -415,7 +415,7 @@ Get-ChildItem -Path $clientPath | ForEach {
 
             $notesSec1 = $fXMLFile.ManuScript.properties.notes
             $notesSec2 = $sXMLFile.ManuScript.properties.notes
-            if ($notesSec1 -ilike $notesSec2) {
+            if ($notesSec1 -inotmatch $notesSec2) {
                 $notesCheck = 1
             }
         }
