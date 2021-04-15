@@ -65,7 +65,7 @@ function compareVer($inArr) {
 }
 
 #store output variables
-$ifTrue = "False"
+$flag = $true
 $newPath = newestVersion($clientPath)
 #check for valid product file
 if($newPath -ne "") {
@@ -75,24 +75,32 @@ if($newPath -ne "") {
         [XML]$tableData = Get-Content $newPath
         $overrideCheck = 0
         #iterate through xml file
+        $count = 0
+        $valueArr = @($null, $null, $null, $null)
         foreach ($empDetail in $tableData.ManuScript.model.object.table) {
-            if ($empDetail.override -eq 1) {
-                $overrideCheck = 1
-            }
             $tableName = $empDetail.id
             $targetName = "Manuscripts"+$clientLOB
             #look for table with correct name
             if ($tableName -eq $targetName) {
-                #stop and set flag true if valid version numbers found in table
-                $compareString = $empDetail.data.row.value
-                if ($compareString -match $version) {
-                    $ifTrue = "True"
-                    break
+                #check table for override
+                if ($empDetail.override -eq 1) {
+                    $overrideCheck = 1
+                }
+                #create array of values to check for updates
+                if($count -lt 4){
+                    $valueArr[$count] = $empDetail.data.row.value
+                    $count++
                 }
             }
         }
+        #set flag true if valid version numbers found in table
+        for($i = 0; $i -lt $value.Length; $i++){
+            if ($valueArr[$i] -match $version) {
+                    $flag = $false
+            }
+        }
         #output results of comparison
-        if ($ifTrue -eq "True") {
+        if ($flag) {
             Write-Host "Manuscript table was successfully updated" -ForegroundColor Green
         } else {
             Write-Host "Error: Manuscript table was not successfully updated" -ForegroundColor Red
