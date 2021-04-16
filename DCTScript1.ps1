@@ -104,7 +104,7 @@ function getEncoding($fileName){
     } catch {
         $ErrorMessage = $_.Exception.Message
         if ($ErrorMessage  -like '*Access*denied*') {
-            Write-Host 'Access to the path was denied'
+            Write-Host "Access to" $fileName "was denied"
         }
     }
 
