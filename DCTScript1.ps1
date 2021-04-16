@@ -97,8 +97,19 @@ function createFileList($arrList){
 #function to check file for UTF-8 encoding
 function getEncoding($fileName){
     $ret = ""
-     [byte[]]$byte = get-content -Encoding byte -ReadCount 4 -TotalCount 4 -Path $fileName
-    # EF BB BF (UTF8)
+
+    #section for access check
+    try {
+        [byte[]]$byte = get-content -Encoding byte -ReadCount 4 -TotalCount 4 -Path $fileName -ErrorAction Stop
+    } catch {
+        $ErrorMessage = $_.Exception.Message
+        if ($ErrorMessage  -like '*Access*denied*') {
+            Write-Host 'Access to the path was denied'
+        }
+    }
+
+     #[byte[]]$byte = get-content -Encoding byte -ReadCount 4 -TotalCount 4 -Path $fileName
+     #EF BB BF (UTF8)
      if ( $byte[0] -eq 0xef -and $byte[1] -eq 0xbb -and $byte[2] -eq 0xbf ) {
         $ret =  'UTF-8 with BOM'
     } else { 
