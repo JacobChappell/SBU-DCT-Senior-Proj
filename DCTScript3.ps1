@@ -238,13 +238,37 @@ Get-ChildItem -Path $clientPath | ForEach {
                 $i++
             }
 
-            $modelComp = Compare-Object $filePath1 $filePath2 | Where-Object { ($_.SideIndicator -eq "=>") -or ($_.SideIndicator -eq "<=") } | ForEach-Object { $_.InputObject }
-            $i = 0
-            $modelComp | ForEach {
-                if ($modelComp[$i].SideIndicator -ne $null) {
+            $model1 = Select-Xml -Xml $fXMLFile -XPath "//model"
+            $model2 = Select-Xml -Xml $sXMLFile -XPath "//model"
+            $modelComp = Compare-Object $model1 $model2 | Where-Object { ($_.SideIndicator -eq "=>") -or ($_.SideIndicator -eq "<=") }
+            #for ($i = 0; $i -lt $modelComp.Length; $i++) {
+            if ($modelComp -ne $null) {
+                if ($modelComp[0].SideIndicator -ne "==") {
                     $modelCheck = 1
+                    $modelArr = $modelComp[0].InputObject
+                    $modelArrSplit = $modelArr -split '<'
+                    $modelPatt1 = $modelArrSplit[1].ToString()
+                    $modelPatt2 = $modelArrSplit[2].ToString()
+                    $modelLine1 = Get-Content $filePath1 | Select-String -Pattern $modelPatt1 | Select-Object LineNumber
+                    $modelLine2 = Get-Content $filePath1 | Select-String -Pattern $modelPatt2 | Select-Object LineNumber
+                    $modelLine3 = Get-Content $filePath2 | Select-String -Pattern $modelPatt1 | Select-Object LineNumber
+                    $modelLine4 = Get-Content $filePath2 | Select-String -Pattern $modelPatt2 | Select-Object LineNumber
+                    if ($modelLine1[1] -ne $null) {
+                        $printLine1 = $modelLine1[0].LineNumber
+                    } else {
+                        $printLine1 = $modelLine1.LineNumber
+                    }
+                    if ($modelLine2[1] -ne $null) {
+                        $printLine2 = $modelLine2[0].LineNumber
+                    } else {
+                        $printLine2 = $modelLine2.LineNumber
+                    }
+                    if ((($printLine1+1) -eq $printLine2) -and (($printLine3+1) -ne $printLine4)) {
+                        $printLine = $printLine1
+                    } elseif ((($printLine1+1) -ne $printLine2) -and (($printLine3+1) -eq $printLine4)) {
+                        $printLine = $printLine2
+                    }
                 }
-                $i++
             }
 
 
@@ -472,7 +496,7 @@ Get-ChildItem -Path $clientPath | ForEach {
             }
             #check if the new file's model section is the same as the recent file's model section
             if ($modelCheck -eq 1 ) {
-                Write-Host "The model section(s) are not the same under the model tag" -ForegroundColor Red
+                Write-Host "The model section(s) are not the same under the model tag starting at line $printLine" -ForegroundColor Red
             }
             Write-Host ""
         }
