@@ -1,0 +1,12 @@
+Write-Host "Manuscript Catalog: Part 3"
+#Manuscript Catalog part 3
+#Checks current MSC (ManuScriptCatalog) against previous version to ensure only changes are the newest file at the bottom 
+
+#input from employee
+$clientName = Read-Host -Prompt "Enter client name (ex. TESTCLIENT) "
+#$filePath = 'C:\Users\ezekial.page\Desktop\ManuScriptCatalog.xml'
+$filePath1 = "C:\SaaS\$clientName\shared\ManuScriptCatalog.xml"
+$filePath2 = "C:\SaaS\$clientName\shared\ReferenceManuScriptCatalog.xml"
+
+[XML] $inFile1 = Get-Content $filePath1
+[XML] $inFile2 = Get-Content $filePath2
