@@ -97,23 +97,17 @@ function createFileList($arrList){
 #function to check file for UTF-8 encoding
 function getEncoding($fileName){
     $ret = ""
-
-    #section for access check
-    try {
-        [byte[]]$byte = get-content -Encoding byte -ReadCount 4 -TotalCount 4 -Path $fileName -ErrorAction Stop
-    } catch {
-        $ErrorMessage = $_.Exception.Message
-        if ($ErrorMessage  -like '*Access*denied*') {
-            Write-Host "Access to" $fileName "was denied"
+     [byte[]]$byte = get-content -Encoding byte -ReadCount 4 -TotalCount 4 -Path $fileName -ErrorAction SilentlyContinue
+     if($Error[0].Exception -is [System.UnauthorizedAccessException]){
+        $ret = "Access to " + $fileName + " was denied."
+     }
+    # EF BB BF (UTF8)
+    if($byte -ne $null){
+        if ( $byte[0] -eq 0xef -and $byte[1] -eq 0xbb -and $byte[2] -eq 0xbf  ) {
+            $ret =  'UTF-8 with BOM'
+        } else { 
+            $ret = 'Wrong encoding or no BOM'
         }
-    }
-
-     #[byte[]]$byte = get-content -Encoding byte -ReadCount 4 -TotalCount 4 -Path $fileName
-     #EF BB BF (UTF8)
-     if ( $byte[0] -eq 0xef -and $byte[1] -eq 0xbb -and $byte[2] -eq 0xbf ) {
-        $ret =  'UTF-8 with BOM'
-    } else { 
-        $ret = 'Wrong encoding or no BOM'
     }
     return $ret
 }
@@ -132,12 +126,11 @@ Get-ChildItem -Path $clientPath | ForEach{
             #store output variable names
             $fileInfo = Get-ChildItem -Path $_.FullName
             $fileName = $fileInfo.Name
-    
             #store file encoding result in variable
             $encodingCheck = getEncoding($_.FullName)
 
             #check for incorrect encoding
-            if ($encodingCheck -ne "UTF-8 with BOM") {
+            if ($encodingCheck -eq 'Wrong encoding or no BOM' ) {
                 #check for previous errors
                 if($flag -eq 0){
                     Write-Host "The following files have incorrect encoding:" -ForegroundColor Red
@@ -145,6 +138,8 @@ Get-ChildItem -Path $clientPath | ForEach{
                 }
                 $outString += $fileName + "`n"
                 $ifFlag++
+            }ElseIf($encodingCheck -ne 'UTF-8 with BOM'){
+                Write-Host $encodingCheck
             }
         }
     }
