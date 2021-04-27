@@ -132,7 +132,7 @@ function secNewestFileList($clPath) {
 #combines array containing file names and its most recent version into single array
 function createFileList($arrList) {
     $outArr = [System.Collections.ArrayList]@()
-    for ($i = 0; $i -lt (($arrList.count + 1) / 2); $i+=2) {
+    for ($i = 0; $i -lt $arrList.count; $i+=2) {
         $versionString = ""
         $verArr = $arrList[$i + 1]
             for ($j = 0; $j -lt $verArr.count;$j++) {
@@ -157,7 +157,6 @@ Get-ChildItem -Path $clientPath | ForEach {
     $outString2 = "Folder: " + $stateName
     $newFiles = newestFileList($LobPath)
     $recentFiles = secNewestFileList($LobPath)
-
     if (($newFiles -ne "") -or ($recentFiles -ne "")) {
         $ifFlag = 0
         $fileArr1 = @()
@@ -240,6 +239,23 @@ Get-ChildItem -Path $clientPath | ForEach {
 
             $model1 = Select-Xml -Xml $fXMLFile -XPath "//model"
             $model2 = Select-Xml -Xml $sXMLFile -XPath "//model"
+            <#$model1 = foreach ($node in $fXMLFile.ManuScript.model) {
+                $xmlNode = [ordered] @{
+                    nodeName = $node.Name
+                }
+
+                for ($i = 0; $i -lt $node.object.count; $i++) {
+                    $xmlNode[$node.object.name[$i]] = $node.object.Value[$i]
+                }
+
+                [pscustomobject] $xmlNode
+            }
+            $model2 = $sXMLFile.SelectNodes('//model/*') | ForEach-Object {
+                $xmlNode2 += $_
+            }
+            $model2 = $sXMLFile.SelectNodes('//*')
+            Write-Host $xmlNode
+            Write-Host $model1 #>
             $modelComp = Compare-Object $model1 $model2 | Where-Object { ($_.SideIndicator -eq "=>") -or ($_.SideIndicator -eq "<=") }
             if ($modelComp -ne $null) {
                 if ($modelComp[0].SideIndicator -ne "==") {
@@ -417,10 +433,8 @@ Get-ChildItem -Path $clientPath | ForEach {
             if ($notesSec1 -inotmatch $notesSec2) {
                 $notesCheck = 1
             }
-        }
 
-
-        $outString += "Old File:" + $fileName2 + "`n" + "New File:" + $fileName1
+        $outString = "Old File:" + $fileName2 + "`n" + "New File:" + $fileName1 + "`n"
         $ifFlag++
         #check if there is only one file and if so print error
         if ($numFileError -eq 1) {
@@ -474,6 +488,7 @@ Get-ChildItem -Path $clientPath | ForEach {
                 Write-Host "The model section(s) are different" -ForegroundColor Red
             }
             Write-Host ""
+        }
         }
     } else {
         #no product file was found in folder
