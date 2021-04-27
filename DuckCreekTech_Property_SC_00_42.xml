@@ -1,0 +1,6334 @@
+<ManuScript>
+	<properties manuscriptID="DuckCreekTech_Property_SC_00_42" versionID="DuckCreekTech_Property_SC_00_22_01" versionDate="2019-04-01" version="1" caption="DuckCreekTech  Property   SC   (00.42)   2019-04-01" image="" dataSchema="CommercialPropertySchema.xml" boolean="1" inherited="" fieldCache="0" cultureCode="en-US" cultureName="United States [english]" shortCircuitCond="True">
+		<contexts>
+			<context>Programmer</context>
+		</contexts>
+		<notes>11/15/2018 8:40 AM: Versioned with ManuScriptVersioner&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;5/19/2017 11:18 AM: Versioned with ManuScriptVersioner&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;11/28/2016 4:43 PM: Versioned with ManuScriptVersioner&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;7/12/2016 1:04 PM: Versioned with ManuScriptVersioner&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;6/6/2016 3:19 PM: Versioned with ManuScriptVersioner&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;12/7/2015 9:49 AM: Versioned with ManuScriptVersioner&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;6/10/2014 11:12 AM: Versioned with ManuScriptVersioner&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;4/9/2014 9:18 AM: Versioned with ManuScriptVersioner&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;10/28/2013 9:56 AM: Versioned with ManuScriptVersioner&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;9/13/2012 11:30 AM: Versioned with ManuScriptVersioner&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;9/11/2012 1:56 PM: Versioned with ManuScriptVersioner&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;3/2/2012 11:05 AM: Versioned with ManuScriptVersioner&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;8/1/2011 2:35 PM: Versioned with ManuScriptVersioner&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;8/11/2010 2:47 PM: Versioned with ManuScriptVersioner&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;4/14/2010 9:04 AM: Versioned with ManuScriptVersioner&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;9/18/2009 1:11 PM: Versioned with ManuScriptVersioner&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;7/8/2009 3:50 PM: Versioned with ManuScriptVersioner&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;9/23/2008 12:00 PM: Versioned with UpdateMover&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;7/24/2008 2:34 PM: Versioned with UpdateMover&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;4/28/2008 3:55 PM: Versioned with UpdateMover&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;4/4/2008 8:22 AM: Versioned with UpdateMover&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;11/30/2007 1:48 PM: Versioned with UpdateMover&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;11/9/2007 11:25 AM: Versioned with UpdateMover&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;11/27/2006 7:44 AM: Versioned with UpdateMover&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;6/22/2006 2:19 PM: Versioned with UpdateMover&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;4/12/2004 8:44 AM: Initial Release</notes>
+		<resourceState status="Development" protected="1"/>
+		<keys>
+			<keyInfo name="lob" value="Property"/>
+			<keyInfo name="state" value="SC"/>
+			<keyInfo name="effectiveDateNew" value="2019-04-01"/>
+			<keyInfo name="effectiveDateRenewal" value="2019-04-01"/>
+			<keyInfo name="masterID" value="DuckCreekTech_Property_US_00_20"/>
+			<keyInfo name="productCode" value="None"/>
+			<keyInfo name="family" value="DCTTemplates"/>
+			<keyInfo name="version" value="00.42"/>
+		</keys>
+	</properties>
+	<model defaultValue="">
+		<object id="data" path="data">
+			<table id="Rule85_BG1ClassLossCosts" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="CSP" type="string" find="eq">
+					<key value="0074"/>
+					<key value="0075"/>
+					<key value="0076"/>
+					<key value="0077"/>
+					<key value="0078"/>
+					<key value="0079"/>
+					<key value="0196"/>
+					<key value="0197"/>
+					<key value="0198"/>
+					<key value="0311"/>
+					<key value="0312"/>
+					<key value="0313"/>
+					<key value="0321"/>
+					<key value="0322"/>
+					<key value="0323"/>
+					<key value="0331"/>
+					<key value="0332"/>
+					<key value="0333"/>
+					<key value="0341"/>
+					<key value="0342"/>
+					<key value="0343"/>
+					<key value="0511"/>
+					<key value="0512"/>
+					<key value="0520"/>
+					<key value="0531"/>
+					<key value="0532"/>
+					<key value="0533"/>
+					<key value="0534"/>
+					<key value="0541"/>
+					<key value="0545"/>
+					<key value="0550"/>
+					<key value="0561"/>
+					<key value="0562"/>
+					<key value="0563"/>
+					<key value="0564"/>
+					<key value="0565"/>
+					<key value="0566"/>
+					<key value="0567"/>
+					<key value="0570"/>
+					<key value="0580"/>
+					<key value="0581"/>
+					<key value="0582"/>
+					<key value="0701"/>
+					<key value="0702"/>
+					<key value="0742"/>
+					<key value="0743"/>
+					<key value="0744"/>
+					<key value="0745"/>
+					<key value="0746"/>
+					<key value="0747"/>
+					<key value="0755"/>
+					<key value="0756"/>
+					<key value="0757"/>
+					<key value="0831"/>
+					<key value="0832"/>
+					<key value="0833"/>
+					<key value="0834"/>
+					<key value="0841"/>
+					<key value="0843"/>
+					<key value="0844"/>
+					<key value="0845"/>
+					<key value="0846"/>
+					<key value="0851"/>
+					<key value="0852"/>
+					<key value="0900"/>
+					<key value="0911"/>
+					<key value="0912"/>
+					<key value="0913"/>
+					<key value="0921"/>
+					<key value="0922"/>
+					<key value="0923"/>
+					<key value="0931"/>
+					<key value="0932"/>
+					<key value="0933"/>
+					<key value="0934"/>
+					<key value="0940"/>
+					<key value="0951"/>
+					<key value="0952"/>
+					<key value="1000"/>
+					<key value="1051"/>
+					<key value="1052"/>
+					<key value="1070"/>
+					<key value="1150"/>
+					<key value="1180"/>
+					<key value="1211"/>
+					<key value="1212"/>
+					<key value="1213"/>
+					<key value="1220"/>
+					<key value="1230"/>
+					<key value="1400"/>
+					<key value="1650"/>
+					<key value="1700"/>
+					<key value="1751"/>
+					<key value="1752"/>
+					<key value="2200"/>
+					<key value="2350"/>
+					<key value="2459"/>
+					<key value="2800"/>
+					<key value="3409"/>
+					<key value="4809"/>
+					<key value="9999" default="1"/>
+				</rowKeys>
+				<rowKeys name="Construction" type="string" find="range">
+					<key value="Frame"/>
+					<key value="JoistedMasonry"/>
+					<key value="NonCombustible" default="1"/>
+					<key value="MasonryNonCombustible"/>
+					<key value="ModifiedFireResistive,FireResistive"/>
+				</rowKeys>
+				<rowKeys name="ContentType" type="string" find="eq">
+					<key value="A" default="1"/>
+					<key value="B"/>
+					<key value="C"/>
+				</rowKeys>
+				<colKeys name="BuildingContent" type="string" find="eq">
+					<key value="B" default="1"/>
+					<key value="C"/>
+					<key value="Y"/>
+				</colKeys>
+				<data>
+					<row value="0.137,0.138,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.124,0.125,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.111,0.118,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.089,0.104,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.083,0.097,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.137,0.138,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.124,0.125,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.111,0.118,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.089,0.104,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.083,0.097,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.137,0.138,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.124,0.125,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.111,0.118,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.089,0.104,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.083,0.097,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.126,0.131,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.113,0.118,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.101,0.111,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.081,0.098,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.076,0.092,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.126,0.131,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.113,0.118,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.101,0.111,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.081,0.098,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.076,0.092,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.126,0.131,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.113,0.118,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.101,0.111,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.081,0.098,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.076,0.092,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.085,0.094,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.076,0.085,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.067,0.080,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.055,0.070,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.050,0.066,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.085,0.094,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.076,0.085,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.067,0.080,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.055,0.070,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.050,0.066,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.085,0.094,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.076,0.085,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.067,0.080,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.055,0.070,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.050,0.066,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.270,0.305,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.242,0.274,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.215,0.258,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.175,0.229,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.162,0.212,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.270,0.305,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.242,0.274,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.215,0.258,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.175,0.229,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.162,0.212,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.270,0.305,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.242,0.274,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.215,0.258,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.175,0.229,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.162,0.212,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.414,0.617,"/>
+					<row value=",0.723,"/>
+					<row value=",,"/>
+					<row value="0.375,0.556,"/>
+					<row value=",0.650,"/>
+					<row value=",,"/>
+					<row value="0.331,0.526,"/>
+					<row value=",0.615,"/>
+					<row value=",,"/>
+					<row value="0.270,0.464,"/>
+					<row value=",0.542,"/>
+					<row value=",,"/>
+					<row value="0.247,0.431,"/>
+					<row value=",0.507,"/>
+					<row value=",,"/>
+					<row value="0.414,0.617,"/>
+					<row value=",0.723,"/>
+					<row value=",,"/>
+					<row value="0.375,0.556,"/>
+					<row value=",0.650,"/>
+					<row value=",,"/>
+					<row value="0.331,0.526,"/>
+					<row value=",0.615,"/>
+					<row value=",,"/>
+					<row value="0.270,0.464,"/>
+					<row value=",0.542,"/>
+					<row value=",,"/>
+					<row value="0.247,0.431,"/>
+					<row value=",0.507,"/>
+					<row value=",,"/>
+					<row value="0.414,0.617,"/>
+					<row value=",0.723,"/>
+					<row value=",,"/>
+					<row value="0.375,0.556,"/>
+					<row value=",0.650,"/>
+					<row value=",,"/>
+					<row value="0.331,0.526,"/>
+					<row value=",0.615,"/>
+					<row value=",,"/>
+					<row value="0.270,0.464,"/>
+					<row value=",0.542,"/>
+					<row value=",,"/>
+					<row value="0.247,0.431,"/>
+					<row value=",0.507,"/>
+					<row value=",,"/>
+					<row value="0.150,0.133,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.136,0.118,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.121,0.113,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.097,0.100,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.091,0.091,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.150,0.133,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.136,0.118,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.121,0.113,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.097,0.100,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.091,0.091,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.150,0.133,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.136,0.118,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.121,0.113,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.097,0.100,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.091,0.091,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.234,0.267,"/>
+					<row value=",0.313,"/>
+					<row value=",,"/>
+					<row value="0.210,0.240,"/>
+					<row value=",0.280,"/>
+					<row value=",,"/>
+					<row value="0.188,0.226,"/>
+					<row value=",0.267,"/>
+					<row value=",,"/>
+					<row value="0.153,0.199,"/>
+					<row value=",0.234,"/>
+					<row value=",,"/>
+					<row value="0.141,0.186,"/>
+					<row value=",0.218,"/>
+					<row value=",,"/>
+					<row value="0.234,0.267,"/>
+					<row value=",0.313,"/>
+					<row value=",,"/>
+					<row value="0.210,0.240,"/>
+					<row value=",0.280,"/>
+					<row value=",,"/>
+					<row value="0.188,0.226,"/>
+					<row value=",0.267,"/>
+					<row value=",,"/>
+					<row value="0.153,0.199,"/>
+					<row value=",0.234,"/>
+					<row value=",,"/>
+					<row value="0.141,0.186,"/>
+					<row value=",0.218,"/>
+					<row value=",,"/>
+					<row value="0.234,0.267,"/>
+					<row value=",0.313,"/>
+					<row value=",,"/>
+					<row value="0.210,0.240,"/>
+					<row value=",0.280,"/>
+					<row value=",,"/>
+					<row value="0.188,0.226,"/>
+					<row value=",0.267,"/>
+					<row value=",,"/>
+					<row value="0.153,0.199,"/>
+					<row value=",0.234,"/>
+					<row value=",,"/>
+					<row value="0.141,0.186,"/>
+					<row value=",0.218,"/>
+					<row value=",,"/>
+					<row value="0.116,0.193,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.104,0.174,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.093,0.163,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.075,0.143,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.070,0.135,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.110,0.171,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.099,0.154,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.087,0.146,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.072,0.128,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.066,0.119,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.138,0.250,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.124,0.226,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.110,0.213,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.090,0.187,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.083,0.175,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.116,0.203,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.105,0.182,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.094,0.171,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.076,0.152,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.070,0.141,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.179,0.250,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.160,0.226,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.143,0.213,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.116,0.187,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.108,0.175,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.140,0.201,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.126,0.180,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.113,0.170,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.091,0.151,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.086,0.141,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.197,0.210,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.176,0.190,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.157,0.179,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.127,0.158,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.118,0.147,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.301,0.323,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.271,0.290,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.241,0.274,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.196,0.241,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.181,0.225,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.356,0.402,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.321,0.361,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.285,0.342,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.230,0.301,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.214,0.280,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.105,0.208,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.094,0.187,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.086,0.177,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.069,0.156,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.064,0.146,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.112,0.208,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.100,0.187,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.088,0.177,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.072,0.156,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.067,0.146,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.126,0.230,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.113,0.208,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.101,0.196,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.083,0.174,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.076,0.161,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.125,0.171,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.113,0.154,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.100,0.146,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.082,0.128,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.075,0.119,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.174,0.302,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.156,0.272,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.138,0.257,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.113,0.227,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.103,0.212,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.115,0.168,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.103,0.151,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.091,0.141,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.075,0.127,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.069,0.118,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.130,0.227,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.116,0.205,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.104,0.193,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.086,0.170,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.079,0.159,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.116,0.193,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.104,0.174,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.093,0.163,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.075,0.143,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.070,0.135,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.116,0.203,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.104,0.182,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.093,0.171,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.075,0.152,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.070,0.141,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.116,0.212,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.104,0.191,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.093,0.180,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.075,0.159,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.070,0.149,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.123,0.203,"/>
+					<row value=",0.246,"/>
+					<row value=",0.224,"/>
+					<row value="0.110,0.182,"/>
+					<row value=",0.223,"/>
+					<row value=",0.201,"/>
+					<row value="0.097,0.171,"/>
+					<row value=",0.210,"/>
+					<row value=",0.191,"/>
+					<row value="0.080,0.152,"/>
+					<row value=",0.186,"/>
+					<row value=",0.168,"/>
+					<row value="0.075,0.141,"/>
+					<row value=",0.174,"/>
+					<row value=",0.156,"/>
+					<row value="0.136,0.180,"/>
+					<row value=",0.223,"/>
+					<row value=",0.201,"/>
+					<row value="0.122,0.163,"/>
+					<row value=",0.199,"/>
+					<row value=",0.180,"/>
+					<row value="0.108,0.154,"/>
+					<row value=",0.190,"/>
+					<row value=",0.170,"/>
+					<row value="0.088,0.135,"/>
+					<row value=",0.167,"/>
+					<row value=",0.151,"/>
+					<row value="0.082,0.127,"/>
+					<row value=",0.154,"/>
+					<row value=",0.141,"/>
+					<row value="0.101,0.112,"/>
+					<row value=",0.164,"/>
+					<row value=",0.129,"/>
+					<row value="0.091,0.101,"/>
+					<row value=",0.149,"/>
+					<row value=",0.117,"/>
+					<row value="0.081,0.095,"/>
+					<row value=",0.140,"/>
+					<row value=",0.109,"/>
+					<row value="0.066,0.084,"/>
+					<row value=",0.124,"/>
+					<row value=",0.097,"/>
+					<row value="0.060,0.078,"/>
+					<row value=",0.115,"/>
+					<row value=",0.090,"/>
+					<row value="0.155,0.184,"/>
+					<row value=",0.254,"/>
+					<row value=",0.227,"/>
+					<row value="0.139,0.165,"/>
+					<row value=",0.229,"/>
+					<row value=",0.204,"/>
+					<row value="0.124,0.155,"/>
+					<row value=",0.217,"/>
+					<row value=",0.193,"/>
+					<row value="0.100,0.138,"/>
+					<row value=",0.191,"/>
+					<row value=",0.170,"/>
+					<row value="0.092,0.127,"/>
+					<row value=",0.178,"/>
+					<row value=",0.159,"/>
+					<row value="0.421,0.463,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.380,0.418,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.338,0.394,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.274,0.349,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.254,0.324,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.421,0.463,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.380,0.418,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.338,0.394,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.274,0.349,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.254,0.324,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.421,0.463,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.380,0.418,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.338,0.394,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.274,0.349,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.254,0.324,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.182,0.198,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.164,0.179,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.145,0.169,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.119,0.150,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.109,0.138,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.182,0.198,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.164,0.179,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.145,0.169,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.119,0.150,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.109,0.138,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.182,0.198,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.164,0.179,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.145,0.169,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.119,0.150,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.109,0.138,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.446,0.513,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.401,0.463,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.356,0.437,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.289,0.384,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.268,0.358,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.182,0.207,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.163,0.186,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.145,0.176,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.118,0.156,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.109,0.145,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.196,0.207,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.176,0.186,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.156,0.176,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.127,0.156,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.118,0.145,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.152,0.176,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.138,0.158,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.122,0.149,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.100,0.132,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.091,0.123,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.194,0.207,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.174,0.186,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.156,0.176,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.127,0.156,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.116,0.145,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.165,0.193,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.149,0.173,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.132,0.163,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.107,0.145,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.100,0.135,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.265,0.270,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.237,0.243,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.212,0.230,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.173,0.203,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.159,0.189,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.270,0.281,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.243,0.254,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.216,0.239,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.176,0.211,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.161,0.197,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.135,0.143,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.122,0.129,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.107,0.122,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.087,0.107,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.079,0.100,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.182,0.199,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.163,0.180,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.145,0.169,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.118,0.150,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.109,0.139,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.120,0.138,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.107,0.123,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.096,0.118,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.077,0.104,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.073,0.096,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.250,0.247,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.224,0.221,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.199,0.211,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.163,0.185,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.150,0.173,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.050,0.058,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.044,0.052,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.039,0.049,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.033,0.042,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.030,0.040,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.052,0.059,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.047,0.054,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.041,0.051,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.034,0.044,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.031,0.042,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.095,0.101,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.086,0.091,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.077,0.086,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.062,0.076,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.057,0.071,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.324,0.383,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.293,0.346,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.261,0.325,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.211,0.288,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.194,0.269,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.429,0.530,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.387,0.477,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.344,0.451,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.279,0.397,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.257,0.369,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.284,0.332,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.254,0.299,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.225,0.283,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.185,0.248,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.170,0.231,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.170,0.201,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.152,0.182,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.136,0.171,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.109,0.152,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.102,0.142,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.188,0.229,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.170,0.205,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.152,0.194,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.122,0.172,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.112,0.160,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.124,0.134,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.112,0.121,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.100,0.114,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.080,0.100,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.074,0.093,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.113,0.132,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.101,0.119,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.091,0.113,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.073,0.100,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.068,0.092,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.160,0.196,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.145,0.177,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.128,0.166,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.103,0.147,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.097,0.138,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.136,0.171,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.123,0.154,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.109,0.146,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.088,0.128,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.082,0.119,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.177,0.209,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.158,0.189,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.142,0.178,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.115,0.157,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.107,0.147,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.086,0.107,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.077,0.096,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.069,0.091,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.057,0.080,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.052,0.074,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.520,0.574,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.468,0.517,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.417,0.488,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.339,0.431,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.312,0.402,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.176,0.252,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.158,0.227,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.141,0.214,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.114,0.189,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.105,0.176,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.098,0.086,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.088,0.078,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.078,0.073,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.063,0.065,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.058,0.060,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.061,0.079,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.056,0.071,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.049,0.067,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.041,0.059,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.037,0.056,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.114,0.131,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.103,0.117,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.091,0.112,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.074,0.097,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.069,0.091,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.095,0.113,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.085,0.101,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.076,0.096,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.061,0.085,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.057,0.079,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.065,,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.059,,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.053,,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.043,,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.040,,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.181,0.212,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.164,0.192,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.145,0.181,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.117,0.159,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.108,0.149,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.143,0.177,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.129,0.159,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.116,0.149,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.093,0.133,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.087,0.124,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.127,0.168,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.113,0.151,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.101,0.143,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.082,0.127,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.076,0.117,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.151,0.185,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.136,0.165,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.121,0.157,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.099,0.138,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.090,0.129,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.131,0.178,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.117,0.161,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.105,0.151,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.085,0.134,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.078,0.125,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.392,0.475,0.590"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.352,0.428,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.313,0.404,0.061"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.254,0.358,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.234,0.332,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.233,0.295,0.164"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.210,0.265,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.186,0.252,0.021"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.151,0.221,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.140,0.207,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.191,0.289,0.159"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.171,0.260,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.153,0.246,0.020"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.125,0.218,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.113,0.203,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.121,0.159,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.110,0.143,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.099,0.136,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.078,0.121,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.073,0.111,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.116,0.113,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.104,0.103,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.092,0.098,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.074,0.085,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.069,0.078,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.394,0.471,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.356,0.424,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.318,0.399,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.259,0.352,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.237,0.331,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.254,0.301,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.229,0.272,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.204,0.254,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.166,0.224,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.153,0.212,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.166,0.212,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.149,0.191,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.132,0.183,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.106,0.161,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.097,0.149,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.731,0.966,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.661,0.870,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.591,0.818,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.479,0.723,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.443,0.679,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.462,0.536,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.415,0.481,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.368,0.454,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.299,0.400,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.275,0.373,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.353,0.431,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.318,0.388,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.283,0.365,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.229,0.321,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value="0.214,0.303,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value=",,"/>
+					<row value=",0,"/>
+					<row value=",0,"/>
+					<row value="0,0,"/>
+					<row value=",0,"/>
+					<row value=",0,"/>
+					<row value="0,0,"/>
+					<row value=",0,"/>
+					<row value=",0,"/>
+					<row value="0,0,"/>
+					<row value=",0,"/>
+					<row value=",0,"/>
+					<row value="0,0,"/>
+					<row value=",0,"/>
+					<row value=",0,"/>
+				</data>
+			</table>
+			<table id="A_RuleAndValue" tableType="local">
+				<fields>
+					<field type="int" name="Rule"/>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="Coverage" type="string" find="eq">
+					<key value="BrandsAndLabelsMaxIncrease"/>
+					<key value="DebrisRemovalSpecialLossCost"/>
+					<key value="MiscellaneousRealPropertyLossCost"/>
+					<key value="PersPropApartments"/>
+					<key value="PersPropExcludingTheft"/>
+					<key value="PersPropOffices"/>
+					<key value="PollutantBroadLossCost"/>
+					<key value="PollutantSpecialLossCost"/>
+					<key value="VacancyPermitBG1MinimumLossCost"/>
+					<key value="VacancyPermitBG2MinimumLossCost"/>
+					<key value="VacancyPermitBroadLossCost"/>
+					<key value="VacancyPermitEqkLossCost"/>
+					<key value="VacancyPermitSpecialLossCost"/>
+					<key value="VacancyPermitSpecialVandalismLessThanEightyPercentCoins"/>
+					<key value="VacancyPermitSpecialVandalismMinimumLossCost"/>
+					<key value="VacanyPermitStandardPolicyHigherThan80"/>
+					<key value="VacanyPermitStandardPolicyLessThan80"/>
+					<key value="ZZZ" default="1"/>
+					<key value="CollapseDuringConstructionAdjustment"/>
+					<key value="BroadBuildersRiskBaseLossCost"/>
+					<key value="SpecialBuildersRiskBaseLossCost"/>
+					<key value="SpecialTimeElementBuildersRiskLossCost"/>
+					<key value="SprinkleredRatedAsNonSprinklered"/>
+					<key value="SprinklerSystemEqkFactor"/>
+					<key value="TRIABG1Adjustment"/>
+					<key value="BuildingTheftExclusionFactor"/>
+				</rowKeys>
+				<data>
+					<row value="Rule 38.C.3 (Multistate),.053"/>
+					<row value="Rule 38.F.4.b (Multistate),0.01"/>
+					<row value="Rule 38.J.5 (Multistate),.528"/>
+					<row value="Rule 72.E.2.d.1,.186"/>
+					<row value="Rule 72.E.2.c,.025"/>
+					<row value="Rule 72.E.2.d.2,51"/>
+					<row value="Rule 38.E.4.b,0.006"/>
+					<row value="Rule 38.E.4.c,0.006"/>
+					<row value="Rule 38.P.4.c.(1).(a),0.022"/>
+					<row value="Rule 38.P.4.c.(1).(a),0.006"/>
+					<row value="Rule 38.P.4.c.(1).(b),0.04"/>
+					<row value="Rule 38.P.4.c.(1).(b),0.006"/>
+					<row value="Rule 38.P.4.c.(1).(b),0.053"/>
+					<row value="Rule 38.P.4.c.(1).(a),0.831"/>
+					<row value="Rule 38.P.4.c.(1).(a),0.562"/>
+					<row value="Rule 38.P.4.c.(2).(b),1.08"/>
+					<row value="Rule 38.P.4.c.(2).(b),1.62"/>
+					<row value="None,0"/>
+					<row value="Rule 41.D.4.b,0.002"/>
+					<row value="Rule 71.E.3 (Multistate),0.012"/>
+					<row value="Rule 72.E.3.(a) (Multistate),0.015"/>
+					<row value="Rule 72.E.3.b (Multistate),0.024"/>
+					<row value="Rule 74.A.3.c (Multistate),0.0006"/>
+					<row value="Rule 73.D.7,1.06"/>
+					<row value="PEX301 B.2,.990"/>
+					<row value="Rule 72.E.2.b.(2),.88"/>
+				</data>
+			</table>
+			<table id="Rule36_ValueReportingForm" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="CausesOfLoss" type="string" find="eq">
+					<key value="Basic"/>
+					<key value="Broad"/>
+					<key value="Special"/>
+					<key value="Earthquake"/>
+					<key value="Acquired"/>
+				</rowKeys>
+				<data>
+					<row value=".891"/>
+					<row value=".026"/>
+					<row value="1.187"/>
+					<row value=".056"/>
+					<row value=".528"/>
+				</data>
+			</table>
+			<table id="Rule38H4_LossAssessmentLossCostPremium" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="Limit" type="int" find="range">
+					<key value="0"/>
+					<key value="1000"/>
+					<key value="5000"/>
+					<key value="10000"/>
+					<key value="[eachadd] 5000"/>
+				</rowKeys>
+				<colKeys name="CauseOfLoss" type="string" find="eq">
+					<key value="Basic"/>
+					<key value="AllOther" default="1"/>
+				</colKeys>
+				<data>
+					<row value="0,0"/>
+					<row value="2.700,3.165"/>
+					<row value="4.321,5.275"/>
+					<row value="5.401,6.858"/>
+					<row value=".540,1.055"/>
+				</data>
+			</table>
+			<table id="Rule38L4a_UtilityServicesLossCosts" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="CauseOfLoss" type="string" find="eq">
+					<key value="BG1"/>
+					<key value="BG2"/>
+					<key value="Broad"/>
+					<key value="SpecialBuilding"/>
+					<key value="SpecialPersonalProperty"/>
+					<key value="Earthquake"/>
+				</rowKeys>
+				<colKeys name="UtilityProviderType" type="string" find="eq">
+					<key value="PublicUtilties"/>
+					<key value="OtherThanPublicUtilities"/>
+				</colKeys>
+				<data>
+					<row value=".038,.075"/>
+					<row value=".011,.022"/>
+					<row value=".006,.010"/>
+					<row value=".006,.010"/>
+					<row value=".021,.042"/>
+					<row value=".011,.022"/>
+				</data>
+			</table>
+			<table id="Rule38L4b_UtilityServicesLossCosts" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="CauseOfLoss" type="string" find="eq">
+					<key value="BG1"/>
+					<key value="BG2"/>
+					<key value="Broad"/>
+					<key value="SpecialBuilding"/>
+					<key value="SpecialPersonalProperty"/>
+					<key value="Earthquake"/>
+				</rowKeys>
+				<data>
+					<row value=".008"/>
+					<row value=".006"/>
+					<row value=".006"/>
+					<row value=".006"/>
+					<row value=".021"/>
+					<row value=".034"/>
+				</data>
+			</table>
+			<table id="Rule38O5_TreesShrubsAndPlantsLossCosts" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="Coverage" type="string" find="eq">
+					<key value="BG1"/>
+					<key value="BG2"/>
+				</rowKeys>
+				<data>
+					<row value=".421"/>
+					<row value=".421"/>
+				</data>
+			</table>
+			<table id="Rule38T4b_SpoilageLossCost" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="Class" type="int" find="eq">
+					<key value="Class1"/>
+					<key value="Class2"/>
+					<key value="Class3"/>
+				</rowKeys>
+				<colKeys name="Coverage" type="string" find="eq">
+					<key value="Breakdown"/>
+					<key value="PowerOutage"/>
+					<key value="Both"/>
+				</colKeys>
+				<colKeys name="Refrigeration" type="string" find="eq">
+					<key value="1" default="1"/>
+					<key value="0"/>
+				</colKeys>
+				<data>
+					<row value=".659,.923,.396,.396,.923,1.187"/>
+					<row value=".791,1.055,.422,.422,1.055,1.319"/>
+					<row value=".923,1.372,.475,.475,1.213,1.662"/>
+				</data>
+			</table>
+			<table id="Rule51H4_MiningPropertiesAdjustment" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="Coverage" type="string" find="eq">
+					<key value="BG1"/>
+					<key value="BG2"/>
+				</rowKeys>
+				<colKeys name="CausesOfLossSubline" type="string" find="eq">
+					<key value="Limited"/>
+					<key value="Broad"/>
+				</colKeys>
+				<data>
+					<row value=".095,.173"/>
+					<row value=".044,.199"/>
+				</data>
+			</table>
+			<table id="Rule54B4_UtilityServicesLossCosts" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="Select" type="string" find="eq" pageKey="1">
+					<key value="PowerWaterSupply"/>
+					<key value="CommunicationSupply"/>
+					<key value="OverheadTransmissionCommunicationLines"/>
+				</rowKeys>
+				<rowKeys name="CauseOfLoss" type="string" find="eq">
+					<key value="BG1"/>
+					<key value="BG2"/>
+					<key value="Broad"/>
+					<key value="Special"/>
+					<key value="Earthquake"/>
+				</rowKeys>
+				<data>
+					<row value=".022"/>
+					<row value=".011"/>
+					<row value=".006"/>
+					<row value=".019"/>
+					<row value=".028"/>
+					<row value=".044"/>
+					<row value=".044"/>
+					<row value=".010"/>
+					<row value=".029"/>
+					<row value=".056"/>
+					<row value=".011"/>
+					<row value=".027"/>
+					<row value=".010"/>
+					<row value=".053"/>
+					<row value=".056"/>
+				</data>
+			</table>
+			<table id="Rule68_TobaccoInWarehouses" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="LimitOfLiability" type="int" find="range">
+					<key value="0-50000"/>
+					<key value="50001-75000"/>
+					<key value="75001-100000"/>
+					<key value="100001&gt;"/>
+				</rowKeys>
+				<data>
+					<row value="26"/>
+					<row value="40"/>
+					<row value="53"/>
+					<row value="79"/>
+				</data>
+			</table>
+			<table id="Rule70E2_BG2LossCosts" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="Territory" type="string" find="eq" pageKey="1">
+					<key value="Inland" default="1"/>
+					<key value="Seacoast"/>
+					<key value="Beach"/>
+				</rowKeys>
+				<rowKeys name="Classification" type="string" find="eq">
+					<key value="AA"/>
+					<key value="A"/>
+					<key value="AB"/>
+					<key value="B"/>
+				</rowKeys>
+				<rowKeys name="BuildingOrContents" type="string" find="eq">
+					<key value="B"/>
+					<key value="C"/>
+				</rowKeys>
+				<data>
+					<row value=".059"/>
+					<row value=".051"/>
+					<row value=".065"/>
+					<row value=".057"/>
+					<row value=".079"/>
+					<row value=".067"/>
+					<row value=".119"/>
+					<row value=".105"/>
+					<row value=".170"/>
+					<row value=".125"/>
+					<row value=".187"/>
+					<row value=".138"/>
+					<row value=".203"/>
+					<row value=".152"/>
+					<row value=".358"/>
+					<row value=".297"/>
+					<row value=".317"/>
+					<row value=".230"/>
+					<row value=".354"/>
+					<row value=".255"/>
+					<row value=".372"/>
+					<row value=".279"/>
+					<row value=".633"/>
+					<row value=".526"/>
+				</data>
+			</table>
+			<table id="Rule71E2c_BroadLossCosts" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="Item" type="string" find="eq">
+					<key value="B" default="1"/>
+					<key value="C"/>
+				</rowKeys>
+				<colKeys name="Construction" type="string" find="range">
+					<key value="FireResistive,ModifiedFireResistive"/>
+					<key value="Frame,JoistedMasonry,NonCombustible,MasonryNonCombustible"/>
+				</colKeys>
+				<data>
+					<row value=".010,.015"/>
+					<row value=".011,.021"/>
+				</data>
+			</table>
+			<table id="Rule71E4b1_BroadTimeElementWithoutExtraExpenseLossCosts" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="Construction" type="string" find="range">
+					<key value="ModifiedFireResistive,FireResistive"/>
+					<key value="Frame,JoistedMasonry,NonCombustible,MasonryNonCombustible"/>
+				</rowKeys>
+				<data>
+					<row value=".007"/>
+					<row value=".011"/>
+				</data>
+			</table>
+			<table id="Rule71E4b2_BroadTimeElementWithExtraExpenseLossCosts" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="Construction" type="string" find="range">
+					<key value="ModifiedFireResistive,FireResistive"/>
+					<key value="Frame,JoistedMasonry,NonCombustible,MasonryNonCombustible"/>
+				</rowKeys>
+				<data>
+					<row value=".012"/>
+					<row value=".023"/>
+				</data>
+			</table>
+			<table id="Rule72E2b1_SpecialBuildingLossCosts" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<data>
+					<row value=".030"/>
+				</data>
+			</table>
+			<table id="Rule72E2d3c_BaseLossCostByTerritory" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="County" type="string" find="range">
+					<key value="RemainderOfState" default="1"/>
+				</rowKeys>
+				<colKeys name="OccupancyType" type="string" find="eq">
+					<key value="M" default="1"/>
+					<key value="MH"/>
+					<key value="I"/>
+					<key value="IP"/>
+					<key value="S"/>
+					<key value="C"/>
+				</colKeys>
+				<data>
+					<row value=".041,.041,.041,.041,.041,.041"/>
+				</data>
+			</table>
+			<table id="Rule72E4a1_SpecialTimeElementExludingTheftLossCosts" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="Construction" type="string" find="range">
+					<key value="ModifiedFireResistive,FireResistive"/>
+					<key value="AllOther" default="1"/>
+				</rowKeys>
+				<colKeys name="LossCost" type="string" find="eq">
+					<key value="WithoutExtraExpense"/>
+					<key value="WithExtraExpense"/>
+				</colKeys>
+				<data>
+					<row value=".010,.021"/>
+					<row value=".019,.037"/>
+				</data>
+			</table>
+			<table id="Rule72E4b1_SpecialTimeElementIncludingTheftLossCosts" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="Construction" type="string" find="range">
+					<key value="ModifiedFireResistive,FireResistive"/>
+					<key value="AllOther" default="1"/>
+				</rowKeys>
+				<rowKeys name="RiskType" type="string" find="range">
+					<key value="Apartment,Condo"/>
+					<key value="AllOther" default="1"/>
+				</rowKeys>
+				<colKeys name="LossCost" type="string" find="eq">
+					<key value="WithoutExtraExpense"/>
+					<key value="AllOther" default="1"/>
+				</colKeys>
+				<data>
+					<row value="0.010,0.017"/>
+					<row value="0.027,0.035"/>
+					<row value="0.016,0.029"/>
+					<row value="0.033,0.047"/>
+				</data>
+			</table>
+			<table id="Rule73D2_DeductibleCredit" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="Tier" type="int" find="eq" pageKey="1">
+					<key value="1"/>
+					<key value="2" default="1"/>
+					<key value="3"/>
+				</rowKeys>
+				<rowKeys name="BuildingClass" type="string" find="range">
+					<key value="1C,1D,3B"/>
+					<key value="3A,4B,5A"/>
+					<key value="2A,2B,4A"/>
+					<key value="3C,4C,4D,5B,5C" default="1"/>
+					<key value="5AA"/>
+				</rowKeys>
+				<colKeys name="PercentageDeductible" type="int" find="eq">
+					<key value="10" default="1"/>
+					<key value="15"/>
+					<key value="20"/>
+					<key value="25"/>
+					<key value="30"/>
+					<key value="35"/>
+					<key value="40"/>
+				</colKeys>
+				<data>
+					<row value="0.90,0.80,0.70,0.60,0.50,0.45,0.40"/>
+					<row value="0.85,0.75,0.65,0.55,0.50,0.40,0.35"/>
+					<row value="0.85,0.70,0.60,0.50,0.40,0.35,0.30"/>
+					<row value="1,0.90,0.80,0.70,0.60,0.50,0.45"/>
+					<row value="1,0.90,0.75,0.65,0.55,0.45,0.40"/>
+					<row value="0.80,0.60,0.50,0.40,0.30,0.25,0.20"/>
+					<row value="0.70,0.50,0.35,0.25,0.20,0.15,0.10"/>
+					<row value="0.60,0.40,0.30,0.20,0.15,0.10,0.05"/>
+					<row value="1,0.80,0.65,0.50,0.40,0.30,0.25"/>
+					<row value="1,0.70,0.50,0.40,0.25,0.20,0.15"/>
+					<row value="0.70,0.50,0.40,0.30,0.20,0.15,0.10"/>
+					<row value="0.60,0.35,0.20,0.15,0.10,0.05,0.05"/>
+					<row value="0.50,0.30,0.15,0.10,0.05,0.05,0.05"/>
+					<row value="1,0.75,0.55,0.40,0.30,0.20,0.15"/>
+					<row value="1,0.60,0.40,0.25,0.15,0.10,0.05"/>
+				</data>
+			</table>
+			<table id="Rule73D4b_EarthquakeBuildersRiskFactor" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="CSP" type="string" find="eq">
+					<key value="1150"/>
+					<key value="AllOther" default="1"/>
+				</rowKeys>
+				<rowKeys name="BuildingClass" type="string" find="range">
+					<key value="3A,4A,5A,6"/>
+					<key value="AllOther" default="1"/>
+				</rowKeys>
+				<data>
+					<row value="1.000"/>
+					<row value=".495"/>
+					<row value="1.000"/>
+					<row value="1.000"/>
+				</data>
+			</table>
+			<table id="Rule73D4d_EarthquakeMasonryVeneerCoverageFactor" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="ExteriorWallPercentage" type="string" find="eq">
+					<key value="N/A" default="1"/>
+					<key value="10%-25%"/>
+					<key value="25%-50%"/>
+					<key value="Over50%"/>
+				</rowKeys>
+				<rowKeys name="BuildingClass" type="string" find="range">
+					<key value="1C,1D"/>
+					<key value="AllOther" default="1"/>
+				</rowKeys>
+				<data>
+					<row value="1.00"/>
+					<row value="1.00"/>
+					<row value="1.75"/>
+					<row value="1.00"/>
+					<row value="2.50"/>
+					<row value="1.00"/>
+					<row value="4.00"/>
+					<row value="1.00"/>
+				</data>
+			</table>
+			<table id="Rule73E1aB_EarthquakeLossCosts" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="Territory" type="int" find="eq" pageKey="1">
+					<key value="11" default="1"/>
+					<key value="12"/>
+					<key value="13"/>
+					<key value="14"/>
+				</rowKeys>
+				<rowKeys name="BuildingClass" type="string" find="range">
+					<key value="1C" default="1"/>
+					<key value="1D"/>
+					<key value="2A"/>
+					<key value="2B"/>
+					<key value="3A"/>
+					<key value="3B"/>
+					<key value="3C"/>
+					<key value="4A"/>
+					<key value="4B"/>
+					<key value="4C"/>
+					<key value="4D"/>
+					<key value="5A"/>
+					<key value="5AA"/>
+					<key value="5B"/>
+					<key value="5C"/>
+				</rowKeys>
+				<colKeys name="Type" type="string" find="eq">
+					<key value="B" default="1"/>
+					<key value="1"/>
+					<key value="2"/>
+					<key value="3"/>
+					<key value="4"/>
+					<key value="MandatoryDed"/>
+				</colKeys>
+				<data>
+					<row value="0.051,0.238,0.068,0.030,0.016,5"/>
+					<row value="0.051,0.238,0.068,0.030,0.016,5"/>
+					<row value="0.022,0.157,0.050,0.022,0.012,5"/>
+					<row value="0.022,0.157,0.050,0.022,0.012,5"/>
+					<row value="0.034,0.115,0.034,0.014,0.007,5"/>
+					<row value="0.066,0.198,0.066,0.028,0.014,5"/>
+					<row value="0.055,0.179,0.055,0.021,0.008,10"/>
+					<row value="0.037,0.142,0.037,0.014,0.007,5"/>
+					<row value="0.062,0.207,0.062,0.025,0.012,5"/>
+					<row value="0.078,0.248,0.078,0.029,0.013,10"/>
+					<row value="0.068,0.229,0.068,0.025,0.011,10"/>
+					<row value="0.057,0.193,0.057,0.023,0.011,5"/>
+					<row value="0.072,0.258,0.072,0.026,0.011,10"/>
+					<row value="0.067,0.207,0.067,0.033,0.010,10"/>
+					<row value="0.105,0.331,0.105,0.041,0.017,10"/>
+					<row value="0.048,0.238,0.065,0.028,0.015,5"/>
+					<row value="0.048,0.238,0.065,0.028,0.015,5"/>
+					<row value="0.016,0.152,0.039,0.016,0.008,5"/>
+					<row value="0.016,0.152,0.039,0.016,0.008,5"/>
+					<row value="0.032,0.115,0.032,0.012,0.006,5"/>
+					<row value="0.064,0.198,0.064,0.026,0.012,5"/>
+					<row value="0.053,0.179,0.053,0.018,0.007,10"/>
+					<row value="0.034,0.142,0.034,0.012,0.005,5"/>
+					<row value="0.058,0.207,0.058,0.022,0.010,5"/>
+					<row value="0.075,0.248,0.075,0.027,0.011,10"/>
+					<row value="0.065,0.229,0.065,0.023,0.009,10"/>
+					<row value="0.054,0.193,0.054,0.022,0.010,5"/>
+					<row value="0.067,0.258,0.067,0.023,0.008,10"/>
+					<row value="0.066,0.207,0.066,0.031,0.009,10"/>
+					<row value="0.104,0.331,0.104,0.038,0.015,10"/>
+					<row value="0.033,0.238,0.045,0.018,0.009,5"/>
+					<row value="0.033,0.238,0.045,0.018,0.009,5"/>
+					<row value="0.007,0.101,0.019,0.007,0.003,5"/>
+					<row value="0.007,0.101,0.019,0.007,0.003,5"/>
+					<row value="0.023,0.098,0.023,0.008,0.003,5"/>
+					<row value="0.045,0.183,0.045,0.017,0.008,5"/>
+					<row value="0.034,0.168,0.034,0.011,0.003,10"/>
+					<row value="0.024,0.112,0.024,0.008,0.003,5"/>
+					<row value="0.038,0.170,0.038,0.013,0.006,5"/>
+					<row value="0.052,0.241,0.052,0.017,0.006,10"/>
+					<row value="0.044,0.215,0.044,0.014,0.004,10"/>
+					<row value="0.039,0.176,0.039,0.014,0.006,5"/>
+					<row value="0.045,0.238,0.045,0.013,0.004,10"/>
+					<row value="0.048,0.196,0.048,0.022,0.005,10"/>
+					<row value="0.073,0.323,0.073,0.024,0.008,10"/>
+					<row value="0.010,0.091,0.014,0.006,0.003,5"/>
+					<row value="0.010,0.091,0.014,0.006,0.003,5"/>
+					<row value="0.004,0.053,0.009,0.004,0.003,5"/>
+					<row value="0.004,0.053,0.009,0.004,0.003,5"/>
+					<row value="0.010,0.054,0.010,0.003,0.001,5"/>
+					<row value="0.016,0.087,0.016,0.004,0.002,5"/>
+					<row value="0.010,0.070,0.010,0.003,0.002,10"/>
+					<row value="0.011,0.065,0.011,0.003,0.002,5"/>
+					<row value="0.014,0.085,0.014,0.005,0.003,5"/>
+					<row value="0.017,0.115,0.017,0.005,0.003,10"/>
+					<row value="0.016,0.110,0.016,0.005,0.003,10"/>
+					<row value="0.019,0.097,0.019,0.006,0.003,5"/>
+					<row value="0.017,0.125,0.017,0.004,0.003,10"/>
+					<row value="0.021,0.113,0.021,0.008,0.003,10"/>
+					<row value="0.031,0.194,0.031,0.015,0.005,10"/>
+				</data>
+			</table>
+			<table id="Rule73E1b_NumberOfStoriesFactor" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="NumberOfStories" type="int" find="range">
+					<key value="1-8"/>
+					<key value="9-20"/>
+					<key value="21&gt;"/>
+				</rowKeys>
+				<data>
+					<row value="1.0"/>
+					<row value="1.5"/>
+					<row value="2.0"/>
+				</data>
+			</table>
+			<table id="Rule74A3b_AdditionalExclusionsVandalism" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="CSP" type="string" find="range">
+					<key value="AllOther" default="1"/>
+					<key value="1190"/>
+					<key value="1185"/>
+					<key value="1150"/>
+					<key value="0841"/>
+					<key value="1650"/>
+					<key value="0900"/>
+					<key value="0846"/>
+					<key value="0833"/>
+					<key value="0951"/>
+					<key value="0952"/>
+					<key value="0580"/>
+					<key value="0843"/>
+					<key value="0742,0743,0744,0745,0746,0747"/>
+					<key value="1051"/>
+					<key value="0844"/>
+					<key value="1052"/>
+					<key value="0834"/>
+					<key value="1180"/>
+					<key value="1190"/>
+				</rowKeys>
+				<data>
+					<row value=".006"/>
+					<row value=".016"/>
+					<row value=".379"/>
+					<row value=".010"/>
+					<row value=".021"/>
+					<row value=".021"/>
+					<row value=".021"/>
+					<row value=".021"/>
+					<row value=".021"/>
+					<row value=".021"/>
+					<row value=".021"/>
+					<row value=".021"/>
+					<row value=".021"/>
+					<row value=".021"/>
+					<row value=".021"/>
+					<row value=".021"/>
+					<row value=".021"/>
+					<row value=".021"/>
+					<row value=".021"/>
+					<row value=".016"/>
+				</data>
+			</table>
+			<table id="Rule74A3c_AdditionalExclusionsSprinklerLeakage" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="ConstructionCode" type="string" find="range">
+					<key value="Frame"/>
+					<key value="JoistedMasonry"/>
+					<key value="NonCombustible"/>
+					<key value="MasonryNonCombustible"/>
+					<key value="ModifiedFireResistive,FireResistive"/>
+				</rowKeys>
+				<colKeys name="BuildingOrContents" type="string" find="eq">
+					<key value="B" default="1"/>
+					<key value="C"/>
+				</colKeys>
+				<data>
+					<row value=".92,.93"/>
+					<row value=".93,.86"/>
+					<row value=".77,.81"/>
+					<row value=".81,.83"/>
+					<row value=".84,.87"/>
+				</data>
+			</table>
+			<table id="Rule74C5_PierAndWharfLossCosts" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="Select" type="string" find="eq">
+					<key value="FireResistiveWithoutSuperstructure"/>
+					<key value="FireResistiveIncludingSuperstructure"/>
+					<key value="NonCombustibleIncludingSuperstructure"/>
+					<key value="AllOtherConstructionWithoutSuperstructure"/>
+					<key value="AllOtherConstructionIncludingSuperstructure"/>
+					<key value="SubstructureWithCanopySuperstructure"/>
+				</rowKeys>
+				<data>
+					<row value=".026"/>
+					<row value=".026"/>
+					<row value=".026"/>
+					<row value=".026"/>
+					<row value=".040"/>
+					<row value=".040"/>
+				</data>
+			</table>
+			<table id="Rule74F5c_SprinklerLeakageEarthquakeExtensionFactor" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="BuildingClass" type="string" find="range">
+					<key value="AllClasses" default="1"/>
+				</rowKeys>
+				<colKeys name="SusceptibilityGrading" type="string" find="eq">
+					<key value="Building"/>
+					<key value="S"/>
+					<key value="M"/>
+					<key value="H"/>
+				</colKeys>
+				<data>
+					<row value=".210,.210,.315,.420"/>
+				</data>
+			</table>
+			<table id="Rule74G4_WatercraftExclusionBuybackLossCosts" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="Select" type="string" find="eq">
+					<key value="FireResistiveWithoutSuperstructure"/>
+					<key value="FireResistiveIncludingSuperstructure"/>
+					<key value="NonCombustibleIncludingSuperstructure"/>
+					<key value="AllOtherConstructionWithoutSuperstructure"/>
+					<key value="AllOtherConstructionIncludingSuperstructure"/>
+					<key value="SubstructureWithCanopySuperstructure"/>
+				</rowKeys>
+				<data>
+					<row value=".016"/>
+					<row value=".016"/>
+					<row value=".016"/>
+					<row value=".016"/>
+					<row value=".024"/>
+					<row value=".024"/>
+				</data>
+			</table>
+			<table id="Rule85C_SubStandardConditions" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="Condition" type="string" find="eq">
+					<key value="HeatingCooking"/>
+					<key value="Wiring"/>
+					<key value="Conversion"/>
+					<key value="PhysicalCondition"/>
+					<key value="Exposure"/>
+				</rowKeys>
+				<colKeys name="Construction Code" type="string" find="range">
+					<key value="Frame,JoistedMasonry,NonCombustible"/>
+					<key value="MasonryNonCombustible"/>
+					<key value="ModifiedFireResistive,FireResistive"/>
+				</colKeys>
+				<data>
+					<row value=".321,.160,.076"/>
+					<row value=".160,.076,.040"/>
+					<row value=".321,.160,.076"/>
+					<row value=".321,.160,.076"/>
+					<row value=".160,.076,.040"/>
+				</data>
+			</table>
+			<table id="Rule85L3_SpecialClassLossCosts" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="ItemNumber" type="string" find="eq">
+					<key value="1a"/>
+					<key value="1b"/>
+					<key value="1c"/>
+					<key value="2"/>
+					<key value="3a"/>
+					<key value="3b"/>
+					<key value="4a"/>
+					<key value="4b"/>
+					<key value="5"/>
+					<key value="6a"/>
+					<key value="6b"/>
+					<key value="7a"/>
+					<key value="7b"/>
+					<key value="8"/>
+					<key value="9"/>
+					<key value="10a"/>
+					<key value="10b"/>
+					<key value="10c"/>
+					<key value="11a"/>
+					<key value="11b"/>
+					<key value="11c"/>
+					<key value="12"/>
+					<key value="13"/>
+					<key value="14a"/>
+					<key value="14b1"/>
+					<key value="14b2"/>
+					<key value="14b3"/>
+					<key value="15a"/>
+					<key value="15b"/>
+					<key value="16a"/>
+					<key value="16b"/>
+					<key value="17"/>
+					<key value="18a"/>
+					<key value="18b"/>
+					<key value="19a"/>
+					<key value="19b"/>
+					<key value="20a"/>
+					<key value="20b"/>
+					<key value="20c"/>
+					<key value="20d"/>
+					<key value="21"/>
+					<key value="22"/>
+					<key value="23"/>
+					<key value="24"/>
+					<key value="25"/>
+					<key value="26"/>
+					<key value="27"/>
+					<key value="28a"/>
+					<key value="28b"/>
+					<key value="29a1"/>
+					<key value="29a2"/>
+					<key value="29b1"/>
+					<key value="29b2"/>
+					<key value="30a"/>
+					<key value="30b1"/>
+					<key value="30b2"/>
+					<key value="30b3"/>
+					<key value="31a"/>
+					<key value="31b"/>
+					<key value="31c"/>
+					<key value="32a"/>
+					<key value="32b"/>
+					<key value="32c1"/>
+					<key value="32c2"/>
+					<key value="32d"/>
+					<key value="33a"/>
+					<key value="33b"/>
+					<key value="34a"/>
+					<key value="34b"/>
+				</rowKeys>
+				<colKeys name="ProtectionClass" type="string" find="range">
+					<key value="1,2,3,4"/>
+					<key value="5,6,7,8"/>
+					<key value="8B,9,10" default="1"/>
+				</colKeys>
+				<data>
+					<row value=".044,.044,.044"/>
+					<row value=".260,.340,.421"/>
+					<row value=".502,.664,.826"/>
+					<row value=".286,.368,.448"/>
+					<row value=".055,.055,.055"/>
+					<row value=".556,.556,.556"/>
+					<row value=".286,.286,.286"/>
+					<row value="1.636,2.176,2.716"/>
+					<row value=".167,.189,.205"/>
+					<row value=".055,.055,.055"/>
+					<row value=".502,.664,.826"/>
+					<row value=".513,.513,.513"/>
+					<row value="1.188,1.188,1.188"/>
+					<row value=".502,.664,.826"/>
+					<row value=".502,.664,.826"/>
+					<row value=".049,.049,.049"/>
+					<row value=".152,.152,.152"/>
+					<row value=".448,.502,.556"/>
+					<row value=".124,.124,.124"/>
+					<row value=".286,.286,.286"/>
+					<row value=".502,.664,.826"/>
+					<row value="1.096,1.232,1.367"/>
+					<row value=".124,.124,.152"/>
+					<row value=".070,.070,.070"/>
+					<row value=".044,.044,.044"/>
+					<row value=".152,.152,.152"/>
+					<row value=".502,.664,.826"/>
+					<row value=".070,.070,.070"/>
+					<row value=".152,.152,.152"/>
+					<row value=".340,.448,.556"/>
+					<row value=".664,.880,1.096"/>
+					<row value="5.417,5.417,5.417"/>
+					<row value=".055,.055,.055"/>
+					<row value=".556,.556,.556"/>
+					<row value=".044,.044,.044"/>
+					<row value=".070,.070,.070"/>
+					<row value=".178,.232,.286"/>
+					<row value=".502,.664,.826"/>
+					<row value=".988,1.312,1.636"/>
+					<row value="0.00,0.00,0.00"/>
+					<row value=".502,.664,.826"/>
+					<row value=".421,.421,.421"/>
+					<row value="1.636,2.176,2.716"/>
+					<row value=".556,.556,.556"/>
+					<row value="5.417,5.417,5.417"/>
+					<row value="3.256,3.662,4.067"/>
+					<row value="1.096,1.232,1.367"/>
+					<row value=".055,.055,.055"/>
+					<row value=".556,.556,.556"/>
+					<row value=".044,.044,.044"/>
+					<row value=".152,.152,.152"/>
+					<row value=".044,.044,.044"/>
+					<row value=".556,.556,.556"/>
+					<row value=".044,.044,.044"/>
+					<row value=".044,.044,.044"/>
+					<row value=".070,.070,.070"/>
+					<row value=".124,.124,.124"/>
+					<row value="1.636,1.852,2.041"/>
+					<row value="2.176,2.447,2.716"/>
+					<row value="2.176,2.447,2.716"/>
+					<row value=".070,.070,.070"/>
+					<row value=".070,.070,.070"/>
+					<row value=".044,.044,.044"/>
+					<row value=".070,.070,.070"/>
+					<row value=".070,.070,.070"/>
+					<row value=".049,.049,.049"/>
+					<row value=".826,.826,.826"/>
+					<row value=".055,.055,.055"/>
+					<row value=".152,.152,.152"/>
+					<row value=",,"/>
+				</data>
+			</table>
+			<table id="Rule85M1b_ProtectionClassMultipliers" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="ProtectionClass" type="string" find="eq">
+					<key value="1"/>
+					<key value="2"/>
+					<key value="3"/>
+					<key value="4"/>
+					<key value="5" default="1"/>
+					<key value="6"/>
+					<key value="7"/>
+					<key value="8"/>
+					<key value="8B"/>
+					<key value="9"/>
+					<key value="10"/>
+				</rowKeys>
+				<colKeys name="Construction" type="string" find="range">
+					<key value="Frame,JoistedMasonry,NonCombustible" default="1"/>
+					<key value="MasonryNonCombustible,ModifiedFireResistive,FireResistive"/>
+				</colKeys>
+				<data>
+					<row value=".88,.90"/>
+					<row value=".92,.94"/>
+					<row value=".96,.97"/>
+					<row value=".98,.98"/>
+					<row value="1.00,1.00"/>
+					<row value="1.06,1.05"/>
+					<row value="1.18,1.14"/>
+					<row value="1.30,1.24"/>
+					<row value="1.42,1.34"/>
+					<row value="1.42,1.34"/>
+					<row value="1.72,1.58"/>
+					<row value=""/>
+				</data>
+			</table>
+			<table id="Rule85_TerritoryMultiplier" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="Territory" type="string" find="eq">
+					<key value="RemainderOfState" default="1"/>
+				</rowKeys>
+				<data>
+					<row value="1.000"/>
+				</data>
+			</table>
+			<table id="TerrorismLossCosts" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="Programyear" type="int" find="eq">
+					<key value="2005"/>
+					<key value="9999" default="1"/>
+				</rowKeys>
+				<colKeys name="Tier" type="int" find="eq">
+					<key value="3" default="1"/>
+				</colKeys>
+				<data>
+					<row value=".001"/>
+					<row value=".001"/>
+				</data>
+			</table>
+			<table id="Rule73D8_EarthquakeBuildingHeight" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="Class" type="string" find="eq">
+					<key value="1C"/>
+					<key value="1D"/>
+					<key value="2A"/>
+					<key value="2B"/>
+					<key value="3A"/>
+					<key value="3B"/>
+					<key value="3C"/>
+					<key value="4A"/>
+					<key value="4B"/>
+					<key value="4C"/>
+					<key value="4D"/>
+					<key value="5A"/>
+					<key value="5AA"/>
+					<key value="5B"/>
+					<key value="5C"/>
+				</rowKeys>
+				<colKeys name="NumberOfStories" type="int" find="range">
+					<key value="4-7"/>
+					<key value="8&gt;"/>
+				</colKeys>
+				<colKeys name="Tier" type="int" find="eq">
+					<key value="1"/>
+					<key value="2"/>
+					<key value="3"/>
+				</colKeys>
+				<data>
+					<row value="1.000,1.000,1.000,1.000,1.000,1.000"/>
+					<row value="1.000,1.000,1.000,1.000,1.000,1.000"/>
+					<row value="1.000,1.000,1.000,1.000,1.000,1.000"/>
+					<row value="1.000,1.000,1.000,1.000,1.000,1.000"/>
+					<row value="1.396,2.180,2.293,1.730,2.791,3.344"/>
+					<row value="1.214,1.248,1.282,1.308,1.415,1.653"/>
+					<row value="1.227,1.256,1.308,1.300,1.440,1.760"/>
+					<row value="1.456,1.917,2.246,1.626,2.436,3.063"/>
+					<row value="1.341,1.515,1.560,1.746,2.357,2.710"/>
+					<row value="1.222,1.210,1.402,1.368,1.495,1.990"/>
+					<row value="1.433,1.343,1.513,1.590,1.505,2.005"/>
+					<row value="1,1,1,1,1,1"/>
+					<row value="1.000,1.000,1.000,1.000,1.000,1.000"/>
+					<row value="1.324,1.593,1.669,1.778,2.349,2.798"/>
+					<row value="1.239,1.344,1.363,1.239,1.344,1.363"/>
+				</data>
+			</table>
+			<table id="Rule81E4_DeductibleFactors" tableType="local">
+				<fields>
+					<field type="int" name="BG1"/>
+					<field type="int" name="BG2"/>
+					<field type="int" name="Other"/>
+				</fields>
+				<rowKeys type="int" name="rowIndex">
+					<if>
+						<condition>
+							<comparison compare="eq">
+								<operand idref="ExtPropertyRiskPrivate.DeductibleSelected" type="string"/>
+								<operand type="int" value="1000"/>
+							</comparison>
+						</condition>
+						<then>
+							<if>
+								<condition>
+									<comparison compare="ge">
+										<operand idref="BuildingPrivate.TotalLimits" type="int"/>
+										<operand type="int" value="250001"/>
+									</comparison>
+								</condition>
+								<then value="0"/>
+							</if>
+							<if>
+								<condition>
+									<comparison compare="ge">
+										<operand idref="BuildingPrivate.TotalLimits" type="int"/>
+										<operand type="int" value="100001"/>
+									</comparison>
+								</condition>
+								<then value="1"/>
+							</if>
+							<if>
+								<condition>
+									<comparison compare="ge">
+										<operand idref="BuildingPrivate.TotalLimits" type="int"/>
+										<operand type="int" value="50001"/>
+									</comparison>
+								</condition>
+								<then value="2"/>
+							</if>
+							<if>
+								<condition idref="True"/>
+								<then value="3"/>
+							</if>
+						</then>
+					</if>
+					<if>
+						<condition>
+							<comparison compare="eq">
+								<operand idref="ExtPropertyRiskPrivate.DeductibleSelected" type="string"/>
+								<operand type="int" value="2500"/>
+							</comparison>
+						</condition>
+						<then>
+							<if>
+								<condition>
+									<comparison compare="ge">
+										<operand idref="BuildingPrivate.TotalLimits" type="int"/>
+										<operand type="int" value="500001"/>
+									</comparison>
+								</condition>
+								<then value="4"/>
+							</if>
+							<if>
+								<condition>
+									<comparison compare="ge">
+										<operand idref="BuildingPrivate.TotalLimits" type="int"/>
+										<operand type="int" value="250001"/>
+									</comparison>
+								</condition>
+								<then value="5"/>
+							</if>
+							<if>
+								<condition>
+									<comparison compare="ge">
+										<operand idref="BuildingPrivate.TotalLimits" type="int"/>
+										<operand type="int" value="100001"/>
+									</comparison>
+								</condition>
+								<then value="6"/>
+							</if>
+							<if>
+								<condition idref="True"/>
+								<then value="7"/>
+							</if>
+						</then>
+					</if>
+					<if>
+						<condition>
+							<comparison compare="eq">
+								<operand idref="ExtPropertyRiskPrivate.DeductibleSelected" type="string"/>
+								<operand type="int" value="5000"/>
+							</comparison>
+						</condition>
+						<then>
+							<if>
+								<condition>
+									<comparison compare="ge">
+										<operand idref="BuildingPrivate.TotalLimits" type="int"/>
+										<operand type="int" value="1000001"/>
+									</comparison>
+								</condition>
+								<then value="8"/>
+							</if>
+							<if>
+								<condition>
+									<comparison compare="ge">
+										<operand idref="BuildingPrivate.TotalLimits" type="int"/>
+										<operand type="int" value="500001"/>
+									</comparison>
+								</condition>
+								<then value="9"/>
+							</if>
+							<if>
+								<condition>
+									<comparison compare="ge">
+										<operand idref="BuildingPrivate.TotalLimits" type="int"/>
+										<operand type="int" value="250001"/>
+									</comparison>
+								</condition>
+								<then value="10"/>
+							</if>
+							<if>
+								<condition idref="True"/>
+								<then value="11"/>
+							</if>
+						</then>
+					</if>
+					<if>
+						<condition>
+							<comparison compare="eq">
+								<operand idref="ExtPropertyRiskPrivate.DeductibleSelected" type="string"/>
+								<operand type="int" value="10000"/>
+							</comparison>
+						</condition>
+						<then>
+							<if>
+								<condition>
+									<comparison compare="ge">
+										<operand idref="BuildingPrivate.TotalLimits" type="int"/>
+										<operand type="int" value="5000001"/>
+									</comparison>
+								</condition>
+								<then value="12"/>
+							</if>
+							<if>
+								<condition>
+									<comparison compare="ge">
+										<operand idref="BuildingPrivate.TotalLimits" type="int"/>
+										<operand type="int" value="1000001"/>
+									</comparison>
+								</condition>
+								<then value="13"/>
+							</if>
+							<if>
+								<condition>
+									<comparison compare="ge">
+										<operand idref="BuildingPrivate.TotalLimits" type="int"/>
+										<operand type="int" value="500001"/>
+									</comparison>
+								</condition>
+								<then value="14"/>
+							</if>
+							<if>
+								<condition>
+									<comparison compare="ge">
+										<operand idref="BuildingPrivate.TotalLimits" type="int"/>
+										<operand type="int" value="250001"/>
+									</comparison>
+								</condition>
+								<then value="15"/>
+							</if>
+							<if>
+								<condition idref="True"/>
+								<then value="16"/>
+							</if>
+						</then>
+					</if>
+					<if>
+						<condition>
+							<comparison compare="eq">
+								<operand idref="ExtPropertyRiskPrivate.DeductibleSelected" type="string"/>
+								<operand type="int" value="25000"/>
+							</comparison>
+						</condition>
+						<then>
+							<if>
+								<condition>
+									<comparison compare="ge">
+										<operand idref="BuildingPrivate.TotalLimits" type="int"/>
+										<operand type="int" value="10000001"/>
+									</comparison>
+								</condition>
+								<then value="17"/>
+							</if>
+							<if>
+								<condition>
+									<comparison compare="ge">
+										<operand idref="BuildingPrivate.TotalLimits" type="int"/>
+										<operand type="int" value="5000001"/>
+									</comparison>
+								</condition>
+								<then value="18"/>
+							</if>
+							<if>
+								<condition>
+									<comparison compare="ge">
+										<operand idref="BuildingPrivate.TotalLimits" type="int"/>
+										<operand type="int" value="1000001"/>
+									</comparison>
+								</condition>
+								<then value="19"/>
+							</if>
+							<if>
+								<condition>
+									<comparison compare="ge">
+										<operand idref="BuildingPrivate.TotalLimits" type="int"/>
+										<operand type="int" value="500001"/>
+									</comparison>
+								</condition>
+								<then value="20"/>
+							</if>
+							<if>
+								<condition idref="True"/>
+								<then value="21"/>
+							</if>
+						</then>
+					</if>
+					<if>
+						<condition>
+							<comparison compare="eq">
+								<operand idref="ExtPropertyRiskPrivate.DeductibleSelected" type="string"/>
+								<operand type="int" value="50000"/>
+							</comparison>
+						</condition>
+						<then>
+							<if>
+								<condition>
+									<comparison compare="ge">
+										<operand idref="BuildingPrivate.TotalLimits" type="int"/>
+										<operand type="int" value="10000001"/>
+									</comparison>
+								</condition>
+								<then value="22"/>
+							</if>
+							<if>
+								<condition>
+									<comparison compare="ge">
+										<operand idref="BuildingPrivate.TotalLimits" type="int"/>
+										<operand type="int" value="5500001"/>
+									</comparison>
+								</condition>
+								<then value="23"/>
+							</if>
+							<if>
+								<condition>
+									<comparison compare="ge">
+										<operand idref="BuildingPrivate.TotalLimits" type="int"/>
+										<operand type="int" value="3500001"/>
+									</comparison>
+								</condition>
+								<then value="24"/>
+							</if>
+							<if>
+								<condition>
+									<comparison compare="ge">
+										<operand idref="BuildingPrivate.TotalLimits" type="int"/>
+										<operand type="int" value="1000001"/>
+									</comparison>
+								</condition>
+								<then value="25"/>
+							</if>
+							<if>
+								<condition idref="True"/>
+								<then value="26"/>
+							</if>
+						</then>
+					</if>
+					<if>
+						<condition>
+							<comparison compare="eq">
+								<operand idref="ExtPropertyRiskPrivate.DeductibleSelected" type="string"/>
+								<operand type="int" value="75000"/>
+							</comparison>
+						</condition>
+						<then>
+							<if>
+								<condition>
+									<comparison compare="ge">
+										<operand idref="BuildingPrivate.TotalLimits" type="int"/>
+										<operand type="int" value="10000001"/>
+									</comparison>
+								</condition>
+								<then value="27"/>
+							</if>
+							<if>
+								<condition>
+									<comparison compare="ge">
+										<operand idref="BuildingPrivate.TotalLimits" type="int"/>
+										<operand type="int" value="5500001"/>
+									</comparison>
+								</condition>
+								<then value="28"/>
+							</if>
+							<if>
+								<condition>
+									<comparison compare="ge">
+										<operand idref="BuildingPrivate.TotalLimits" type="int"/>
+										<operand type="int" value="3500001"/>
+									</comparison>
+								</condition>
+								<then value="29"/>
+							</if>
+							<if>
+								<condition>
+									<comparison compare="ge">
+										<operand idref="BuildingPrivate.TotalLimits" type="int"/>
+										<operand type="int" value="1000001"/>
+									</comparison>
+								</condition>
+								<then value="30"/>
+							</if>
+							<if>
+								<condition idref="True"/>
+								<then value="31"/>
+							</if>
+						</then>
+					</if>
+					<if>
+						<condition idref="True">
+							<comparison compare="eq">
+								<operand idref="PropertyRiskInput.DeductibleBG1" type="string"/>
+								<operand type="int" value="500"/>
+							</comparison>
+						</condition>
+						<then value="32"/>
+					</if>
+				</rowKeys>
+				<colKeys type="int" name="colIndex">
+					<if>
+						<condition value="1"/>
+						<then value="0"/>
+					</if>
+				</colKeys>
+				<data>
+					<row value=".99,.98,.96"/>
+					<row value=".97,.97,.93"/>
+					<row value=".96,.95,.92"/>
+					<row value=".94,.94,.89"/>
+					<row value=".96,.95,.89"/>
+					<row value=".93,.91,.82"/>
+					<row value=".90,.88,.79"/>
+					<row value=".84,.83,.71"/>
+					<row value=".95,.93,.84"/>
+					<row value=".90,.86,.74"/>
+					<row value=".87,.83,.69"/>
+					<row value=".79,.75,.59"/>
+					<row value=".94,.92,.81"/>
+					<row value=".89,.84,.69"/>
+					<row value=".83,.77,.60"/>
+					<row value=".78,.72,.54"/>
+					<row value=".67,.61,.44"/>
+					<row value=".93,.88,.71"/>
+					<row value=".87,.80,.60"/>
+					<row value=".81,.72,.52"/>
+					<row value=".71,.62,.42"/>
+					<row value=".60,.49,.32"/>
+					<row value=".90,.81,.60"/>
+					<row value=".81,.71,.48"/>
+					<row value=".77,.66,.44"/>
+					<row value=".72,.60,.39"/>
+					<row value=".53,.43,.27"/>
+					<row value=".87,.77,.54"/>
+					<row value=".77,.65,.42"/>
+					<row value=".73,.60,.38"/>
+					<row value=".66,.53,.33"/>
+					<row value=".50,.38,.25"/>
+					<row value="1.000,1.000,1.000"/>
+				</data>
+			</table>
+			<table id="A_RuleCommunityGradingBG2Factors" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="Grade" type="int" find="eq">
+					<key value="1"/>
+					<key value="2"/>
+					<key value="3"/>
+					<key value="4"/>
+					<key value="5"/>
+					<key value="6"/>
+					<key value="7"/>
+					<key value="8"/>
+					<key value="9"/>
+					<key value="10"/>
+					<key value="99" default="1"/>
+				</rowKeys>
+				<colKeys name="Territory" type="string" find="eq">
+					<key value="Inland" default="1"/>
+					<key value="Seacoast"/>
+					<key value="Beach"/>
+				</colKeys>
+				<data>
+					<row value=".94,.89,.89"/>
+					<row value=".94,.89,.89"/>
+					<row value=".94,.89,.89"/>
+					<row value=".97,.93,.93"/>
+					<row value=".97,.93,.93"/>
+					<row value=".97,.93,.93"/>
+					<row value=".97,.93,.93"/>
+					<row value=".99,.97,.97"/>
+					<row value=".99,.97,.97"/>
+					<row value="1.00,1.00,1.00"/>
+					<row value="1.00,1.00,1.00"/>
+				</data>
+			</table>
+			<table id="A_RuleCommunityGradingEarthquakeFactors" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="Grade" type="int" find="eq">
+					<key value="1"/>
+					<key value="2"/>
+					<key value="3"/>
+					<key value="4"/>
+					<key value="5"/>
+					<key value="6"/>
+					<key value="7"/>
+					<key value="8"/>
+					<key value="9"/>
+					<key value="10"/>
+					<key value="99" default="1"/>
+				</rowKeys>
+				<colKeys name="Territory" type="string" find="eq">
+					<key value="11" default="1"/>
+					<key value="12"/>
+					<key value="13"/>
+					<key value="14"/>
+				</colKeys>
+				<data>
+					<row value=".79,.79,.78,.77"/>
+					<row value=".79,.79,.78,.77"/>
+					<row value=".79,.79,.78,.77"/>
+					<row value=".88,.88,.87,.86"/>
+					<row value=".88,.88,.87,.86"/>
+					<row value=".88,.88,.87,.86"/>
+					<row value=".88,.88,.87,.86"/>
+					<row value=".96,.96,.95,.95"/>
+					<row value=".96,.96,.95,.95"/>
+					<row value="1.00,1.00,1.00,1.00"/>
+					<row value="1.00,1.00,1.00,1.00"/>
+				</data>
+			</table>
+			<table id="Rule73E1a_Tier" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="TerritoryOrZone" type="int" find="range">
+					<key value="11-12" default="1"/>
+					<key value="13-14"/>
+				</rowKeys>
+				<data>
+					<row value="1"/>
+					<row value="3"/>
+				</data>
+			</table>
+			<table id="Rule82D_WindHailRateModificationFactors" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="Deductible" type="string" find="eq">
+					<key value="1"/>
+					<key value="2"/>
+					<key value="5"/>
+				</rowKeys>
+				<rowKeys name="LocationAmountOfTotalInsurance" type="int" find="range">
+					<key value="2500001&gt;"/>
+					<key value="1000001-2500000"/>
+					<key value="250001-1000000"/>
+					<key value="100001-250000"/>
+					<key value="100000&lt;"/>
+				</rowKeys>
+				<data>
+					<row value=".68"/>
+					<row value=".77"/>
+					<row value=".84"/>
+					<row value=".93"/>
+					<row value=".96"/>
+					<row value=".59"/>
+					<row value=".67"/>
+					<row value=".75"/>
+					<row value=".86"/>
+					<row value=".92"/>
+					<row value=".47"/>
+					<row value=".54"/>
+					<row value=".61"/>
+					<row value=".72"/>
+					<row value=".83"/>
+				</data>
+			</table>
+			<table id="Rule73D3_EarthquakeTerritory" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="Zipcode" type="string" find="eq">
+					<key value="29001" default="1"/>
+					<key value="29002"/>
+					<key value="29003"/>
+					<key value="29006"/>
+					<key value="29009"/>
+					<key value="29010"/>
+					<key value="29014"/>
+					<key value="29015"/>
+					<key value="29016"/>
+					<key value="29018"/>
+					<key value="29020"/>
+					<key value="29030"/>
+					<key value="29031"/>
+					<key value="29032"/>
+					<key value="29033"/>
+					<key value="29036"/>
+					<key value="29037"/>
+					<key value="29038"/>
+					<key value="29039"/>
+					<key value="29040"/>
+					<key value="29041"/>
+					<key value="29042"/>
+					<key value="29044"/>
+					<key value="29045"/>
+					<key value="29046"/>
+					<key value="29047"/>
+					<key value="29048"/>
+					<key value="29051"/>
+					<key value="29052"/>
+					<key value="29053"/>
+					<key value="29054"/>
+					<key value="29055"/>
+					<key value="29056"/>
+					<key value="29058"/>
+					<key value="29059"/>
+					<key value="29061"/>
+					<key value="29062"/>
+					<key value="29063"/>
+					<key value="29065"/>
+					<key value="29067"/>
+					<key value="29069"/>
+					<key value="29070"/>
+					<key value="29071"/>
+					<key value="29072"/>
+					<key value="29073"/>
+					<key value="29074"/>
+					<key value="29075"/>
+					<key value="29078"/>
+					<key value="29079"/>
+					<key value="29080"/>
+					<key value="29081"/>
+					<key value="29082"/>
+					<key value="29101"/>
+					<key value="29102"/>
+					<key value="29104"/>
+					<key value="29105"/>
+					<key value="29106"/>
+					<key value="29107"/>
+					<key value="29108"/>
+					<key value="29111"/>
+					<key value="29112"/>
+					<key value="29113"/>
+					<key value="29114"/>
+					<key value="29115"/>
+					<key value="29116"/>
+					<key value="29117"/>
+					<key value="29118"/>
+					<key value="29122"/>
+					<key value="29123"/>
+					<key value="29124"/>
+					<key value="29125"/>
+					<key value="29126"/>
+					<key value="29127"/>
+					<key value="29128"/>
+					<key value="29129"/>
+					<key value="29130"/>
+					<key value="29132"/>
+					<key value="29133"/>
+					<key value="29135"/>
+					<key value="29137"/>
+					<key value="29138"/>
+					<key value="29142"/>
+					<key value="29143"/>
+					<key value="29145"/>
+					<key value="29146"/>
+					<key value="29147"/>
+					<key value="29148"/>
+					<key value="29150"/>
+					<key value="29151"/>
+					<key value="29152"/>
+					<key value="29153"/>
+					<key value="29154"/>
+					<key value="29160"/>
+					<key value="29161"/>
+					<key value="29162"/>
+					<key value="29163"/>
+					<key value="29164"/>
+					<key value="29166"/>
+					<key value="29168"/>
+					<key value="29169"/>
+					<key value="29170"/>
+					<key value="29171"/>
+					<key value="29172"/>
+					<key value="29175"/>
+					<key value="29176"/>
+					<key value="29177"/>
+					<key value="29178"/>
+					<key value="29180"/>
+					<key value="29201"/>
+					<key value="29202"/>
+					<key value="29203"/>
+					<key value="29204"/>
+					<key value="29205"/>
+					<key value="29206"/>
+					<key value="29207"/>
+					<key value="29208"/>
+					<key value="29209"/>
+					<key value="29210"/>
+					<key value="29211"/>
+					<key value="29212"/>
+					<key value="29214"/>
+					<key value="29215"/>
+					<key value="29216"/>
+					<key value="29217"/>
+					<key value="29218"/>
+					<key value="29219"/>
+					<key value="29220"/>
+					<key value="29221"/>
+					<key value="29222"/>
+					<key value="29223"/>
+					<key value="29224"/>
+					<key value="29225"/>
+					<key value="29226"/>
+					<key value="29227"/>
+					<key value="29228"/>
+					<key value="29229"/>
+					<key value="29230"/>
+					<key value="29240"/>
+					<key value="29250"/>
+					<key value="29260"/>
+					<key value="29290"/>
+					<key value="29292"/>
+					<key value="29301"/>
+					<key value="29302"/>
+					<key value="29303"/>
+					<key value="29304"/>
+					<key value="29305"/>
+					<key value="29306"/>
+					<key value="29307"/>
+					<key value="29316"/>
+					<key value="29318"/>
+					<key value="29319"/>
+					<key value="29320"/>
+					<key value="29321"/>
+					<key value="29322"/>
+					<key value="29323"/>
+					<key value="29324"/>
+					<key value="29325"/>
+					<key value="29329"/>
+					<key value="29330"/>
+					<key value="29331"/>
+					<key value="29332"/>
+					<key value="29333"/>
+					<key value="29334"/>
+					<key value="29335"/>
+					<key value="29336"/>
+					<key value="29338"/>
+					<key value="29340"/>
+					<key value="29341"/>
+					<key value="29342"/>
+					<key value="29346"/>
+					<key value="29348"/>
+					<key value="29349"/>
+					<key value="29351"/>
+					<key value="29353"/>
+					<key value="29355"/>
+					<key value="29356"/>
+					<key value="29360"/>
+					<key value="29364"/>
+					<key value="29365"/>
+					<key value="29368"/>
+					<key value="29369"/>
+					<key value="29370"/>
+					<key value="29372"/>
+					<key value="29373"/>
+					<key value="29374"/>
+					<key value="29375"/>
+					<key value="29376"/>
+					<key value="29377"/>
+					<key value="29378"/>
+					<key value="29379"/>
+					<key value="29384"/>
+					<key value="29385"/>
+					<key value="29386"/>
+					<key value="29388"/>
+					<key value="29390"/>
+					<key value="29391"/>
+					<key value="29395"/>
+					<key value="29401"/>
+					<key value="29402"/>
+					<key value="29403"/>
+					<key value="29404"/>
+					<key value="29405"/>
+					<key value="29406"/>
+					<key value="29407"/>
+					<key value="29409"/>
+					<key value="29410"/>
+					<key value="29412"/>
+					<key value="29413"/>
+					<key value="29414"/>
+					<key value="29415"/>
+					<key value="29416"/>
+					<key value="29417"/>
+					<key value="29418"/>
+					<key value="29419"/>
+					<key value="29420"/>
+					<key value="29422"/>
+					<key value="29423"/>
+					<key value="29424"/>
+					<key value="29425"/>
+					<key value="29426"/>
+					<key value="29429"/>
+					<key value="29430"/>
+					<key value="29431"/>
+					<key value="29432"/>
+					<key value="29433"/>
+					<key value="29434"/>
+					<key value="29435"/>
+					<key value="29436"/>
+					<key value="29437"/>
+					<key value="29438"/>
+					<key value="29439"/>
+					<key value="29440"/>
+					<key value="29442"/>
+					<key value="29445"/>
+					<key value="29446"/>
+					<key value="29447"/>
+					<key value="29448"/>
+					<key value="29449"/>
+					<key value="29450"/>
+					<key value="29451"/>
+					<key value="29452"/>
+					<key value="29453"/>
+					<key value="29455"/>
+					<key value="29456"/>
+					<key value="29457"/>
+					<key value="29458"/>
+					<key value="29461"/>
+					<key value="29464"/>
+					<key value="29465"/>
+					<key value="29466"/>
+					<key value="29468"/>
+					<key value="29469"/>
+					<key value="29470"/>
+					<key value="29471"/>
+					<key value="29472"/>
+					<key value="29474"/>
+					<key value="29475"/>
+					<key value="29476"/>
+					<key value="29477"/>
+					<key value="29479"/>
+					<key value="29481"/>
+					<key value="29482"/>
+					<key value="29483"/>
+					<key value="29484"/>
+					<key value="29485"/>
+					<key value="29487"/>
+					<key value="29488"/>
+					<key value="29492"/>
+					<key value="29493"/>
+					<key value="29501"/>
+					<key value="29502"/>
+					<key value="29503"/>
+					<key value="29504"/>
+					<key value="29505"/>
+					<key value="29506"/>
+					<key value="29510"/>
+					<key value="29511"/>
+					<key value="29512"/>
+					<key value="29516"/>
+					<key value="29518"/>
+					<key value="29519"/>
+					<key value="29520"/>
+					<key value="29525"/>
+					<key value="29526"/>
+					<key value="29527"/>
+					<key value="29528"/>
+					<key value="29530"/>
+					<key value="29532"/>
+					<key value="29536"/>
+					<key value="29540"/>
+					<key value="29541"/>
+					<key value="29543"/>
+					<key value="29544"/>
+					<key value="29545"/>
+					<key value="29546"/>
+					<key value="29547"/>
+					<key value="29550"/>
+					<key value="29551"/>
+					<key value="29554"/>
+					<key value="29555"/>
+					<key value="29556"/>
+					<key value="29560"/>
+					<key value="29563"/>
+					<key value="29564"/>
+					<key value="29565"/>
+					<key value="29566"/>
+					<key value="29567"/>
+					<key value="29568"/>
+					<key value="29569"/>
+					<key value="29570"/>
+					<key value="29571"/>
+					<key value="29572"/>
+					<key value="29573"/>
+					<key value="29574"/>
+					<key value="29575"/>
+					<key value="29576"/>
+					<key value="29577"/>
+					<key value="29578"/>
+					<key value="29579"/>
+					<key value="29580"/>
+					<key value="29581"/>
+					<key value="29582"/>
+					<key value="29583"/>
+					<key value="29584"/>
+					<key value="29585"/>
+					<key value="29587"/>
+					<key value="29589"/>
+					<key value="29590"/>
+					<key value="29591"/>
+					<key value="29592"/>
+					<key value="29593"/>
+					<key value="29594"/>
+					<key value="29596"/>
+					<key value="29597"/>
+					<key value="29598"/>
+					<key value="29601"/>
+					<key value="29602"/>
+					<key value="29603"/>
+					<key value="29604"/>
+					<key value="29605"/>
+					<key value="29606"/>
+					<key value="29607"/>
+					<key value="29608"/>
+					<key value="29609"/>
+					<key value="29610"/>
+					<key value="29611"/>
+					<key value="29612"/>
+					<key value="29613"/>
+					<key value="29614"/>
+					<key value="29615"/>
+					<key value="29616"/>
+					<key value="29617"/>
+					<key value="29620"/>
+					<key value="29621"/>
+					<key value="29622"/>
+					<key value="29623"/>
+					<key value="29624"/>
+					<key value="29625"/>
+					<key value="29626"/>
+					<key value="29627"/>
+					<key value="29628"/>
+					<key value="29630"/>
+					<key value="29631"/>
+					<key value="29632"/>
+					<key value="29633"/>
+					<key value="29634"/>
+					<key value="29635"/>
+					<key value="29636"/>
+					<key value="29638"/>
+					<key value="29639"/>
+					<key value="29640"/>
+					<key value="29641"/>
+					<key value="29642"/>
+					<key value="29643"/>
+					<key value="29644"/>
+					<key value="29645"/>
+					<key value="29646"/>
+					<key value="29647"/>
+					<key value="29648"/>
+					<key value="29649"/>
+					<key value="29650"/>
+					<key value="29651"/>
+					<key value="29652"/>
+					<key value="29653"/>
+					<key value="29654"/>
+					<key value="29655"/>
+					<key value="29656"/>
+					<key value="29657"/>
+					<key value="29658"/>
+					<key value="29659"/>
+					<key value="29661"/>
+					<key value="29662"/>
+					<key value="29664"/>
+					<key value="29665"/>
+					<key value="29666"/>
+					<key value="29667"/>
+					<key value="29669"/>
+					<key value="29670"/>
+					<key value="29671"/>
+					<key value="29672"/>
+					<key value="29673"/>
+					<key value="29675"/>
+					<key value="29676"/>
+					<key value="29677"/>
+					<key value="29678"/>
+					<key value="29679"/>
+					<key value="29680"/>
+					<key value="29681"/>
+					<key value="29682"/>
+					<key value="29683"/>
+					<key value="29684"/>
+					<key value="29685"/>
+					<key value="29686"/>
+					<key value="29687"/>
+					<key value="29688"/>
+					<key value="29689"/>
+					<key value="29690"/>
+					<key value="29691"/>
+					<key value="29692"/>
+					<key value="29693"/>
+					<key value="29695"/>
+					<key value="29696"/>
+					<key value="29697"/>
+					<key value="29698"/>
+					<key value="29702"/>
+					<key value="29703"/>
+					<key value="29704"/>
+					<key value="29706"/>
+					<key value="29707"/>
+					<key value="29708"/>
+					<key value="29709"/>
+					<key value="29710"/>
+					<key value="29712"/>
+					<key value="29714"/>
+					<key value="29715"/>
+					<key value="29716"/>
+					<key value="29717"/>
+					<key value="29718"/>
+					<key value="29720"/>
+					<key value="29721"/>
+					<key value="29722"/>
+					<key value="29724"/>
+					<key value="29726"/>
+					<key value="29727"/>
+					<key value="29728"/>
+					<key value="29729"/>
+					<key value="29730"/>
+					<key value="29731"/>
+					<key value="29732"/>
+					<key value="29733"/>
+					<key value="29734"/>
+					<key value="29741"/>
+					<key value="29742"/>
+					<key value="29743"/>
+					<key value="29744"/>
+					<key value="29745"/>
+					<key value="29801"/>
+					<key value="29802"/>
+					<key value="29803"/>
+					<key value="29804"/>
+					<key value="29805"/>
+					<key value="29808"/>
+					<key value="29809"/>
+					<key value="29810"/>
+					<key value="29812"/>
+					<key value="29813"/>
+					<key value="29816"/>
+					<key value="29817"/>
+					<key value="29819"/>
+					<key value="29821"/>
+					<key value="29822"/>
+					<key value="29824"/>
+					<key value="29826"/>
+					<key value="29827"/>
+					<key value="29828"/>
+					<key value="29829"/>
+					<key value="29831"/>
+					<key value="29832"/>
+					<key value="29834"/>
+					<key value="29835"/>
+					<key value="29836"/>
+					<key value="29838"/>
+					<key value="29839"/>
+					<key value="29840"/>
+					<key value="29841"/>
+					<key value="29842"/>
+					<key value="29843"/>
+					<key value="29844"/>
+					<key value="29845"/>
+					<key value="29846"/>
+					<key value="29847"/>
+					<key value="29848"/>
+					<key value="29849"/>
+					<key value="29850"/>
+					<key value="29851"/>
+					<key value="29853"/>
+					<key value="29856"/>
+					<key value="29860"/>
+					<key value="29861"/>
+					<key value="29901"/>
+					<key value="29902"/>
+					<key value="29903"/>
+					<key value="29904"/>
+					<key value="29905"/>
+					<key value="29906"/>
+					<key value="29910"/>
+					<key value="29911"/>
+					<key value="29912"/>
+					<key value="29913"/>
+					<key value="29914"/>
+					<key value="29915"/>
+					<key value="29916"/>
+					<key value="29918"/>
+					<key value="29920"/>
+					<key value="29921"/>
+					<key value="29922"/>
+					<key value="29923"/>
+					<key value="29924"/>
+					<key value="29925"/>
+					<key value="29926"/>
+					<key value="29927"/>
+					<key value="29928"/>
+					<key value="29929"/>
+					<key value="29931"/>
+					<key value="29932"/>
+					<key value="29933"/>
+					<key value="29934"/>
+					<key value="29935"/>
+					<key value="29936"/>
+					<key value="29938"/>
+					<key value="29939"/>
+					<key value="29940"/>
+					<key value="29941"/>
+					<key value="29943"/>
+					<key value="29944"/>
+					<key value="29945"/>
+				</rowKeys>
+				<data>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="14"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="14"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="14"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="14"/>
+					<row value="13"/>
+					<row value="14"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="14"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="14"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="14"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="14"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="14"/>
+					<row value="13"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="12"/>
+					<row value="11"/>
+					<row value="12"/>
+					<row value="12"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="11"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="12"/>
+					<row value="12"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="12"/>
+					<row value="12"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="12"/>
+					<row value="11"/>
+					<row value="12"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="12"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="11"/>
+					<row value="12"/>
+					<row value="12"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="12"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="11"/>
+					<row value="12"/>
+					<row value="12"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="13"/>
+					<row value="11"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="13"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="14"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="14"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="14"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="14"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="14"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="12"/>
+					<row value="12"/>
+					<row value="12"/>
+					<row value="12"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="12"/>
+				</data>
+			</table>
+			<table id="CPPModifiers" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="RiskType" type="string" find="eq">
+					<key value="A"/>
+					<key value="C"/>
+					<key value="IP"/>
+					<key value="I"/>
+					<key value="M"/>
+					<key value="MH"/>
+					<key value="O"/>
+					<key value="S"/>
+					<key value="Default" default="1"/>
+				</rowKeys>
+				<data>
+					<row value=".75"/>
+					<row value="1.00"/>
+					<row value=".68"/>
+					<row value="1.00"/>
+					<row value=".87"/>
+					<row value="1.00"/>
+					<row value=".61"/>
+					<row value=".78"/>
+					<row value="1.00"/>
+				</data>
+			</table>
+			<table id="TerrorismAdjustmentFactors" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="Tier" type="int" find="eq">
+					<key value="3" default="1"/>
+				</rowKeys>
+				<data>
+					<row value=".50"/>
+				</data>
+			</table>
+			<table id="TerrorismPercentOfFullValue" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="Percent" type="int" find="interpolate">
+					<key value="5"/>
+					<key value="10"/>
+					<key value="25"/>
+					<key value="50"/>
+				</rowKeys>
+				<colKeys name="Terrorism Limitation Of Coverage" type="string" find="eq">
+					<key value="Certified"/>
+					<key value="CertifiedOther"/>
+				</colKeys>
+				<data>
+					<row value="8.24,8.48"/>
+					<row value="5.15,5.30"/>
+					<row value="2.73,2.81"/>
+					<row value="1.55,1.59"/>
+				</data>
+			</table>
+			<table id="TerrorismRejectionAdjustmentFactors" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="Tier" type="int" find="eq">
+					<key value="3" default="1"/>
+				</rowKeys>
+				<data>
+					<row value="1.00"/>
+				</data>
+			</table>
+			<private id="data.CPPModifiersIndicator" type="boolean" comment="">
+				<value value="1"/>
+			</private>
+			<table id="Rule74A_BG2Territories" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="Number" type="int" find="eq">
+					<key value="1"/>
+					<key value="2"/>
+					<key value="3"/>
+				</rowKeys>
+				<data>
+					<row value="Inland"/>
+					<row value="Seacoast"/>
+					<row value="Beach"/>
+				</data>
+			</table>
+			<table id="StatCodeTerritory" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="Territory" type="string" find="eq">
+					<key value="Charleston"/>
+					<key value="Columbia"/>
+					<key value="Greenville"/>
+					<key value="RemainderOfState" default="1"/>
+				</rowKeys>
+				<rowKeys name="TerritorialZone" type="string" find="eq">
+					<key value="Inland" default="1"/>
+					<key value="Seacoast"/>
+					<key value="Beach"/>
+				</rowKeys>
+				<colKeys name="County" type="string" find="eq">
+					<key value="Abbeville"/>
+					<key value="Aiken"/>
+					<key value="Allendale"/>
+					<key value="Anderson"/>
+					<key value="Bamberg"/>
+					<key value="Barnwell"/>
+					<key value="Beaufort"/>
+					<key value="Berkeley"/>
+					<key value="Calhoun"/>
+					<key value="Charleston"/>
+					<key value="Cherokee"/>
+					<key value="Chester"/>
+					<key value="Chesterfield"/>
+					<key value="Clarendon"/>
+					<key value="Colleton"/>
+					<key value="Darlington"/>
+					<key value="Dillon"/>
+					<key value="Dorchester"/>
+					<key value="Edgefield"/>
+					<key value="Fairfield"/>
+					<key value="Florence"/>
+					<key value="Georgetown"/>
+					<key value="Greenville"/>
+					<key value="Greenwood"/>
+					<key value="Hampton"/>
+					<key value="Horry"/>
+					<key value="Jasper"/>
+					<key value="Kershaw"/>
+					<key value="Lancaster"/>
+					<key value="Laurens"/>
+					<key value="Lee"/>
+					<key value="Lexington"/>
+					<key value="McCormick"/>
+					<key value="Marion"/>
+					<key value="Marlboro"/>
+					<key value="Newberry"/>
+					<key value="Oconee"/>
+					<key value="Orangeburg"/>
+					<key value="Pickens"/>
+					<key value="Richland"/>
+					<key value="Saluda"/>
+					<key value="Spartanburg"/>
+					<key value="Sumter"/>
+					<key value="Union"/>
+					<key value="Williamsburg"/>
+					<key value="York"/>
+					<key value="RemainderOfState" default="1"/>
+				</colKeys>
+				<data>
+					<row value="010,020,030,040,050,060,070,080,090,,110,120,130,140,150,160,170,180,190,200,210,220,230,240,250,260,270,280,290,300,310,320,330,340,350,360,370,380,390,400,410,420,430,440,450,460,999"/>
+					<row value=",,,,,,075,,,101,,,,,,,,,,,,225,,,,265,,,,,,,,,,,,,,,,,,,,,999"/>
+					<row value=",,,,,,079,,,105,,,,,155,,,,,,,229,,,,269,,,,,,,,,,,,,,,,,,,,,999"/>
+					<row value="010,020,030,040,050,060,070,080,090,,110,120,130,140,150,160,170,180,190,200,210,220,230,240,250,260,270,280,290,300,310,321,330,340,350,360,370,380,390,401,410,420,430,440,450,460,999"/>
+					<row value=",,,,,,075,,,100,,,,,,,,,,,,225,,,,265,,,,,,,,,,,,,,,,,,,,,999"/>
+					<row value=",,,,,,079,,,105,,,,,155,,,,,,,229,,,,269,,,,,,,,,,,,,,,,,,,,,999"/>
+					<row value="010,020,030,040,050,060,070,080,090,,110,120,130,140,150,160,170,180,190,200,210,220,231,240,250,260,270,280,290,300,310,320,330,340,350,360,370,380,390,400,410,420,430,440,450,460,999"/>
+					<row value=",,,,,,075,,,100,,,,,,,,,,,,225,,,,265,,,,,,,,,,,,,,,,,,,,,999"/>
+					<row value=",,,,,,079,,,105,,,,,155,,,,,,,229,,,,269,,,,,,,,,,,,,,,,,,,,,999"/>
+					<row value="010,020,030,040,050,060,070,080,090,,110,120,130,140,150,160,170,180,190,200,210,220,230,240,250,260,270,280,290,300,310,320,330,340,350,360,370,380,390,400,410,420,430,440,450,460,999"/>
+					<row value=",,,,,,075,,,100,,,,,,,,,,,,225,,,,265,,,,,,,,,,,,,,,,,,,,,999"/>
+					<row value=",,,,,,079,,,105,,,,,155,,,,,,,229,,,,269,,,,,,,,,,,,,,,,,,,,,999"/>
+				</data>
+			</table>
+			<table id="TerrorismPercentOfFullValueCertified" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="Percent" type="int" find="interpolate">
+					<key value="5"/>
+					<key value="10"/>
+					<key value="25"/>
+					<key value="50"/>
+				</rowKeys>
+				<colKeys name="Terrorism Limitation Of Coverage" type="string" find="eq">
+					<key value="Column 1"/>
+				</colKeys>
+				<data>
+					<row value="8.40"/>
+					<row value="5.25"/>
+					<row value="2.78"/>
+					<row value="1.58"/>
+				</data>
+			</table>
+			<table id="TerrorismPercentOfFullValueCertifiedAndOther" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="Percent" type="int" find="interpolate">
+					<key value="5"/>
+					<key value="10"/>
+					<key value="25"/>
+					<key value="50"/>
+				</rowKeys>
+				<colKeys name="Terrorism Limitation Of Coverage" type="string" find="eq">
+					<key value="Column 1"/>
+					<key value="Column 2"/>
+				</colKeys>
+				<data>
+					<row value="8.24,8.48"/>
+					<row value="5.15,5.30"/>
+					<row value="2.73,2.81"/>
+					<row value="1.55,1.59"/>
+				</data>
+			</table>
+			<table id="Rule70E3d3_WindstormLossMitigationType2RoofCoveringFactors" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="RoofCovering" type="string" find="eq">
+					<key value="NonSCBC"/>
+					<key value="SCBC"/>
+				</rowKeys>
+				<colKeys name="Area" type="int" find="eq">
+					<key value="CoastalAndSeacoast"/>
+					<key value="RemainderOfState" default="1"/>
+				</colKeys>
+				<data>
+					<row value="0,0"/>
+					<row value=".07,.06"/>
+					<row value=""/>
+					<row value=""/>
+				</data>
+			</table>
+			<table id="Rule70E3d3_WindstormLossMitigationType2RoofDeckFactors" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="RoofDeck" type="string" find="eq">
+					<key value="Wood"/>
+					<key value="Metal"/>
+					<key value="ReinforcedConcrete"/>
+				</rowKeys>
+				<colKeys name="Area" type="int" find="eq">
+					<key value="CoastalAndSeacoast"/>
+					<key value="RemainderOfState" default="1"/>
+				</colKeys>
+				<data>
+					<row value="0,0"/>
+					<row value=".07,.06"/>
+					<row value=".07,.06"/>
+					<row value=""/>
+				</data>
+			</table>
+			<table id="Rule70E3d3_WindstormLossMitigationType2OpeningProtectionFactors" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="OpeningProtection" type="string" find="eq">
+					<key value="NoShutters"/>
+					<key value="NonEngineeredShutters"/>
+					<key value="EngineeredShutters"/>
+				</rowKeys>
+				<colKeys name="Area" type="int" find="eq">
+					<key value="CoastalAndSeacoast"/>
+					<key value="RemainderOfState" default="1"/>
+				</colKeys>
+				<data>
+					<row value="0,0"/>
+					<row value=".03,.03"/>
+					<row value=".13,.12"/>
+					<row value=""/>
+				</data>
+			</table>
+			<table id="Rule70E3d3_WindstormLossMitigationType2SecondaryWaterResistanceFactors" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="SWR" type="string" find="eq">
+					<key value="0"/>
+					<key value="1"/>
+				</rowKeys>
+				<colKeys name="Area" type="int" find="eq">
+					<key value="CoastalAndSeacoast"/>
+					<key value="RemainderOfState" default="1"/>
+				</colKeys>
+				<data>
+					<row value="0,0"/>
+					<row value=".03,.03"/>
+					<row value=""/>
+					<row value=""/>
+				</data>
+			</table>
+			<table id="Rule70E3d2_WindstormLossMitigationType1SecondaryWaterResistanceFactors" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="SWR" type="string" find="eq">
+					<key value="0"/>
+					<key value="1"/>
+				</rowKeys>
+				<colKeys name="Area" type="int" find="eq">
+					<key value="CoastalAndSeacoast"/>
+					<key value="RemainderOfState" default="1"/>
+				</colKeys>
+				<data>
+					<row value="0,0"/>
+					<row value=".02,.02"/>
+					<row value=""/>
+					<row value=""/>
+				</data>
+			</table>
+			<table id="Rule70E3d2_WindstormLossMitigationType1RoofShapeFactors" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="RoofShape" type="string" find="eq">
+					<key value="Flat"/>
+					<key value="Gable"/>
+					<key value="Hip"/>
+				</rowKeys>
+				<colKeys name="Area" type="int" find="eq">
+					<key value="CoastalAndSeacoast"/>
+					<key value="RemainderOfState" default="1"/>
+				</colKeys>
+				<data>
+					<row value="0,0"/>
+					<row value=".09,.08"/>
+					<row value=".13,.12"/>
+					<row value=""/>
+				</data>
+			</table>
+			<table id="Rule70E3d2_WindstormLossMitigationType1RoofDeckFactors" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="RoofShape" type="string" find="eq">
+					<key value="Flat"/>
+					<key value="Gable"/>
+					<key value="Hip"/>
+				</rowKeys>
+				<rowKeys name="Level" type="int" find="eq">
+					<key value="A"/>
+					<key value="B"/>
+					<key value="C"/>
+					<key value="D"/>
+					<key value="ReinforcedConcrete"/>
+				</rowKeys>
+				<colKeys name="Area" type="int" find="eq">
+					<key value="CoastalAndSeacoast"/>
+					<key value="RemainderOfState" default="1"/>
+				</colKeys>
+				<data>
+					<row value="0,0"/>
+					<row value=".05,.04"/>
+					<row value=".05,.04"/>
+					<row value=".05,.04"/>
+					<row value=".05,.04"/>
+					<row value="0,0"/>
+					<row value=".04,.03"/>
+					<row value=".04,.03"/>
+					<row value=".04,.03"/>
+					<row value=".04,.03"/>
+					<row value="0,0"/>
+					<row value=".03,.03"/>
+					<row value=".03,.03"/>
+					<row value=".03,.03"/>
+					<row value=".03,.03"/>
+				</data>
+			</table>
+			<table id="Rule70E3d2_WindstormLossMitigationType1RoofCoveringFactors" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="RoofShape" type="string" find="eq">
+					<key value="Flat"/>
+					<key value="Gable"/>
+					<key value="Hip"/>
+				</rowKeys>
+				<rowKeys name="RoofCoveringAttachment" type="int" find="eq">
+					<key value="NonSCBC"/>
+					<key value="SCBC"/>
+				</rowKeys>
+				<colKeys name="Area" type="int" find="eq">
+					<key value="CoastalAndSeacoast"/>
+					<key value="RemainderOfState" default="1"/>
+				</colKeys>
+				<data>
+					<row value="0,0"/>
+					<row value=".06,.05"/>
+					<row value="0,0"/>
+					<row value=".04,.03"/>
+					<row value="0,0"/>
+					<row value=".04,.03"/>
+				</data>
+			</table>
+			<table id="Rule70E3d2_WindstormLossMitigationType1OpeningProtectionFactors" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="OpeningProtection" type="string" find="eq">
+					<key value="NoShutters"/>
+					<key value="NonEngineeredShutters"/>
+					<key value="EngineeredShutters"/>
+				</rowKeys>
+				<colKeys name="Area" type="int" find="eq">
+					<key value="CoastalAndSeacoast"/>
+					<key value="RemainderOfState" default="1"/>
+				</colKeys>
+				<data>
+					<row value="0,0"/>
+					<row value=".04,.03"/>
+					<row value=".12,.11"/>
+					<row value=""/>
+				</data>
+			</table>
+			<table id="Rule70E3d2_WindstormLossMitigationType1RoofToWallConnentionFactors" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="RoofToWallConnention" type="string" find="eq">
+					<key value="ToeNails"/>
+					<key value="Clips"/>
+					<key value="SingleWraps"/>
+					<key value="DoubleWraps"/>
+				</rowKeys>
+				<colKeys name="Area" type="int" find="eq">
+					<key value="CoastalAndSeacoast"/>
+					<key value="RemainderOfState" default="1"/>
+				</colKeys>
+				<data>
+					<row value="0,0"/>
+					<row value=".04,.03"/>
+					<row value=".05,.04"/>
+					<row value=".05,.04"/>
+				</data>
+			</table>
+			<table id="Rule70E3d2_WindstormLossMitigationType1DoorStrengthFactors" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="DoorStrength" type="string" find="eq">
+					<key value="ReinforcedSingleWidth"/>
+					<key value="Other"/>
+				</rowKeys>
+				<colKeys name="Area" type="int" find="eq">
+					<key value="CoastalAndSeacoast"/>
+					<key value="RemainderOfState" default="1"/>
+				</colKeys>
+				<data>
+					<row value=".03,.03"/>
+					<row value="0,0"/>
+				</data>
+			</table>
+			<table id="Rule50D2BaseRateAdjustmentFactorsTimeElement" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="CauseOfLoss" type="int" find="eq">
+					<key value="BG1" default="1"/>
+					<key value="BG2"/>
+				</rowKeys>
+				<data>
+					<row value=".85"/>
+					<row value=".80"/>
+				</data>
+			</table>
+			<table id="Rule72E2c3_TheftExclusionFactorPersonalProperty" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="OccupancyCategory" type="string" find="eq">
+					<key value="ResidentialApartmentsAndCondominiums"/>
+					<key value="MotelsAndHotels"/>
+					<key value="Contractors"/>
+					<key value="AllOtherRisks" default="1"/>
+				</rowKeys>
+				<data>
+					<row value=".60"/>
+					<row value=".60"/>
+					<row value=".20"/>
+					<row value=".40"/>
+				</data>
+			</table>
+			<table id="Rule72E2c_SpecialPersonalPropertyLossCost" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="OccupancyCategory" type="string" find="eq">
+					<key value="ResidentialApartmentsAndCondominiums"/>
+					<key value="Offices"/>
+					<key value="MercantileHigh"/>
+					<key value="MercantileMedium"/>
+					<key value="MercantileLow"/>
+					<key value="MotelsAndHotels"/>
+					<key value="InstitutionalHigh"/>
+					<key value="InstitutionalLow"/>
+					<key value="IndustrialAndProcessingHigh"/>
+					<key value="IndustrialAndProcessingLow"/>
+					<key value="ServiceHigh"/>
+					<key value="ServiceLow"/>
+					<key value="Contractors" default="1"/>
+				</rowKeys>
+				<data>
+					<row value=".182"/>
+					<row value=".128"/>
+					<row value=".171"/>
+					<row value=".143"/>
+					<row value=".114"/>
+					<row value=".083"/>
+					<row value=".074"/>
+					<row value=".038"/>
+					<row value=".148"/>
+					<row value=".115"/>
+					<row value=".137"/>
+					<row value=".099"/>
+					<row value=".197"/>
+				</data>
+			</table>
+			<table id="Rule72E2c_SpecialTerritorialMultiplier" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="Territory" type="string" find="eq">
+					<key value="RemainderOfState" default="1"/>
+				</rowKeys>
+				<data>
+					<row value="1.00"/>
+				</data>
+			</table>
+			<table id="Rule70E2d1_LimitOfInsuranceRelativityFactorBuildingBG2" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="LimitOfInsurance" type="int" find="interpolate">
+					<key value="0"/>
+					<key value="50000"/>
+					<key value="75000"/>
+					<key value="100000"/>
+					<key value="125000"/>
+					<key value="150000"/>
+					<key value="175000"/>
+					<key value="200000"/>
+					<key value="225000"/>
+					<key value="250000"/>
+					<key value="275000"/>
+					<key value="300000"/>
+					<key value="325000"/>
+					<key value="350000"/>
+					<key value="375000"/>
+					<key value="400000"/>
+					<key value="425000"/>
+					<key value="450000"/>
+					<key value="475000"/>
+					<key value="500000"/>
+					<key value="550000"/>
+					<key value="600000"/>
+					<key value="650000"/>
+					<key value="700000"/>
+					<key value="750000"/>
+					<key value="800000"/>
+					<key value="850000"/>
+					<key value="900000"/>
+					<key value="950000"/>
+					<key value="1000000"/>
+					<key value="1250000"/>
+					<key value="1500000"/>
+					<key value="1750000"/>
+					<key value="2000000"/>
+					<key value="2250000"/>
+					<key value="2500000"/>
+					<key value="2750000"/>
+					<key value="3000000"/>
+					<key value="3250000"/>
+					<key value="3500000"/>
+					<key value="3750000"/>
+					<key value="4000000"/>
+					<key value="4250000"/>
+					<key value="4500000"/>
+					<key value="4750000"/>
+					<key value="5000000"/>
+					<key value="5500000"/>
+					<key value="6000000"/>
+					<key value="6500000"/>
+					<key value="7000000"/>
+					<key value="7500000"/>
+					<key value="8000000"/>
+					<key value="8500000"/>
+					<key value="9000000"/>
+					<key value="9500000"/>
+					<key value="10000000"/>
+					<key value="1000" default="1"/>
+				</rowKeys>
+				<data>
+					<row value="1.330"/>
+					<row value="1.330"/>
+					<row value="1.238"/>
+					<row value="1.176"/>
+					<row value="1.131"/>
+					<row value="1.095"/>
+					<row value="1.065"/>
+					<row value="1.040"/>
+					<row value="1.019"/>
+					<row value="1.000"/>
+					<row value="0.983"/>
+					<row value="0.968"/>
+					<row value="0.955"/>
+					<row value="0.942"/>
+					<row value="0.931"/>
+					<row value="0.920"/>
+					<row value="0.910"/>
+					<row value="0.901"/>
+					<row value="0.892"/>
+					<row value="0.884"/>
+					<row value="0.870"/>
+					<row value="0.856"/>
+					<row value="0.844"/>
+					<row value="0.833"/>
+					<row value="0.823"/>
+					<row value="0.814"/>
+					<row value="0.805"/>
+					<row value="0.797"/>
+					<row value="0.789"/>
+					<row value="0.782"/>
+					<row value="0.752"/>
+					<row value="0.728"/>
+					<row value="0.708"/>
+					<row value="0.692"/>
+					<row value="0.677"/>
+					<row value="0.665"/>
+					<row value="0.654"/>
+					<row value="0.644"/>
+					<row value="0.635"/>
+					<row value="0.626"/>
+					<row value="0.619"/>
+					<row value="0.612"/>
+					<row value="0.605"/>
+					<row value="0.599"/>
+					<row value="0.593"/>
+					<row value="0.588"/>
+					<row value="0.578"/>
+					<row value="0.569"/>
+					<row value="0.561"/>
+					<row value="0.554"/>
+					<row value="0.547"/>
+					<row value="0.541"/>
+					<row value="0.535"/>
+					<row value="0.530"/>
+					<row value="0.525"/>
+					<row value="0.520"/>
+					<row value="0.000"/>
+				</data>
+			</table>
+			<table id="Rule70E2d2_LimitOfInsuranceRelativityFactorPersonalPropertyBG2" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="LimitOfInsurance" type="int" find="interpolate">
+					<key value="0"/>
+					<key value="10000"/>
+					<key value="20000"/>
+					<key value="30000"/>
+					<key value="40000"/>
+					<key value="50000"/>
+					<key value="60000"/>
+					<key value="70000"/>
+					<key value="80000"/>
+					<key value="90000"/>
+					<key value="100000"/>
+					<key value="125000"/>
+					<key value="150000"/>
+					<key value="175000"/>
+					<key value="200000"/>
+					<key value="225000"/>
+					<key value="250000"/>
+					<key value="275000"/>
+					<key value="300000"/>
+					<key value="325000"/>
+					<key value="350000"/>
+					<key value="375000"/>
+					<key value="400000"/>
+					<key value="425000"/>
+					<key value="450000"/>
+					<key value="475000"/>
+					<key value="500000"/>
+					<key value="550000"/>
+					<key value="600000"/>
+					<key value="650000"/>
+					<key value="700000"/>
+					<key value="750000"/>
+					<key value="800000"/>
+					<key value="850000"/>
+					<key value="900000"/>
+					<key value="950000"/>
+					<key value="1000000"/>
+					<key value="1100000"/>
+					<key value="1200000"/>
+					<key value="1300000"/>
+					<key value="1400000"/>
+					<key value="1500000"/>
+					<key value="1600000"/>
+					<key value="1700000"/>
+					<key value="1800000"/>
+					<key value="1900000"/>
+					<key value="2000000"/>
+					<key value="2500000"/>
+					<key value="3000000"/>
+					<key value="3500000"/>
+					<key value="4000000"/>
+					<key value="4500000"/>
+					<key value="5000000"/>
+					<key value="1000" default="1"/>
+				</rowKeys>
+				<data>
+					<row value="1.274"/>
+					<row value="1.274"/>
+					<row value="1.148"/>
+					<row value="1.080"/>
+					<row value="1.034"/>
+					<row value="1.000"/>
+					<row value="0.973"/>
+					<row value="0.951"/>
+					<row value="0.932"/>
+					<row value="0.915"/>
+					<row value="0.901"/>
+					<row value="0.871"/>
+					<row value="0.847"/>
+					<row value="0.828"/>
+					<row value="0.812"/>
+					<row value="0.797"/>
+					<row value="0.785"/>
+					<row value="0.773"/>
+					<row value="0.763"/>
+					<row value="0.754"/>
+					<row value="0.746"/>
+					<row value="0.738"/>
+					<row value="0.731"/>
+					<row value="0.724"/>
+					<row value="0.718"/>
+					<row value="0.712"/>
+					<row value="0.707"/>
+					<row value="0.697"/>
+					<row value="0.688"/>
+					<row value="0.679"/>
+					<row value="0.672"/>
+					<row value="0.665"/>
+					<row value="0.659"/>
+					<row value="0.653"/>
+					<row value="0.647"/>
+					<row value="0.642"/>
+					<row value="0.637"/>
+					<row value="0.628"/>
+					<row value="0.620"/>
+					<row value="0.612"/>
+					<row value="0.605"/>
+					<row value="0.599"/>
+					<row value="0.593"/>
+					<row value="0.588"/>
+					<row value="0.583"/>
+					<row value="0.578"/>
+					<row value="0.574"/>
+					<row value="0.555"/>
+					<row value="0.540"/>
+					<row value="0.527"/>
+					<row value="0.517"/>
+					<row value="0.508"/>
+					<row value="0.500"/>
+					<row value="0.000"/>
+				</data>
+			</table>
+			<table id="TerritoryLookupEQ" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="ZipCode" type="int" find="eq">
+					<key value="Default" default="1" caption=""/>
+					<key value="29001" caption=""/>
+					<key value="29002" caption=""/>
+					<key value="29003" caption=""/>
+					<key value="29006" caption=""/>
+					<key value="29009" caption=""/>
+					<key value="29010" caption=""/>
+					<key value="29014" caption=""/>
+					<key value="29015" caption=""/>
+					<key value="29016" caption=""/>
+					<key value="29018" caption=""/>
+					<key value="29020" caption=""/>
+					<key value="29021" caption=""/>
+					<key value="29030" caption=""/>
+					<key value="29031" caption=""/>
+					<key value="29032" caption=""/>
+					<key value="29033" caption=""/>
+					<key value="29036" caption=""/>
+					<key value="29037" caption=""/>
+					<key value="29038" caption=""/>
+					<key value="29039" caption=""/>
+					<key value="29040" caption=""/>
+					<key value="29041" caption=""/>
+					<key value="29042" caption=""/>
+					<key value="29044" caption=""/>
+					<key value="29045" caption=""/>
+					<key value="29046" caption=""/>
+					<key value="29047" caption=""/>
+					<key value="29048" caption=""/>
+					<key value="29051" caption=""/>
+					<key value="29052" caption=""/>
+					<key value="29053" caption=""/>
+					<key value="29054" caption=""/>
+					<key value="29055" caption=""/>
+					<key value="29056" caption=""/>
+					<key value="29058" caption=""/>
+					<key value="29059" caption=""/>
+					<key value="29061" caption=""/>
+					<key value="29062" caption=""/>
+					<key value="29063" caption=""/>
+					<key value="29065" caption=""/>
+					<key value="29067" caption=""/>
+					<key value="29069" caption=""/>
+					<key value="29070" caption=""/>
+					<key value="29071" caption=""/>
+					<key value="29072" caption=""/>
+					<key value="29073" caption=""/>
+					<key value="29074" caption=""/>
+					<key value="29075" caption=""/>
+					<key value="29078" caption=""/>
+					<key value="29079" caption=""/>
+					<key value="29080" caption=""/>
+					<key value="29081" caption=""/>
+					<key value="29082" caption=""/>
+					<key value="29101" caption=""/>
+					<key value="29102" caption=""/>
+					<key value="29104" caption=""/>
+					<key value="29105" caption=""/>
+					<key value="29107" caption=""/>
+					<key value="29108" caption=""/>
+					<key value="29111" caption=""/>
+					<key value="29112" caption=""/>
+					<key value="29113" caption=""/>
+					<key value="29114" caption=""/>
+					<key value="29115" caption=""/>
+					<key value="29116" caption=""/>
+					<key value="29117" caption=""/>
+					<key value="29118" caption=""/>
+					<key value="29122" caption=""/>
+					<key value="29123" caption=""/>
+					<key value="29125" caption=""/>
+					<key value="29126" caption=""/>
+					<key value="29127" caption=""/>
+					<key value="29128" caption=""/>
+					<key value="29129" caption=""/>
+					<key value="29130" caption=""/>
+					<key value="29132" caption=""/>
+					<key value="29133" caption=""/>
+					<key value="29135" caption=""/>
+					<key value="29137" caption=""/>
+					<key value="29138" caption=""/>
+					<key value="29142" caption=""/>
+					<key value="29143" caption=""/>
+					<key value="29145" caption=""/>
+					<key value="29146" caption=""/>
+					<key value="29147" caption=""/>
+					<key value="29148" caption=""/>
+					<key value="29150" caption=""/>
+					<key value="29151" caption=""/>
+					<key value="29152" caption=""/>
+					<key value="29153" caption=""/>
+					<key value="29154" caption=""/>
+					<key value="29160" caption=""/>
+					<key value="29161" caption=""/>
+					<key value="29162" caption=""/>
+					<key value="29163" caption=""/>
+					<key value="29164" caption=""/>
+					<key value="29166" caption=""/>
+					<key value="29168" caption=""/>
+					<key value="29169" caption=""/>
+					<key value="29170" caption=""/>
+					<key value="29171" caption=""/>
+					<key value="29172" caption=""/>
+					<key value="29175" caption=""/>
+					<key value="29177" caption=""/>
+					<key value="29178" caption=""/>
+					<key value="29180" caption=""/>
+					<key value="29201" caption=""/>
+					<key value="29202" caption=""/>
+					<key value="29203" caption=""/>
+					<key value="29204" caption=""/>
+					<key value="29205" caption=""/>
+					<key value="29206" caption=""/>
+					<key value="29207" caption=""/>
+					<key value="29208" caption=""/>
+					<key value="29209" caption=""/>
+					<key value="29210" caption=""/>
+					<key value="29211" caption=""/>
+					<key value="29212" caption=""/>
+					<key value="29214" caption=""/>
+					<key value="29215" caption=""/>
+					<key value="29216" caption=""/>
+					<key value="29217" caption=""/>
+					<key value="29218" caption=""/>
+					<key value="29219" caption=""/>
+					<key value="29220" caption=""/>
+					<key value="29221" caption=""/>
+					<key value="29222" caption=""/>
+					<key value="29223" caption=""/>
+					<key value="29224" caption=""/>
+					<key value="29225" caption=""/>
+					<key value="29226" caption=""/>
+					<key value="29227" caption=""/>
+					<key value="29228" caption=""/>
+					<key value="29229" caption=""/>
+					<key value="29230" caption=""/>
+					<key value="29240" caption=""/>
+					<key value="29250" caption=""/>
+					<key value="29260" caption=""/>
+					<key value="29290" caption=""/>
+					<key value="29292" caption=""/>
+					<key value="29301" caption=""/>
+					<key value="29302" caption=""/>
+					<key value="29303" caption=""/>
+					<key value="29304" caption=""/>
+					<key value="29305" caption=""/>
+					<key value="29306" caption=""/>
+					<key value="29307" caption=""/>
+					<key value="29316" caption=""/>
+					<key value="29319" caption=""/>
+					<key value="29320" caption=""/>
+					<key value="29321" caption=""/>
+					<key value="29322" caption=""/>
+					<key value="29323" caption=""/>
+					<key value="29324" caption=""/>
+					<key value="29325" caption=""/>
+					<key value="29329" caption=""/>
+					<key value="29330" caption=""/>
+					<key value="29331" caption=""/>
+					<key value="29332" caption=""/>
+					<key value="29333" caption=""/>
+					<key value="29334" caption=""/>
+					<key value="29335" caption=""/>
+					<key value="29336" caption=""/>
+					<key value="29338" caption=""/>
+					<key value="29340" caption=""/>
+					<key value="29341" caption=""/>
+					<key value="29342" caption=""/>
+					<key value="29346" caption=""/>
+					<key value="29348" caption=""/>
+					<key value="29349" caption=""/>
+					<key value="29351" caption=""/>
+					<key value="29353" caption=""/>
+					<key value="29355" caption=""/>
+					<key value="29356" caption=""/>
+					<key value="29360" caption=""/>
+					<key value="29364" caption=""/>
+					<key value="29365" caption=""/>
+					<key value="29368" caption=""/>
+					<key value="29369" caption=""/>
+					<key value="29370" caption=""/>
+					<key value="29372" caption=""/>
+					<key value="29373" caption=""/>
+					<key value="29374" caption=""/>
+					<key value="29375" caption=""/>
+					<key value="29376" caption=""/>
+					<key value="29377" caption=""/>
+					<key value="29378" caption=""/>
+					<key value="29379" caption=""/>
+					<key value="29384" caption=""/>
+					<key value="29385" caption=""/>
+					<key value="29386" caption=""/>
+					<key value="29388" caption=""/>
+					<key value="29395" caption=""/>
+					<key value="29401" caption=""/>
+					<key value="29402" caption=""/>
+					<key value="29403" caption=""/>
+					<key value="29404" caption=""/>
+					<key value="29405" caption=""/>
+					<key value="29406" caption=""/>
+					<key value="29407" caption=""/>
+					<key value="29409" caption=""/>
+					<key value="29410" caption=""/>
+					<key value="29412" caption=""/>
+					<key value="29413" caption=""/>
+					<key value="29414" caption=""/>
+					<key value="29415" caption=""/>
+					<key value="29416" caption=""/>
+					<key value="29417" caption=""/>
+					<key value="29418" caption=""/>
+					<key value="29419" caption=""/>
+					<key value="29420" caption=""/>
+					<key value="29422" caption=""/>
+					<key value="29423" caption=""/>
+					<key value="29424" caption=""/>
+					<key value="29425" caption=""/>
+					<key value="29426" caption=""/>
+					<key value="29429" caption=""/>
+					<key value="29431" caption=""/>
+					<key value="29432" caption=""/>
+					<key value="29433" caption=""/>
+					<key value="29434" caption=""/>
+					<key value="29435" caption=""/>
+					<key value="29436" caption=""/>
+					<key value="29437" caption=""/>
+					<key value="29438" caption=""/>
+					<key value="29439" caption=""/>
+					<key value="29440" caption=""/>
+					<key value="29442" caption=""/>
+					<key value="29445" caption=""/>
+					<key value="29446" caption=""/>
+					<key value="29447" caption=""/>
+					<key value="29448" caption=""/>
+					<key value="29449" caption=""/>
+					<key value="29450" caption=""/>
+					<key value="29451" caption=""/>
+					<key value="29452" caption=""/>
+					<key value="29453" caption=""/>
+					<key value="29455" caption=""/>
+					<key value="29456" caption=""/>
+					<key value="29457" caption=""/>
+					<key value="29458" caption=""/>
+					<key value="29461" caption=""/>
+					<key value="29464" caption=""/>
+					<key value="29465" caption=""/>
+					<key value="29466" caption=""/>
+					<key value="29468" caption=""/>
+					<key value="29469" caption=""/>
+					<key value="29470" caption=""/>
+					<key value="29471" caption=""/>
+					<key value="29472" caption=""/>
+					<key value="29474" caption=""/>
+					<key value="29475" caption=""/>
+					<key value="29476" caption=""/>
+					<key value="29477" caption=""/>
+					<key value="29479" caption=""/>
+					<key value="29481" caption=""/>
+					<key value="29482" caption=""/>
+					<key value="29483" caption=""/>
+					<key value="29484" caption=""/>
+					<key value="29485" caption=""/>
+					<key value="29486" caption=""/>
+					<key value="29487" caption=""/>
+					<key value="29488" caption=""/>
+					<key value="29492" caption=""/>
+					<key value="29493" caption=""/>
+					<key value="29501" caption=""/>
+					<key value="29502" caption=""/>
+					<key value="29503" caption=""/>
+					<key value="29504" caption=""/>
+					<key value="29505" caption=""/>
+					<key value="29506" caption=""/>
+					<key value="29510" caption=""/>
+					<key value="29511" caption=""/>
+					<key value="29512" caption=""/>
+					<key value="29516" caption=""/>
+					<key value="29518" caption=""/>
+					<key value="29519" caption=""/>
+					<key value="29520" caption=""/>
+					<key value="29525" caption=""/>
+					<key value="29526" caption=""/>
+					<key value="29527" caption=""/>
+					<key value="29528" caption=""/>
+					<key value="29530" caption=""/>
+					<key value="29532" caption=""/>
+					<key value="29536" caption=""/>
+					<key value="29540" caption=""/>
+					<key value="29541" caption=""/>
+					<key value="29543" caption=""/>
+					<key value="29544" caption=""/>
+					<key value="29545" caption=""/>
+					<key value="29546" caption=""/>
+					<key value="29547" caption=""/>
+					<key value="29550" caption=""/>
+					<key value="29551" caption=""/>
+					<key value="29554" caption=""/>
+					<key value="29555" caption=""/>
+					<key value="29556" caption=""/>
+					<key value="29560" caption=""/>
+					<key value="29563" caption=""/>
+					<key value="29564" caption=""/>
+					<key value="29565" caption=""/>
+					<key value="29566" caption=""/>
+					<key value="29567" caption=""/>
+					<key value="29568" caption=""/>
+					<key value="29569" caption=""/>
+					<key value="29570" caption=""/>
+					<key value="29571" caption=""/>
+					<key value="29572" caption=""/>
+					<key value="29574" caption=""/>
+					<key value="29575" caption=""/>
+					<key value="29576" caption=""/>
+					<key value="29577" caption=""/>
+					<key value="29578" caption=""/>
+					<key value="29579" caption=""/>
+					<key value="29580" caption=""/>
+					<key value="29581" caption=""/>
+					<key value="29582" caption=""/>
+					<key value="29583" caption=""/>
+					<key value="29584" caption=""/>
+					<key value="29585" caption=""/>
+					<key value="29587" caption=""/>
+					<key value="29588" caption=""/>
+					<key value="29589" caption=""/>
+					<key value="29590" caption=""/>
+					<key value="29591" caption=""/>
+					<key value="29592" caption=""/>
+					<key value="29593" caption=""/>
+					<key value="29594" caption=""/>
+					<key value="29596" caption=""/>
+					<key value="29597" caption=""/>
+					<key value="29598" caption=""/>
+					<key value="29601" caption=""/>
+					<key value="29602" caption=""/>
+					<key value="29603" caption=""/>
+					<key value="29604" caption=""/>
+					<key value="29605" caption=""/>
+					<key value="29606" caption=""/>
+					<key value="29607" caption=""/>
+					<key value="29608" caption=""/>
+					<key value="29609" caption=""/>
+					<key value="29610" caption=""/>
+					<key value="29611" caption=""/>
+					<key value="29612" caption=""/>
+					<key value="29613" caption=""/>
+					<key value="29614" caption=""/>
+					<key value="29615" caption=""/>
+					<key value="29616" caption=""/>
+					<key value="29617" caption=""/>
+					<key value="29620" caption=""/>
+					<key value="29621" caption=""/>
+					<key value="29622" caption=""/>
+					<key value="29623" caption=""/>
+					<key value="29624" caption=""/>
+					<key value="29625" caption=""/>
+					<key value="29626" caption=""/>
+					<key value="29627" caption=""/>
+					<key value="29628" caption=""/>
+					<key value="29630" caption=""/>
+					<key value="29631" caption=""/>
+					<key value="29632" caption=""/>
+					<key value="29633" caption=""/>
+					<key value="29634" caption=""/>
+					<key value="29635" caption=""/>
+					<key value="29636" caption=""/>
+					<key value="29638" caption=""/>
+					<key value="29639" caption=""/>
+					<key value="29640" caption=""/>
+					<key value="29641" caption=""/>
+					<key value="29642" caption=""/>
+					<key value="29643" caption=""/>
+					<key value="29644" caption=""/>
+					<key value="29645" caption=""/>
+					<key value="29646" caption=""/>
+					<key value="29647" caption=""/>
+					<key value="29648" caption=""/>
+					<key value="29649" caption=""/>
+					<key value="29650" caption=""/>
+					<key value="29651" caption=""/>
+					<key value="29652" caption=""/>
+					<key value="29653" caption=""/>
+					<key value="29654" caption=""/>
+					<key value="29655" caption=""/>
+					<key value="29656" caption=""/>
+					<key value="29657" caption=""/>
+					<key value="29658" caption=""/>
+					<key value="29659" caption=""/>
+					<key value="29661" caption=""/>
+					<key value="29662" caption=""/>
+					<key value="29664" caption=""/>
+					<key value="29665" caption=""/>
+					<key value="29666" caption=""/>
+					<key value="29667" caption=""/>
+					<key value="29669" caption=""/>
+					<key value="29670" caption=""/>
+					<key value="29671" caption=""/>
+					<key value="29672" caption=""/>
+					<key value="29673" caption=""/>
+					<key value="29675" caption=""/>
+					<key value="29676" caption=""/>
+					<key value="29677" caption=""/>
+					<key value="29678" caption=""/>
+					<key value="29679" caption=""/>
+					<key value="29680" caption=""/>
+					<key value="29681" caption=""/>
+					<key value="29682" caption=""/>
+					<key value="29683" caption=""/>
+					<key value="29684" caption=""/>
+					<key value="29685" caption=""/>
+					<key value="29686" caption=""/>
+					<key value="29687" caption=""/>
+					<key value="29688" caption=""/>
+					<key value="29689" caption=""/>
+					<key value="29690" caption=""/>
+					<key value="29691" caption=""/>
+					<key value="29692" caption=""/>
+					<key value="29693" caption=""/>
+					<key value="29695" caption=""/>
+					<key value="29696" caption=""/>
+					<key value="29697" caption=""/>
+					<key value="29702" caption=""/>
+					<key value="29703" caption=""/>
+					<key value="29704" caption=""/>
+					<key value="29706" caption=""/>
+					<key value="29707" caption=""/>
+					<key value="29708" caption=""/>
+					<key value="29709" caption=""/>
+					<key value="29710" caption=""/>
+					<key value="29712" caption=""/>
+					<key value="29714" caption=""/>
+					<key value="29715" caption=""/>
+					<key value="29716" caption=""/>
+					<key value="29717" caption=""/>
+					<key value="29718" caption=""/>
+					<key value="29720" caption=""/>
+					<key value="29721" caption=""/>
+					<key value="29722" caption=""/>
+					<key value="29724" caption=""/>
+					<key value="29726" caption=""/>
+					<key value="29727" caption=""/>
+					<key value="29728" caption=""/>
+					<key value="29729" caption=""/>
+					<key value="29730" caption=""/>
+					<key value="29731" caption=""/>
+					<key value="29732" caption=""/>
+					<key value="29733" caption=""/>
+					<key value="29734" caption=""/>
+					<key value="29741" caption=""/>
+					<key value="29742" caption=""/>
+					<key value="29743" caption=""/>
+					<key value="29744" caption=""/>
+					<key value="29745" caption=""/>
+					<key value="29801" caption=""/>
+					<key value="29802" caption=""/>
+					<key value="29803" caption=""/>
+					<key value="29804" caption=""/>
+					<key value="29805" caption=""/>
+					<key value="29808" caption=""/>
+					<key value="29809" caption=""/>
+					<key value="29810" caption=""/>
+					<key value="29812" caption=""/>
+					<key value="29813" caption=""/>
+					<key value="29816" caption=""/>
+					<key value="29817" caption=""/>
+					<key value="29819" caption=""/>
+					<key value="29821" caption=""/>
+					<key value="29822" caption=""/>
+					<key value="29824" caption=""/>
+					<key value="29826" caption=""/>
+					<key value="29827" caption=""/>
+					<key value="29828" caption=""/>
+					<key value="29829" caption=""/>
+					<key value="29831" caption=""/>
+					<key value="29832" caption=""/>
+					<key value="29834" caption=""/>
+					<key value="29835" caption=""/>
+					<key value="29836" caption=""/>
+					<key value="29838" caption=""/>
+					<key value="29839" caption=""/>
+					<key value="29840" caption=""/>
+					<key value="29841" caption=""/>
+					<key value="29842" caption=""/>
+					<key value="29843" caption=""/>
+					<key value="29844" caption=""/>
+					<key value="29845" caption=""/>
+					<key value="29846" caption=""/>
+					<key value="29847" caption=""/>
+					<key value="29848" caption=""/>
+					<key value="29849" caption=""/>
+					<key value="29850" caption=""/>
+					<key value="29851" caption=""/>
+					<key value="29853" caption=""/>
+					<key value="29856" caption=""/>
+					<key value="29860" caption=""/>
+					<key value="29861" caption=""/>
+					<key value="29899" caption=""/>
+					<key value="29901" caption=""/>
+					<key value="29902" caption=""/>
+					<key value="29903" caption=""/>
+					<key value="29904" caption=""/>
+					<key value="29905" caption=""/>
+					<key value="29906" caption=""/>
+					<key value="29907" caption=""/>
+					<key value="29909" caption=""/>
+					<key value="29910" caption=""/>
+					<key value="29911" caption=""/>
+					<key value="29912" caption=""/>
+					<key value="29913" caption=""/>
+					<key value="29914" caption=""/>
+					<key value="29915" caption=""/>
+					<key value="29916" caption=""/>
+					<key value="29918" caption=""/>
+					<key value="29920" caption=""/>
+					<key value="29921" caption=""/>
+					<key value="29922" caption=""/>
+					<key value="29923" caption=""/>
+					<key value="29924" caption=""/>
+					<key value="29925" caption=""/>
+					<key value="29926" caption=""/>
+					<key value="29927" caption=""/>
+					<key value="29928" caption=""/>
+					<key value="29929" caption=""/>
+					<key value="29931" caption=""/>
+					<key value="29932" caption=""/>
+					<key value="29933" caption=""/>
+					<key value="29934" caption=""/>
+					<key value="29935" caption=""/>
+					<key value="29936" caption=""/>
+					<key value="29938" caption=""/>
+					<key value="29939" caption=""/>
+					<key value="29940" caption=""/>
+					<key value="29941" caption=""/>
+					<key value="29943" caption=""/>
+					<key value="29944" caption=""/>
+					<key value="29945" caption=""/>
+				</rowKeys>
+				<data>
+					<row value="0"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="14"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="14"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="14"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="14"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="14"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="14"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="14"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="14"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="12"/>
+					<row value="11"/>
+					<row value="12"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="11"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="12"/>
+					<row value="12"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="12"/>
+					<row value="12"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="12"/>
+					<row value="11"/>
+					<row value="12"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="12"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="11"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="11"/>
+					<row value="12"/>
+					<row value="12"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="12"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="11"/>
+					<row value="12"/>
+					<row value="12"/>
+					<row value="11"/>
+					<row value="12"/>
+					<row value="11"/>
+					<row value="13"/>
+					<row value="11"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="13"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="14"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="14"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="14"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="14"/>
+					<row value="14"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="14"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="14"/>
+					<row value="12"/>
+					<row value="12"/>
+					<row value="12"/>
+					<row value="12"/>
+					<row value="12"/>
+					<row value="12"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="12"/>
+					<row value="12"/>
+					<row value="13"/>
+					<row value="13"/>
+					<row value="12"/>
+				</data>
+			</table>
+			<table id="EnhancedWindRatingProgramDistanceToCoastFactor" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="DistanceToCoast" type="string" find="eq">
+					<key value="0To500Feet" default="1"/>
+					<key value="501To1000Feet"/>
+					<key value="1001To1500Feet"/>
+					<key value="1501To2000Feet"/>
+					<key value="2001To2500Feet"/>
+					<key value="2501FeetTo1mile"/>
+					<key value="Over1mileTo2Miles"/>
+					<key value="Over2MilesTo3Miles"/>
+					<key value="Over3MilesTo4Miles"/>
+					<key value="Over4MilesTo5Miles"/>
+					<key value="Over5Miles"/>
+				</rowKeys>
+				<data>
+					<row value="1.00"/>
+					<row value="0.95"/>
+					<row value="0.95"/>
+					<row value="0.90"/>
+					<row value="0.90"/>
+					<row value="0.90"/>
+					<row value="0.80"/>
+					<row value="0.60"/>
+					<row value="0.50"/>
+					<row value="0.40"/>
+					<row value="0.40"/>
+				</data>
+			</table>
+			<table id="EnhancedWindRatingProgramYearBuiltFactor" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="County" type="string" find="range">
+					<key value="Beaufort,Berkeley,Charleston,Dorchester,Georgetown,Horry,Jasper"/>
+					<key value="Remainder" default="1"/>
+				</rowKeys>
+				<colKeys name="YearBuilt" type="int" find="range">
+					<key value="&lt;1995"/>
+					<key value="1996"/>
+					<key value="1997-2003"/>
+					<key value="2004"/>
+					<key value="2005&gt;"/>
+				</colKeys>
+				<data>
+					<row value="1.00,0.95,0.85,0.75,0.65"/>
+					<row value="1.00,0.95,0.90,0.85,0.80"/>
+				</data>
+			</table>
+			<table id="GeographicWindHazardLevel" tableType="local">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="County" type="string" find="eq">
+					<key value="Default" default="1"/>
+					<key value="Allendale"/>
+					<key value="Beaufort"/>
+					<key value="Berkeley"/>
+					<key value="Charleston"/>
+					<key value="Clarendon"/>
+					<key value="Colleton"/>
+					<key value="Dillon"/>
+					<key value="Dorchester"/>
+					<key value="Florence"/>
+					<key value="Georgetown"/>
+					<key value="Hampton"/>
+					<key value="Horry"/>
+					<key value="Jasper"/>
+					<key value="Marion"/>
+					<key value="Williamsburg"/>
+					<key value="Aiken"/>
+					<key value="Bamberg"/>
+					<key value="Barnwell"/>
+					<key value="Calhoun"/>
+					<key value="Chester"/>
+					<key value="Chesterfield"/>
+					<key value="Darlington"/>
+					<key value="Fairfield"/>
+					<key value="Kershaw"/>
+					<key value="Lancaster"/>
+					<key value="Lee"/>
+					<key value="Lexington"/>
+					<key value="Marlboro"/>
+					<key value="Orangeburg"/>
+					<key value="Richland"/>
+					<key value="Sumter"/>
+					<key value="Abbeville"/>
+					<key value="Anderson"/>
+					<key value="Cherokee"/>
+					<key value="Edgefield"/>
+					<key value="Greenville"/>
+					<key value="Greenwood"/>
+					<key value="Laurens"/>
+					<key value="McCormick"/>
+					<key value="Newberry"/>
+					<key value="Oconee"/>
+					<key value="Pickens"/>
+					<key value="Saluda"/>
+					<key value="Spartanburg"/>
+					<key value="Union"/>
+					<key value="York"/>
+				</rowKeys>
+				<data>
+					<row value="Medium"/>
+					<row value="Severe"/>
+					<row value="Severe"/>
+					<row value="Severe"/>
+					<row value="Severe"/>
+					<row value="Severe"/>
+					<row value="Severe"/>
+					<row value="Severe"/>
+					<row value="Severe"/>
+					<row value="Severe"/>
+					<row value="Severe"/>
+					<row value="Severe"/>
+					<row value="Severe"/>
+					<row value="Severe"/>
+					<row value="Severe"/>
+					<row value="Severe"/>
+					<row value="High"/>
+					<row value="High"/>
+					<row value="High"/>
+					<row value="High"/>
+					<row value="High"/>
+					<row value="High"/>
+					<row value="High"/>
+					<row value="High"/>
+					<row value="High"/>
+					<row value="High"/>
+					<row value="High"/>
+					<row value="High"/>
+					<row value="High"/>
+					<row value="High"/>
+					<row value="High"/>
+					<row value="High"/>
+					<row value="Medium"/>
+					<row value="Medium"/>
+					<row value="Medium"/>
+					<row value="Medium"/>
+					<row value="Medium"/>
+					<row value="Medium"/>
+					<row value="Medium"/>
+					<row value="Medium"/>
+					<row value="Medium"/>
+					<row value="Medium"/>
+					<row value="Medium"/>
+					<row value="Medium"/>
+					<row value="Medium"/>
+					<row value="Medium"/>
+					<row value="Medium"/>
+				</data>
+			</table>
+			<table id="Rule76C7a1_FloodPropertyDamageLossCosts" tableType="local" separator=",">
+				<fields>
+					<field type="int" name="Value"/>
+				</fields>
+				<rowKeys name="County" type="string" find="range" pageKey="1">
+					<key value="Beaufort,Charleston"/>
+					<key value="RestOfState" default="1"/>
+				</rowKeys>
+				<rowKeys name="Item" type="string" find="eq">
+					<key value="B" default="1"/>
+					<key value="C"/>
+				</rowKeys>
+				<rowKeys name="Construction" type="string" find="range">
+					<key value="Frame,NonCombustible"/>
+					<key value="JoistedMasonry,MasonryNonCombustible"/>
+					<key value="ModifiedFireResistive,FireResistive"/>
+				</rowKeys>
+				<colKeys name="FloodZone" type="string" find="eq">
+					<key value="A"/>
+					<key value="X500"/>
+					<key value="X"/>
+					<key value="D"/>
+				</colKeys>
+				<data>
+					<row value="1.230,0.258,0.057,0.120"/>
+					<row value="0.911,0.191,0.042,0.089"/>
+					<row value="0.592,0.124,0.027,0.058"/>
+					<row value="2.818,0.625,0.169,0.317"/>
+					<row value="2.087,0.463,0.125,0.235"/>
+					<row value="1.357,0.301,0.081,0.152"/>
+					<row value="1.066,0.224,0.049,0.104"/>
+					<row value="0.790,0.166,0.037,0.077"/>
+					<row value="0.592,0.124,0.027,0.058"/>
+					<row value="2.442,0.542,0.146,0.274"/>
+					<row value="1.809,0.402,0.108,0.203"/>
+					<row value="1.357,0.301,0.081,0.152"/>
+				</data>
+			</table>
+		</object>
+	</model>
+	<revisions/>
+	<mapping mappingCount="17">
+		<reference name="Client Name" idref="Applicant.Name"/>
+		<reference name="Policy Status" idref="PolicyInfo.Status"/>
+		<reference name="Policy Number" idref="PolicyNumbers.PolicyNumber"/>
+		<reference name="Effective Date" idref="PolicyInfo.EffectiveDate"/>
+		<reference name="Expiration Date" idref="PolicyInfo.ExpirationDate"/>
+		<reference name="Policy Premium" idref="Policy.TotalPremium"/>
+		<reference name="Address" idref="Applicant.Address1"/>
+		<reference name="Address2" idref="Applicant.Address2"/>
+		<reference name="City" idref="Applicant.City"/>
+		<reference name="State" idref="Applicant.State"/>
+		<reference name="ZIP Code" idref="Applicant.ZipCode"/>
+		<reference name="Phone Number" idref="Applicant.Phone"/>
+		<reference name="Fax Number" idref="Applicant.Fax"/>
+		<reference name="Producer" idref="Producer.Name"/>
+		<reference name="Agency" idref="AgencyInfo.AgencyName"/>
+		<reference name="Description" idref="PolicyInfo.Description"/>
+		<reference name="TransactionDate" idref="PolicyInfo.TransactionDate"/>
+	</mapping>
+</ManuScript>

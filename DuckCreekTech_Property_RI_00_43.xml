@@ -1,0 +1,4612 @@
+﻿<ManuScript>
+  <properties manuscriptID="DuckCreekTech_Property_RI_00_43" versionID="DuckCreekTech_Property_RI_00_25" versionDate="2020-10-01" version="1" caption="DuckCreekTech  Property   RI   (00.43)   2020-10-01" image="" dataSchema="CommercialPropertySchema.xml" boolean="1" inherited="" fieldCache="0" cultureCode="en-US" cultureName="United States [english]">
+    <contexts>
+      <context>Programmer</context>
+    </contexts>
+    <notes>6/25/2020 1:58 PM: Versioned with ManuScriptVersioner&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;7/6/2018 10:50 AM: Versioned with ManuScriptVersioner&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;5/18/2018 1:34 PM: Versioned with ManuScriptVersioner&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;5/4/2017 2:09 PM: Versioned with ManuScriptVersioner&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;11/28/2016 4:23 PM: Versioned with ManuScriptVersioner&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;5/29/2014 9:41 AM: Versioned with ManuScriptVersioner&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;11/25/2013 2:26 PM: Versioned with ManuScriptVersioner&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;10/16/2012 3:12 PM: Versioned with ManuScriptVersioner&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;6/28/2012 4:19 PM: Versioned with ManuScriptVersioner&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;3/7/2012 10:04 AM: Versioned with ManuScriptVersioner&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;11/17/2011 9:38 AM: Versioned with ManuScriptVersioner&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;11/17/2011 8:29 AM: Versioned with ManuScriptVersioner&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;5/31/2011 3:20 PM: Versioned with ManuScriptVersioner&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;4/18/2011 10:32 AM: Versioned with ManuScriptVersioner&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;6/23/2010 3:16 PM: Versioned with ManuScriptVersioner&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;3/25/2010 1:40 PM: Versioned with ManuScriptVersioner&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;9/9/2009 4:00 PM: Versioned with ManuScriptVersioner&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;3/5/2009 9:14 AM: Versioned with ManuScriptVersioner&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;7/24/2008 2:34 PM: Versioned with UpdateMover&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;4/25/2008 10:35 AM: Versioned with UpdateMover&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;10/25/2007 7:52 AM: Versioned with UpdateMover&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;11/21/2006 3:23 PM: Versioned with UpdateMover&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;6/22/2006 9:23 AM: Versioned with UpdateMover&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;3/27/2006 2:47 PM: Master&amp;#13;&amp;#10;C:\CommercialTemplates\Property\DuckCreekTech_Property_RI_00_22_20051001.xml&amp;#13;&amp;#10;&amp;#13;&amp;#10;Slave&amp;#13;&amp;#10;C:\CommercialTemplates\Property\DuckCreekTech_Property_RI_00_23_20060901.xml&amp;#13;&amp;#10;LOSS COSTS - INFORMATION MARCH 9, 2006&amp;#13;&amp;#10;BUSINESSOWNERS LI-BP-2006-121&amp;#13;&amp;#10;ILLINOIS BUSINESSOWNERS CLASS-SPECIFIC ADVISORY LOSS&amp;#13;&amp;#10;COSTS FOR APARTMENT BUILDINGS PROVIDED FOR&amp;#13;&amp;#10;INFORMATION&amp;#13;&amp;#10;This circular furnishes you with Illinois informational Businessowners Class-&amp;#13;&amp;#10;Specific advisory loss costs for Apartment Buildings.&amp;#13;&amp;#10;Table (Rule85_BG1ClassLossCosts)	Changed	data	&amp;#13;&amp;#10;&amp;#13;&amp;#10;Table (Rule70E2_BG2LossCosts)	Changed	data	&amp;#13;&amp;#10;&amp;#13;&amp;#10;Table (Rule72E2b1_SpecialBuildingLossCosts)	Changed	data	&amp;#13;&amp;#10;&amp;#13;&amp;#10;Table (Rule72E2d3c_BaseLossCostByTerritory)	Changed	data&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;3/24/2006 2:06 PM: Versioned with UpdateMover&amp;#13;&amp;#10;----------------&amp;#13;&amp;#10;</notes>
+    <resourceState status="Development" protected="1" />
+    <keys>
+      <keyInfo name="lob" value="Property" />
+      <keyInfo name="state" value="RI" />
+      <keyInfo name="effectiveDateNew" value="2020-10-01" />
+      <keyInfo name="effectiveDateRenewal" value="2020-10-01" />
+      <keyInfo name="masterID" value="DuckCreekTech_Property_US_00_20" />
+      <keyInfo name="productCode" value="None" />
+      <keyInfo name="family" value="DCTTemplates" />
+      <keyInfo name="version" value="00.43" />
+    </keys>
+  </properties>
+  <model defaultValue="">
+    <object id="data" path="data">
+      <table id="Rule85_BG1ClassLossCosts" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="CSP" type="string" find="eq">
+          <key value="0074" />
+          <key value="0075" />
+          <key value="0076" />
+          <key value="0077" />
+          <key value="0078" />
+          <key value="0079" />
+          <key value="0196" />
+          <key value="0197" />
+          <key value="0198" />
+          <key value="0311" />
+          <key value="0312" />
+          <key value="0313" />
+          <key value="0321" />
+          <key value="0322" />
+          <key value="0323" />
+          <key value="0331" />
+          <key value="0332" />
+          <key value="0333" />
+          <key value="0341" />
+          <key value="0342" />
+          <key value="0343" />
+          <key value="0511" />
+          <key value="0512" />
+          <key value="0520" />
+          <key value="0531" />
+          <key value="0532" />
+          <key value="0533" />
+          <key value="0534" />
+          <key value="0541" />
+          <key value="0545" />
+          <key value="0550" />
+          <key value="0561" />
+          <key value="0562" />
+          <key value="0563" />
+          <key value="0564" />
+          <key value="0565" />
+          <key value="0566" />
+          <key value="0567" />
+          <key value="0570" />
+          <key value="0580" />
+          <key value="0581" />
+          <key value="0582" />
+          <key value="0701" />
+          <key value="0702" />
+          <key value="0742" />
+          <key value="0743" />
+          <key value="0744" />
+          <key value="0745" />
+          <key value="0746" />
+          <key value="0747" />
+          <key value="0755" />
+          <key value="0756" />
+          <key value="0757" />
+          <key value="0831" />
+          <key value="0832" />
+          <key value="0833" />
+          <key value="0834" />
+          <key value="0841" />
+          <key value="0843" />
+          <key value="0844" />
+          <key value="0845" />
+          <key value="0846" />
+          <key value="0851" />
+          <key value="0852" />
+          <key value="0900" />
+          <key value="0911" />
+          <key value="0912" />
+          <key value="0913" />
+          <key value="0921" />
+          <key value="0922" />
+          <key value="0923" />
+          <key value="0931" />
+          <key value="0932" />
+          <key value="0933" />
+          <key value="0934" />
+          <key value="0940" />
+          <key value="0951" />
+          <key value="0952" />
+          <key value="1000" />
+          <key value="1051" />
+          <key value="1052" />
+          <key value="1070" />
+          <key value="1150" />
+          <key value="1180" />
+          <key value="1211" />
+          <key value="1212" />
+          <key value="1213" />
+          <key value="1220" />
+          <key value="1230" />
+          <key value="1400" />
+          <key value="1650" />
+          <key value="1700" />
+          <key value="1751" />
+          <key value="1752" />
+          <key value="2200" />
+          <key value="2350" />
+          <key value="2459" />
+          <key value="2800" />
+          <key value="3409" />
+          <key value="4809" />
+          <key value="9999" default="1" />
+        </rowKeys>
+        <rowKeys name="Construction" type="string" find="range">
+          <key value="Frame" />
+          <key value="JoistedMasonry" />
+          <key value="NonCombustible" default="1" />
+          <key value="MasonryNonCombustible" />
+          <key value="ModifiedFireResistive,FireResistive" />
+        </rowKeys>
+        <rowKeys name="ContentType" type="string" find="eq">
+          <key value="A" default="1" />
+          <key value="B" />
+          <key value="C" />
+        </rowKeys>
+        <colKeys name="BuildingContent" type="string" find="eq">
+          <key value="B" default="1" />
+          <key value="C" />
+          <key value="Y" />
+        </colKeys>
+        <data>
+          <row value="0.079,0.079," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.071,0.072," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.064,0.068," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.050,0.058," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.046,0.055," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.079,0.079," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.071,0.072," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.064,0.068," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.050,0.058," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.046,0.055," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.079,0.079," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.071,0.072," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.064,0.068," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.050,0.058," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.046,0.055," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.072,0.075," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.065,0.068," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.056,0.065," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.046,0.056," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.043,0.052," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.072,0.075," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.065,0.068," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.056,0.065," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.046,0.056," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.043,0.052," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.072,0.075," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.065,0.068," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.056,0.065," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.046,0.056," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.043,0.052," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.049,0.054," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.043,0.049," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.038,0.045," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.032,0.040," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.029,0.037," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.049,0.054," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.043,0.049," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.038,0.045," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.032,0.040," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.029,0.037," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.049,0.054," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.043,0.049," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.038,0.045," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.032,0.040," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.029,0.037," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.166,0.187," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.149,0.168," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.132,0.159," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.107,0.141," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.099,0.131," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.166,0.187," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.149,0.168," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.132,0.159," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.107,0.141," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.099,0.131," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.166,0.187," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.149,0.168," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.132,0.159," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.107,0.141," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.099,0.131," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.253,0.378," />
+          <row value=",0.442," />
+          <row value=",," />
+          <row value="0.230,0.339," />
+          <row value=",0.397," />
+          <row value=",," />
+          <row value="0.203,0.322," />
+          <row value=",0.377," />
+          <row value=",," />
+          <row value="0.166,0.284," />
+          <row value=",0.332," />
+          <row value=",," />
+          <row value="0.152,0.263," />
+          <row value=",0.309," />
+          <row value=",," />
+          <row value="0.253,0.378," />
+          <row value=",0.442," />
+          <row value=",," />
+          <row value="0.230,0.339," />
+          <row value=",0.397," />
+          <row value=",," />
+          <row value="0.203,0.322," />
+          <row value=",0.377," />
+          <row value=",," />
+          <row value="0.166,0.284," />
+          <row value=",0.332," />
+          <row value=",," />
+          <row value="0.152,0.263," />
+          <row value=",0.309," />
+          <row value=",," />
+          <row value="0.253,0.378," />
+          <row value=",0.442," />
+          <row value=",," />
+          <row value="0.230,0.339," />
+          <row value=",0.397," />
+          <row value=",," />
+          <row value="0.203,0.322," />
+          <row value=",0.377," />
+          <row value=",," />
+          <row value="0.166,0.284," />
+          <row value=",0.332," />
+          <row value=",," />
+          <row value="0.152,0.263," />
+          <row value=",0.309," />
+          <row value=",," />
+          <row value="0.092,0.080," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.083,0.073," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.074,0.070," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.060,0.061," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.056,0.056," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.092,0.080," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.083,0.073," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.074,0.070," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.060,0.061," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.056,0.056," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.092,0.080," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.083,0.073," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.074,0.070," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.060,0.061," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.056,0.056," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.144,0.164," />
+          <row value=",0.191," />
+          <row value=",," />
+          <row value="0.129,0.148," />
+          <row value=",0.172," />
+          <row value=",," />
+          <row value="0.116,0.139," />
+          <row value=",0.164," />
+          <row value=",," />
+          <row value="0.094,0.123," />
+          <row value=",0.144," />
+          <row value=",," />
+          <row value="0.086,0.115," />
+          <row value=",0.133," />
+          <row value=",," />
+          <row value="0.144,0.164," />
+          <row value=",0.191," />
+          <row value=",," />
+          <row value="0.129,0.148," />
+          <row value=",0.172," />
+          <row value=",," />
+          <row value="0.116,0.139," />
+          <row value=",0.164," />
+          <row value=",," />
+          <row value="0.094,0.123," />
+          <row value=",0.144," />
+          <row value=",," />
+          <row value="0.086,0.115," />
+          <row value=",0.133," />
+          <row value=",," />
+          <row value="0.144,0.164," />
+          <row value=",0.191," />
+          <row value=",," />
+          <row value="0.129,0.148," />
+          <row value=",0.172," />
+          <row value=",," />
+          <row value="0.116,0.139," />
+          <row value=",0.164," />
+          <row value=",," />
+          <row value="0.094,0.123," />
+          <row value=",0.144," />
+          <row value=",," />
+          <row value="0.086,0.115," />
+          <row value=",0.133," />
+          <row value=",," />
+          <row value="0.110,0.148," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.098,0.133," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.088,0.126," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.071,0.111," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.066,0.104," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.104,0.133," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.093,0.120," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.082,0.112," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.068,0.100," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.061,0.092," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.129,0.194," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.117,0.174," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.104,0.165," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.084,0.145," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.078,0.136," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.110,0.157," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.100,0.142," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.089,0.133," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.071,0.120," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.066,0.110," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.168,0.194," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.150,0.174," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.134,0.165," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.110,0.145," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.101,0.136," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.132,0.157," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.120,0.139," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.106,0.132," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.086,0.117," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.080,0.110," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.185,0.162," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.167,0.147," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.148,0.139," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.120,0.122," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.111,0.114," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.285,0.304," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.256,0.273," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.227,0.258," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.184,0.227," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.170,0.212," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.335,0.379," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.302,0.340," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.269,0.322," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.217,0.285," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.201,0.263," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.100,0.161," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.090,0.145," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.080,0.137," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.065,0.121," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.060,0.112," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.105,0.161," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.094,0.145," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.083,0.137," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.068,0.121," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.061,0.112," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.120,0.179," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.108,0.161," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.095,0.150," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.078,0.133," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.071,0.125," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.120,0.133," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.106,0.120," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.094,0.112," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.077,0.100," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.071,0.092," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.165,0.234," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.147,0.211," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.129,0.199," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.106,0.177," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.098,0.165," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.109,0.129," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.098,0.117," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.087,0.110," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.071,0.098," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.065,0.091," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.122,0.177," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.110,0.158," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.098,0.148," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.080,0.132," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.073,0.124," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.110,0.148," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.098,0.133," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.088,0.126," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.071,0.111," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.066,0.104," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.110,0.157," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.098,0.142," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.088,0.133," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.071,0.120," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.066,0.110," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.110,0.165," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.098,0.148," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.088,0.139," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.071,0.124," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.066,0.115," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.115,0.157," />
+          <row value=",0.191," />
+          <row value=",0.173," />
+          <row value="0.104,0.142," />
+          <row value=",0.172," />
+          <row value=",0.157," />
+          <row value="0.092,0.133," />
+          <row value=",0.162," />
+          <row value=",0.148," />
+          <row value="0.076,0.120," />
+          <row value=",0.144," />
+          <row value=",0.129," />
+          <row value="0.070,0.110," />
+          <row value=",0.133," />
+          <row value=",0.121," />
+          <row value="0.128,0.139," />
+          <row value=",0.172," />
+          <row value=",0.157," />
+          <row value="0.115,0.126," />
+          <row value=",0.155," />
+          <row value=",0.139," />
+          <row value="0.103,0.120," />
+          <row value=",0.147," />
+          <row value=",0.132," />
+          <row value="0.083,0.104," />
+          <row value=",0.128," />
+          <row value=",0.117," />
+          <row value="0.077,0.098," />
+          <row value=",0.120," />
+          <row value=",0.110," />
+          <row value="0.076,0.083," />
+          <row value=",0.123," />
+          <row value=",0.096," />
+          <row value="0.068,0.076," />
+          <row value=",0.111," />
+          <row value=",0.087," />
+          <row value="0.059,0.070," />
+          <row value=",0.104," />
+          <row value=",0.081," />
+          <row value="0.049,0.063," />
+          <row value=",0.093," />
+          <row value=",0.072," />
+          <row value="0.045,0.058," />
+          <row value=",0.085," />
+          <row value=",0.068," />
+          <row value="0.102,0.121," />
+          <row value=",0.168," />
+          <row value=",0.149," />
+          <row value="0.092,0.109," />
+          <row value=",0.151," />
+          <row value=",0.135," />
+          <row value="0.082,0.103," />
+          <row value=",0.143," />
+          <row value=",0.128," />
+          <row value="0.065,0.091," />
+          <row value=",0.124," />
+          <row value=",0.113," />
+          <row value="0.062,0.085," />
+          <row value=",0.117," />
+          <row value=",0.104," />
+          <row value="0.149,0.164," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.134,0.148," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.120,0.140," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.098,0.123," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.091,0.115," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.149,0.164," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.134,0.148," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.120,0.140," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.098,0.123," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.091,0.115," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.149,0.164," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.134,0.148," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.120,0.140," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.098,0.123," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.091,0.115," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.066,0.070," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.059,0.064," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.052,0.059," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.043,0.053," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.039,0.050," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.066,0.070," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.059,0.064," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.052,0.059," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.043,0.053," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.039,0.050," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.066,0.070," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.059,0.064," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.052,0.059," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.043,0.053," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.039,0.050," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.238,0.275," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.213,0.247," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.190,0.233," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.155,0.206," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.144,0.192," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.096,0.110," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.086,0.099," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.078,0.094," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.062,0.083," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.057,0.078," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.106,0.110," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.094,0.099," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.083,0.094," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.068,0.083," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.062,0.078," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.081,0.094," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.073,0.085," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.065,0.080," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.054,0.071," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.048,0.067," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.104,0.110," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.093,0.099," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.083,0.094," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.068,0.083," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.061,0.078," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.087,0.102," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.080,0.093," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.071,0.086," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.057,0.078," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.054,0.072," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.142,0.144," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.126,0.130," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.113,0.124," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.093,0.109," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.086,0.100," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.144,0.150," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.130,0.136," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.115,0.127," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.094,0.112," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.086,0.107," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.072,0.075," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.065,0.069," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.057,0.065," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.045,0.057," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.042,0.054," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.096,0.107," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.086,0.096," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.078,0.092," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.062,0.080," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.057,0.074," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.064,0.073," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.057,0.067," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.052,0.062," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.042,0.056," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.039,0.052," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.134,0.131," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.120,0.118," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.107,0.112," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.086,0.098," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.080,0.093," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.038,0.044," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.034,0.040," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.029,0.036," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.025,0.032," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.023,0.029," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.039,0.045," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.035,0.041," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.030,0.038," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.025,0.034," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.024,0.030," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.106,0.112," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.095,0.102," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.085,0.095," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.069,0.085," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.064,0.078," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.442,0.523," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.398,0.472," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.354,0.445," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.289,0.393," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.267,0.368," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.586,0.722," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.529,0.650," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.469,0.615," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.381,0.542," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.351,0.506," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.387,0.452," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.346,0.408," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.308,0.385," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.251,0.339," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.230,0.316," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.230,0.274," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.207,0.247," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.186,0.232," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.150,0.205," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.140,0.194," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.255,0.312," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.230,0.281," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.205,0.267," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.166,0.235," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.153,0.219," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.170,0.182," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.153,0.164," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.137,0.155," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.109,0.137," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.100,0.126," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.069,0.083," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.064,0.075," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.057,0.069," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.045,0.062," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.042,0.057," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.101,0.122," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.091,0.109," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.081,0.104," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.065,0.093," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.061,0.086," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.084,0.108," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.077,0.096," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.068,0.092," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.056,0.081," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.052,0.076," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.109,0.132," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.100,0.119," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.089,0.112," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.071,0.097," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.067,0.093," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.054,0.067," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.048,0.060," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.043,0.057," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.035,0.049," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.034,0.047," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.278,0.307," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.249,0.276," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.223,0.261," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.182,0.229," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.167,0.214," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.094,0.135," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.085,0.121," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.075,0.114," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.060,0.100," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.056,0.094," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.073,0.065," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.066,0.058," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.058,0.054," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.047,0.049," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.044,0.045," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.046,0.059," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.042,0.053," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.036,0.051," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.030,0.044," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.028,0.042," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.039,0.043," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.034,0.040," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.032,0.038," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.024,0.033," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.023,0.032," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.070,0.084," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.065,0.076," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.057,0.071," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.046,0.064," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.043,0.059," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.060,," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.056,," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.050,," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.040,," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.036,," />
+          <row value=",," />
+          <row value=",," />
+          <row value=",," />
+          <row value=",," />
+          <row value=",," />
+          <row value=",," />
+          <row value=",," />
+          <row value=",," />
+          <row value=",," />
+          <row value=",," />
+          <row value=",," />
+          <row value=",," />
+          <row value=",," />
+          <row value=",," />
+          <row value=",," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.323,0.377," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.290,0.341," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.257,0.323," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.210,0.283," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.193,0.265," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.255,0.313," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.230,0.281," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.204,0.265," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.165,0.236," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.155,0.218," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.226,0.299," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.203,0.270," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.181,0.255," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.147,0.226," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.136,0.210," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.270,0.326," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.242,0.294," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.215,0.278," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.174,0.246," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.161,0.230," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.231,0.318," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.210,0.285," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.187,0.270," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.151,0.238," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.141,0.221," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.695,0.843,1.051" />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.625,0.762," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.558,0.718,0.107" />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.450,0.635," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.416,0.591," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.414,0.523,0.290" />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.373,0.471," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.331,0.446,0.038" />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.270,0.392," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.248,0.369," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.338,0.516,0.283" />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.303,0.463," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.271,0.438,0.035" />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.221,0.387," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.203,0.361," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.215,0.283," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.196,0.255," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.174,0.242," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.141,0.215," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.130,0.197," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.204,0.203," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.184,0.182," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.163,0.172," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.133,0.151," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.122,0.141," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.165,0.197," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.149,0.177," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.133,0.168," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.108,0.147," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.099,0.137," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.107,0.126," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.096,0.114," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.085,0.107," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.069,0.094," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.064,0.090," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.069,0.090," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.062,0.079," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.055,0.076," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.045,0.068," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.041,0.062," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.360,0.476," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.327,0.430," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.292,0.404," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.237,0.357," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.218,0.335," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.246,0.284," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.221,0.257," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.195,0.241," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.159,0.213," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.146,0.198," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.188,0.229," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.168,0.206," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.151,0.193," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.122,0.170," />
+          <row value=",," />
+          <row value=",," />
+          <row value="0.114,0.161," />
+          <row value=",," />
+          <row value=",," />
+          <row value=",," />
+          <row value=",0," />
+          <row value=",0," />
+          <row value="0,0," />
+          <row value=",0," />
+          <row value=",0," />
+          <row value="0,0," />
+          <row value=",0," />
+          <row value=",0," />
+          <row value="0,0," />
+          <row value=",0," />
+          <row value=",0," />
+          <row value="0,0," />
+          <row value=",0," />
+          <row value=",0," />
+        </data>
+      </table>
+      <table id="A_RuleAndValue" tableType="local">
+        <fields>
+          <field type="int" name="Rule" />
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="Coverage" type="string" find="eq">
+          <key value="BrandsAndLabelsMaxIncrease" />
+          <key value="DebrisRemovalSpecialLossCost" />
+          <key value="MiscellaneousRealPropertyLossCost" />
+          <key value="PersPropApartments" />
+          <key value="PersPropExcludingTheft" />
+          <key value="PersPropOffices" />
+          <key value="PollutantBroadLossCost" />
+          <key value="PollutantSpecialLossCost" />
+          <key value="VacancyPermitBG1MinimumLossCost" />
+          <key value="VacancyPermitBG2MinimumLossCost" />
+          <key value="VacancyPermitBroadLossCost" />
+          <key value="VacancyPermitEqkLossCost" />
+          <key value="VacancyPermitSpecialLossCost" />
+          <key value="VacancyPermitSpecialVandalismLessThanEightyPercentCoins" />
+          <key value="VacancyPermitSpecialVandalismMinimumLossCost" />
+          <key value="VacanyPermitStandardPolicyHigherThan80" />
+          <key value="VacanyPermitStandardPolicyLessThan80" />
+          <key value="ZZZ" default="1" />
+          <key value="CollapseDuringConstructionAdjustment" />
+          <key value="BroadBuildersRiskBaseLossCost" />
+          <key value="SpecialBuildersRiskBaseLossCost" />
+          <key value="SpecialTimeElementBuildersRiskLossCost" />
+          <key value="SprinkleredRatedAsNonSprinklered" />
+          <key value="SprinklerSystemEqkFactor" />
+          <key value="TRIABG1Adjustment" />
+          <key value="BuildingTheftExclusionFactor" />
+        </rowKeys>
+        <data>
+          <row value="Rule 38.C.3 (Multistate),.053" />
+          <row value="Rule 38.F.4.b (Multistate),0.01" />
+          <row value="Rule 38.J.5 (Multistate),.528" />
+          <row value="Rule 72.E.2.d.1,.327" />
+          <row value="Rule 72.E.2.c,.021" />
+          <row value="Rule 72.E.2.d.2,47" />
+          <row value="Rule 38.E.4.b,0.006" />
+          <row value="Rule 38.E.4.c,0.006" />
+          <row value="Rule 38.P.4.c.(1).(a),0.022" />
+          <row value="Rule 38.P.4.c.(1).(a),0.006" />
+          <row value="Rule 38.P.4.c.(1).(b),0.04" />
+          <row value="Rule 38.P.4.c.(1).(b),0.006" />
+          <row value="Rule 38.P.4.c.(1).(b),0.053" />
+          <row value="Rule 38.P.4.c.(1).(a),0.831" />
+          <row value="Rule 38.P.4.c.(1).(a),0.562" />
+          <row value="Rule 38.P.4.c.(2).(b),1.08" />
+          <row value="Rule 38.P.4.c.(2).(b),1.62" />
+          <row value="None,0" />
+          <row value="Rule 41.D.4.b,0.002" />
+          <row value="Rule 71.E.3 (Multistate),0.012" />
+          <row value="Rule 72.E.3.(a) (Multistate),0.015" />
+          <row value="Rule 72.E.3.b (Multistate),0.024" />
+          <row value="Rule 74.A.3.c (Multistate),0.0006" />
+          <row value="Rule 73.D.7,1.06" />
+          <row value="PEX300 B.2,.990" />
+          <row value="Rule 72E.2.b.(2),.94" />
+        </data>
+      </table>
+      <table id="Rule36_ValueReportingForm" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="CausesOfLoss" type="string" find="eq">
+          <key value="Basic" />
+          <key value="Broad" />
+          <key value="Special" />
+          <key value="Earthquake" />
+          <key value="Acquired" />
+        </rowKeys>
+        <data>
+          <row value=".891" />
+          <row value=".026" />
+          <row value="1.187" />
+          <row value=".056" />
+          <row value=".528" />
+        </data>
+      </table>
+      <table id="Rule38H4_LossAssessmentLossCostPremium" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="Limit" type="int" find="range">
+          <key value="0" />
+          <key value="1000" />
+          <key value="5000" />
+          <key value="10000" />
+          <key value="[eachadd] 5000" />
+        </rowKeys>
+        <colKeys name="CauseOfLoss" type="string" find="eq">
+          <key value="Basic" />
+          <key value="AllOther" default="1" />
+        </colKeys>
+        <data>
+          <row value="0,0" />
+          <row value="2.700,3.165" />
+          <row value="4.321,5.275" />
+          <row value="5.401,6.858" />
+          <row value=".540,1.055" />
+        </data>
+      </table>
+      <table id="Rule38L4a_UtilityServicesLossCosts" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="CauseOfLoss" type="string" find="eq">
+          <key value="BG1" />
+          <key value="BG2" />
+          <key value="Broad" />
+          <key value="SpecialBuilding" />
+          <key value="SpecialPersonalProperty" />
+          <key value="Earthquake" />
+        </rowKeys>
+        <colKeys name="UtilityProviderType" type="string" find="eq">
+          <key value="PublicUtilties" />
+          <key value="OtherThanPublicUtilities" />
+        </colKeys>
+        <data>
+          <row value=".038,.075" />
+          <row value=".011,.022" />
+          <row value=".006,.010" />
+          <row value=".006,.010" />
+          <row value=".021,.042" />
+          <row value=".011,.022" />
+        </data>
+      </table>
+      <table id="Rule38L4b_UtilityServicesLossCosts" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="CauseOfLoss" type="string" find="eq">
+          <key value="BG1" />
+          <key value="BG2" />
+          <key value="Broad" />
+          <key value="SpecialBuilding" />
+          <key value="SpecialPersonalProperty" />
+          <key value="Earthquake" />
+        </rowKeys>
+        <data>
+          <row value=".008" />
+          <row value=".006" />
+          <row value=".006" />
+          <row value=".006" />
+          <row value=".021" />
+          <row value=".034" />
+        </data>
+      </table>
+      <table id="Rule38O5_TreesShrubsAndPlantsLossCosts" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="Coverage" type="string" find="eq">
+          <key value="BG1" />
+          <key value="BG2" />
+        </rowKeys>
+        <data>
+          <row value=".421" />
+          <row value=".421" />
+        </data>
+      </table>
+      <table id="Rule38T4b_SpoilageLossCost" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="Class" type="int" find="eq">
+          <key value="Class1" />
+          <key value="Class2" />
+          <key value="Class3" />
+        </rowKeys>
+        <colKeys name="Coverage" type="string" find="eq">
+          <key value="Breakdown" />
+          <key value="PowerOutage" />
+          <key value="Both" />
+        </colKeys>
+        <colKeys name="Refrigeration" type="string" find="eq">
+          <key value="1" default="1" />
+          <key value="0" />
+        </colKeys>
+        <data>
+          <row value=".659,.923,.396,.396,.923,1.187" />
+          <row value=".791,1.055,.422,.422,1.055,1.319" />
+          <row value=".923,1.372,.475,.475,1.213,1.662" />
+        </data>
+      </table>
+      <table id="Rule51H4_MiningPropertiesAdjustment" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="Coverage" type="string" find="eq">
+          <key value="BG1" />
+          <key value="BG2" />
+        </rowKeys>
+        <colKeys name="CausesOfLossSubline" type="string" find="eq">
+          <key value="Limited" />
+          <key value="Broad" />
+        </colKeys>
+        <data>
+          <row value=".095,.173" />
+          <row value=".044,.199" />
+        </data>
+      </table>
+      <table id="Rule54B4_UtilityServicesLossCosts" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="Select" type="string" find="eq" pageKey="1">
+          <key value="PowerWaterSupply" />
+          <key value="CommunicationSupply" />
+          <key value="OverheadTransmissionCommunicationLines" />
+        </rowKeys>
+        <rowKeys name="CauseOfLoss" type="string" find="eq">
+          <key value="BG1" />
+          <key value="BG2" />
+          <key value="Broad" />
+          <key value="Special" />
+          <key value="Earthquake" />
+        </rowKeys>
+        <data>
+          <row value=".022" />
+          <row value=".011" />
+          <row value=".006" />
+          <row value=".019" />
+          <row value=".028" />
+          <row value=".044" />
+          <row value=".044" />
+          <row value=".010" />
+          <row value=".029" />
+          <row value=".056" />
+          <row value=".011" />
+          <row value=".027" />
+          <row value=".010" />
+          <row value=".053" />
+          <row value=".056" />
+        </data>
+      </table>
+      <table id="Rule68_TobaccoInWarehouses" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="LimitOfLiability" type="int" find="range">
+          <key value="0-50000" />
+          <key value="50001-75000" />
+          <key value="75001-100000" />
+          <key value="100001&gt;" />
+        </rowKeys>
+        <data>
+          <row value="26" />
+          <row value="40" />
+          <row value="53" />
+          <row value="79" />
+        </data>
+      </table>
+      <table id="Rule70E2_BG2LossCosts" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="Territory" type="int" find="eq" pageKey="1">
+          <key value="1" default="1" />
+          <key value="2" />
+        </rowKeys>
+        <rowKeys name="Classification" type="string" find="eq">
+          <key value="AA" />
+          <key value="A" />
+          <key value="AB" />
+          <key value="B" />
+        </rowKeys>
+        <rowKeys name="BuildingOrContents" type="string" find="eq">
+          <key value="B" />
+          <key value="C" />
+        </rowKeys>
+        <data>
+          <row value="0.048" />
+          <row value="0.054" />
+          <row value="0.052" />
+          <row value="0.060" />
+          <row value="0.063" />
+          <row value="0.070" />
+          <row value="0.098" />
+          <row value="0.104" />
+          <row value="0.100" />
+          <row value="0.088" />
+          <row value="0.109" />
+          <row value="0.098" />
+          <row value="0.124" />
+          <row value="0.111" />
+          <row value="0.203" />
+          <row value="0.182" />
+        </data>
+      </table>
+      <table id="Rule71E2c_BroadLossCosts" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="Item" type="string" find="eq">
+          <key value="B" default="1" />
+          <key value="C" />
+        </rowKeys>
+        <colKeys name="Construction" type="string" find="range">
+          <key value="FireResistive,ModifiedFireResistive" />
+          <key value="Frame,JoistedMasonry,NonCombustible,MasonryNonCombustible" />
+        </colKeys>
+        <data>
+          <row value=".010,.015" />
+          <row value=".011,.021" />
+        </data>
+      </table>
+      <table id="Rule71E4b1_BroadTimeElementWithoutExtraExpenseLossCosts" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="Construction" type="string" find="range">
+          <key value="ModifiedFireResistive,FireResistive" />
+          <key value="Frame,JoistedMasonry,NonCombustible,MasonryNonCombustible" />
+        </rowKeys>
+        <data>
+          <row value=".007" />
+          <row value=".011" />
+        </data>
+      </table>
+      <table id="Rule71E4b2_BroadTimeElementWithExtraExpenseLossCosts" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="Construction" type="string" find="range">
+          <key value="ModifiedFireResistive,FireResistive" />
+          <key value="Frame,JoistedMasonry,NonCombustible,MasonryNonCombustible" />
+        </rowKeys>
+        <data>
+          <row value=".012" />
+          <row value=".023" />
+        </data>
+      </table>
+      <table id="Rule72E2b1_SpecialBuildingLossCosts" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <data>
+          <row value="0.057" />
+        </data>
+      </table>
+      <table id="Rule72E2d3c_BaseLossCostByTerritory" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="County" type="string" find="range">
+          <key value="Providence" />
+          <key value="RemainderOfState" default="1" />
+        </rowKeys>
+        <colKeys name="OccupancyType" type="string" find="eq">
+          <key value="M" default="1" />
+          <key value="MH" />
+          <key value="I" />
+          <key value="IP" />
+          <key value="S" />
+          <key value="C" />
+        </colKeys>
+        <data>
+          <row value=".058,.058,.058,.059,.059,.059" />
+          <row value=".050,.050,.050,.054,.054,.054" />
+        </data>
+      </table>
+      <table id="Rule72E4a1_SpecialTimeElementExludingTheftLossCosts" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="Construction" type="string" find="range">
+          <key value="ModifiedFireResistive,FireResistive" />
+          <key value="AllOther" default="1" />
+        </rowKeys>
+        <colKeys name="LossCost" type="string" find="eq">
+          <key value="WithoutExtraExpense" />
+          <key value="WithExtraExpense" />
+        </colKeys>
+        <data>
+          <row value=".010,.021" />
+          <row value=".019,.037" />
+        </data>
+      </table>
+      <table id="Rule72E4b1_SpecialTimeElementIncludingTheftLossCosts" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="Construction" type="string" find="range">
+          <key value="ModifiedFireResistive,FireResistive" />
+          <key value="AllOther" default="1" />
+        </rowKeys>
+        <rowKeys name="RiskType" type="string" find="range">
+          <key value="Apartment,Condo" />
+          <key value="AllOther" default="1" />
+        </rowKeys>
+        <colKeys name="LossCost" type="string" find="eq">
+          <key value="WithoutExtraExpense" />
+          <key value="AllOther" default="1" />
+        </colKeys>
+        <data>
+          <row value="0.010,0.017" />
+          <row value="0.027,0.035" />
+          <row value="0.016,0.029" />
+          <row value="0.033,0.047" />
+        </data>
+      </table>
+      <table id="Rule73D2_DeductibleCredit" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="Tier" type="int" find="eq" pageKey="1">
+          <key value="1" />
+          <key value="2" default="1" />
+          <key value="3" />
+        </rowKeys>
+        <rowKeys name="BuildingClass" type="string" find="range">
+          <key value="1C,1D,3B" />
+          <key value="3A,4B,5A" />
+          <key value="2A,2B,4A" />
+          <key value="3C,4C,4D,5B,5C" default="1" />
+          <key value="5AA" />
+        </rowKeys>
+        <colKeys name="PercentageDeductible" type="int" find="eq">
+          <key value="10" default="1" />
+          <key value="15" />
+          <key value="20" />
+          <key value="25" />
+          <key value="30" />
+          <key value="35" />
+          <key value="40" />
+        </colKeys>
+        <data>
+          <row value="0.90,0.80,0.70,0.60,0.50,0.45,0.40" />
+          <row value="0.85,0.75,0.65,0.55,0.50,0.40,0.35" />
+          <row value="0.85,0.70,0.60,0.50,0.40,0.35,0.30" />
+          <row value="1,0.90,0.80,0.70,0.60,0.50,0.45" />
+          <row value="1,0.90,0.75,0.65,0.55,0.45,0.40" />
+          <row value="0.80,0.60,0.50,0.40,0.30,0.25,0.20" />
+          <row value="0.70,0.50,0.35,0.25,0.20,0.15,0.10" />
+          <row value="0.60,0.40,0.30,0.20,0.15,0.10,0.05" />
+          <row value="1,0.80,0.65,0.50,0.40,0.30,0.25" />
+          <row value="1,0.70,0.50,0.40,0.25,0.20,0.15" />
+          <row value="0.70,0.50,0.40,0.30,0.20,0.15,0.10" />
+          <row value="0.60,0.35,0.20,0.15,0.10,0.05,0.05" />
+          <row value="0.50,0.30,0.15,0.10,0.05,0.05,0.05" />
+          <row value="1,0.75,0.55,0.40,0.30,0.20,0.15" />
+          <row value="1,0.60,0.40,0.25,0.15,0.10,0.05" />
+        </data>
+      </table>
+      <table id="Rule73D4b_EarthquakeBuildersRiskFactor" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="CSP" type="string" find="eq">
+          <key value="1150" />
+          <key value="AllOther" default="1" />
+        </rowKeys>
+        <rowKeys name="BuildingClass" type="string" find="range">
+          <key value="3A,4A,5A,6" />
+          <key value="AllOther" default="1" />
+        </rowKeys>
+        <data>
+          <row value="1.000" />
+          <row value=".495" />
+          <row value="1.000" />
+          <row value="1.000" />
+        </data>
+      </table>
+      <table id="Rule73D4d_EarthquakeMasonryVeneerCoverageFactor" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="ExteriorWallPercentage" type="string" find="eq">
+          <key value="N/A" default="1" />
+          <key value="10%-25%" />
+          <key value="25%-50%" />
+          <key value="Over50%" />
+        </rowKeys>
+        <rowKeys name="BuildingClass" type="string" find="range">
+          <key value="1C,1D" />
+          <key value="AllOther" default="1" />
+        </rowKeys>
+        <data>
+          <row value="1.00" />
+          <row value="1.00" />
+          <row value="1.75" />
+          <row value="1.00" />
+          <row value="2.50" />
+          <row value="1.00" />
+          <row value="4.00" />
+          <row value="1.00" />
+        </data>
+      </table>
+      <table id="Rule73E1aB_EarthquakeLossCosts" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="BuildingClass" type="string" find="range">
+          <key value="1C" default="1" />
+          <key value="1D" />
+          <key value="2A" />
+          <key value="2B" />
+          <key value="3A" />
+          <key value="3B" />
+          <key value="3C" />
+          <key value="4A" />
+          <key value="4B" />
+          <key value="4C" />
+          <key value="4D" />
+          <key value="5A" />
+          <key value="5AA" />
+          <key value="5B" />
+          <key value="5C" />
+        </rowKeys>
+        <colKeys name="Type" type="string" find="eq">
+          <key value="B" default="1" />
+          <key value="1" />
+          <key value="2" />
+          <key value="3" />
+          <key value="4" />
+          <key value="MandatoryDed" />
+        </colKeys>
+        <data>
+          <row value="0.010,0.061,0.018,0.009,0.005,5" />
+          <row value="0.010,0.061,0.018,0.009,0.005,5" />
+          <row value="0.003,0.019,0.006,0.003,0.002,5" />
+          <row value="0.003,0.019,0.006,0.003,0.002,5" />
+          <row value="0.006,0.027,0.009,0.004,0.003,5" />
+          <row value="0.008,0.034,0.010,0.005,0.004,5" />
+          <row value="0.007,0.019,0.007,0.004,0.003,10" />
+          <row value="0.006,0.029,0.008,0.005,0.003,5" />
+          <row value="0.009,0.036,0.011,0.006,0.004,5" />
+          <row value="0.008,0.030,0.008,0.005,0.004,10" />
+          <row value="0.010,0.030,0.010,0.007,0.005,10" />
+          <row value="0.009,0.043,0.012,0.006,0.004,5" />
+          <row value="0.010,0.048,0.014,0.008,0.004,10" />
+          <row value="0.018,0.068,0.021,0.013,0.007,10" />
+          <row value="0.028,0.104,0.042,0.024,0.011,10" />
+        </data>
+      </table>
+      <table id="Rule73E1b_NumberOfStoriesFactor" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="NumberOfStories" type="int" find="range">
+          <key value="1-8" />
+          <key value="9-20" />
+          <key value="21&gt;" />
+        </rowKeys>
+        <data>
+          <row value="1.0" />
+          <row value="1.5" />
+          <row value="2.0" />
+        </data>
+      </table>
+      <table id="Rule74A3b_AdditionalExclusionsVandalism" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="CSP" type="string" find="range">
+          <key value="AllOther" default="1" />
+          <key value="1190" />
+          <key value="1185" />
+          <key value="1150" />
+          <key value="0841" />
+          <key value="1650" />
+          <key value="0900" />
+          <key value="0846" />
+          <key value="0833" />
+          <key value="0951" />
+          <key value="0952" />
+          <key value="0580" />
+          <key value="0843" />
+          <key value="0742,0743,0744,0745,0746,0747" />
+          <key value="1051" />
+          <key value="0844" />
+          <key value="1052" />
+          <key value="0834" />
+          <key value="1180" />
+          <key value="1190" />
+        </rowKeys>
+        <data>
+          <row value=".006" />
+          <row value=".016" />
+          <row value=".379" />
+          <row value=".010" />
+          <row value=".021" />
+          <row value=".021" />
+          <row value=".021" />
+          <row value=".021" />
+          <row value=".021" />
+          <row value=".021" />
+          <row value=".021" />
+          <row value=".021" />
+          <row value=".021" />
+          <row value=".021" />
+          <row value=".021" />
+          <row value=".021" />
+          <row value=".021" />
+          <row value=".021" />
+          <row value=".021" />
+          <row value=".016" />
+        </data>
+      </table>
+      <table id="Rule74A3c_AdditionalExclusionsSprinklerLeakage" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="ConstructionCode" type="string" find="range">
+          <key value="Frame" />
+          <key value="JoistedMasonry" />
+          <key value="NonCombustible" />
+          <key value="MasonryNonCombustible" />
+          <key value="ModifiedFireResistive,FireResistive" />
+        </rowKeys>
+        <colKeys name="BuildingOrContents" type="string" find="eq">
+          <key value="B" default="1" />
+          <key value="C" />
+        </colKeys>
+        <data>
+          <row value=".92,.93" />
+          <row value=".93,.86" />
+          <row value=".77,.81" />
+          <row value=".81,.83" />
+          <row value=".84,.87" />
+        </data>
+      </table>
+      <table id="Rule74C5_PierAndWharfLossCosts" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="Select" type="string" find="eq">
+          <key value="FireResistiveWithoutSuperstructure" />
+          <key value="FireResistiveIncludingSuperstructure" />
+          <key value="NonCombustibleIncludingSuperstructure" />
+          <key value="AllOtherConstructionWithoutSuperstructure" />
+          <key value="AllOtherConstructionIncludingSuperstructure" />
+          <key value="SubstructureWithCanopySuperstructure" />
+        </rowKeys>
+        <data>
+          <row value=".026" />
+          <row value=".026" />
+          <row value=".026" />
+          <row value=".026" />
+          <row value=".040" />
+          <row value=".040" />
+        </data>
+      </table>
+      <table id="Rule74F5c_SprinklerLeakageEarthquakeExtensionFactor" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="BuildingClass" type="string" find="range">
+          <key value="AllClasses" default="1" />
+        </rowKeys>
+        <colKeys name="SusceptibilityGrading" type="string" find="eq">
+          <key value="Building" />
+          <key value="S" />
+          <key value="M" />
+          <key value="H" />
+        </colKeys>
+        <data>
+          <row value=".210,.210,.315,.420" />
+        </data>
+      </table>
+      <table id="Rule74G4_WatercraftExclusionBuybackLossCosts" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="Select" type="string" find="eq">
+          <key value="FireResistiveWithoutSuperstructure" />
+          <key value="FireResistiveIncludingSuperstructure" />
+          <key value="NonCombustibleIncludingSuperstructure" />
+          <key value="AllOtherConstructionWithoutSuperstructure" />
+          <key value="AllOtherConstructionIncludingSuperstructure" />
+          <key value="SubstructureWithCanopySuperstructure" />
+        </rowKeys>
+        <data>
+          <row value=".016" />
+          <row value=".016" />
+          <row value=".016" />
+          <row value=".016" />
+          <row value=".024" />
+          <row value=".024" />
+        </data>
+      </table>
+      <table id="Rule85C_SubStandardConditions" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="Condition" type="string" find="eq">
+          <key value="HeatingCooking" />
+          <key value="Wiring" />
+          <key value="Conversion" />
+          <key value="PhysicalCondition" />
+          <key value="Exposure" />
+        </rowKeys>
+        <colKeys name="Construction Code" type="string" find="range">
+          <key value="Frame,JoistedMasonry,NonCombustible" />
+          <key value="MasonryNonCombustible" />
+          <key value="ModifiedFireResistive,FireResistive" />
+        </colKeys>
+        <data>
+          <row value=".321,.160,.076" />
+          <row value=".160,.076,.040" />
+          <row value=".321,.160,.076" />
+          <row value=".321,.160,.076" />
+          <row value=".160,.076,.040" />
+        </data>
+      </table>
+      <table id="Rule85L3_SpecialClassLossCosts" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="ItemNumber" type="string" find="eq">
+          <key value="1a" />
+          <key value="1b" />
+          <key value="1c" />
+          <key value="2" />
+          <key value="3a" />
+          <key value="3b" />
+          <key value="4a" />
+          <key value="4b" />
+          <key value="5" />
+          <key value="6a" />
+          <key value="6b" />
+          <key value="7a" />
+          <key value="7b" />
+          <key value="8" />
+          <key value="9" />
+          <key value="10a" />
+          <key value="10b" />
+          <key value="10c" />
+          <key value="11a" />
+          <key value="11b" />
+          <key value="11c" />
+          <key value="12" />
+          <key value="13" />
+          <key value="14a" />
+          <key value="14b1" />
+          <key value="14b2" />
+          <key value="14b3" />
+          <key value="15a" />
+          <key value="15b" />
+          <key value="16a" />
+          <key value="16b" />
+          <key value="17" />
+          <key value="18a" />
+          <key value="18b" />
+          <key value="19a" />
+          <key value="19b" />
+          <key value="20a" />
+          <key value="20b" />
+          <key value="20c" />
+          <key value="20d" />
+          <key value="21" />
+          <key value="22" />
+          <key value="23" />
+          <key value="24" />
+          <key value="25" />
+          <key value="26" />
+          <key value="27" />
+          <key value="28a" />
+          <key value="28b" />
+          <key value="29a1" />
+          <key value="29a2" />
+          <key value="29b1" />
+          <key value="29b2" />
+          <key value="30a" />
+          <key value="30b1" />
+          <key value="30b2" />
+          <key value="30b3" />
+          <key value="31a" />
+          <key value="31b" />
+          <key value="31c" />
+          <key value="32a" />
+          <key value="32b" />
+          <key value="32c1" />
+          <key value="32c2" />
+          <key value="32d" />
+          <key value="33a" />
+          <key value="33b" />
+          <key value="34a" />
+          <key value="34b" />
+        </rowKeys>
+        <colKeys name="ProtectionClass" type="string" find="range">
+          <key value="1,2,3,4" />
+          <key value="5,6,7,8" />
+          <key value="8B,9,10" default="1" />
+        </colKeys>
+        <data>
+          <row value=".044,.044,.044" />
+          <row value=".260,.340,.421" />
+          <row value=".502,.664,.826" />
+          <row value=".286,.368,.448" />
+          <row value=".055,.055,.055" />
+          <row value=".556,.556,.556" />
+          <row value=".286,.286,.286" />
+          <row value="1.636,2.176,2.716" />
+          <row value=".167,.189,.205" />
+          <row value=".055,.055,.055" />
+          <row value=".502,.664,.826" />
+          <row value=".513,.513,.513" />
+          <row value="1.188,1.188,1.188" />
+          <row value=".502,.664,.826" />
+          <row value=".502,.664,.826" />
+          <row value=".049,.049,.049" />
+          <row value=".152,.152,.152" />
+          <row value=".448,.502,.556" />
+          <row value=".124,.124,.124" />
+          <row value=".286,.286,.286" />
+          <row value=".502,.664,.826" />
+          <row value="1.096,1.232,1.367" />
+          <row value=".124,.124,.152" />
+          <row value=".070,.070,.070" />
+          <row value=".044,.044,.044" />
+          <row value=".152,.152,.152" />
+          <row value=".502,.664,.826" />
+          <row value=".070,.070,.070" />
+          <row value=".152,.152,.152" />
+          <row value=".340,.448,.556" />
+          <row value=".664,.880,1.096" />
+          <row value="5.417,5.417,5.417" />
+          <row value=".055,.055,.055" />
+          <row value=".556,.556,.556" />
+          <row value=".044,.044,.044" />
+          <row value=".070,.070,.070" />
+          <row value=".178,.232,.286" />
+          <row value=".502,.664,.826" />
+          <row value=".988,1.312,1.636" />
+          <row value="0.00,0.00,0.00" />
+          <row value=".502,.664,.826" />
+          <row value=".421,.421,.421" />
+          <row value="1.636,2.176,2.716" />
+          <row value=".556,.556,.556" />
+          <row value="5.417,5.417,5.417" />
+          <row value="3.256,3.662,4.067" />
+          <row value="1.096,1.232,1.367" />
+          <row value=".055,.055,.055" />
+          <row value=".556,.556,.556" />
+          <row value=".044,.044,.044" />
+          <row value=".152,.152,.152" />
+          <row value=".044,.044,.044" />
+          <row value=".556,.556,.556" />
+          <row value=".044,.044,.044" />
+          <row value=".044,.044,.044" />
+          <row value=".070,.070,.070" />
+          <row value=".124,.124,.124" />
+          <row value="1.636,1.852,2.041" />
+          <row value="2.176,2.447,2.716" />
+          <row value="2.176,2.447,2.716" />
+          <row value=".070,.070,.070" />
+          <row value=".070,.070,.070" />
+          <row value=".044,.044,.044" />
+          <row value=".070,.070,.070" />
+          <row value=".070,.070,.070" />
+          <row value=".049,.049,.049" />
+          <row value=".826,.826,.826" />
+          <row value=".055,.055,.055" />
+          <row value=".152,.152,.152" />
+          <row value=",," />
+        </data>
+      </table>
+      <table id="Rule85M1b_ProtectionClassMultipliers" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="ProtectionClass" type="string" find="eq">
+          <key value="1" />
+          <key value="2" />
+          <key value="3" />
+          <key value="4" />
+          <key value="5" default="1" />
+          <key value="6" />
+          <key value="7" />
+          <key value="8" />
+          <key value="8B" />
+          <key value="9" />
+          <key value="10" />
+        </rowKeys>
+        <colKeys name="Construction" type="string" find="range">
+          <key value="Frame,JoistedMasonry,NonCombustible" default="1" />
+          <key value="MasonryNonCombustible,ModifiedFireResistive,FireResistive" />
+        </colKeys>
+        <data>
+          <row value=".88,.90" />
+          <row value=".92,.94" />
+          <row value=".96,.97" />
+          <row value=".98,.98" />
+          <row value="1.00,1.00" />
+          <row value="1.06,1.05" />
+          <row value="1.18,1.14" />
+          <row value="1.30,1.24" />
+          <row value="1.42,1.34" />
+          <row value="1.42,1.34" />
+          <row value="1.72,1.58" />
+          <row value="" />
+        </data>
+      </table>
+      <table id="Rule85_TerritoryMultiplier" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="Territory" type="string" find="eq">
+          <key value="RemainderOfState" default="1" />
+        </rowKeys>
+        <data>
+          <row value="1.000" />
+        </data>
+      </table>
+      <table id="TerrorismLossCosts" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="Programyear" type="int" find="eq">
+          <key value="2005" />
+          <key value="9999" default="1" />
+        </rowKeys>
+        <colKeys name="Tier" type="int" find="eq">
+          <key value="3" default="1" />
+        </colKeys>
+        <data>
+          <row value=".001" />
+          <row value=".001" />
+        </data>
+      </table>
+      <table id="Rule73D8_EarthquakeBuildingHeight" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="Class" type="string" find="eq">
+          <key value="1C" />
+          <key value="1D" />
+          <key value="2A" />
+          <key value="2B" />
+          <key value="3A" />
+          <key value="3B" />
+          <key value="3C" />
+          <key value="4A" />
+          <key value="4B" />
+          <key value="4C" />
+          <key value="4D" />
+          <key value="5A" />
+          <key value="5AA" />
+          <key value="5B" />
+          <key value="5C" />
+        </rowKeys>
+        <colKeys name="NumberOfStories" type="int" find="range">
+          <key value="4-7" />
+          <key value="8&gt;" />
+        </colKeys>
+        <colKeys name="Tier" type="int" find="eq">
+          <key value="1" />
+          <key value="2" />
+          <key value="3" />
+        </colKeys>
+        <data>
+          <row value="1.000,1.000,1.000,1.000,1.000,1.000" />
+          <row value="1.000,1.000,1.000,1.000,1.000,1.000" />
+          <row value="1.000,1.000,1.000,1.000,1.000,1.000" />
+          <row value="1.000,1.000,1.000,1.000,1.000,1.000" />
+          <row value="1.000,1.000,1.000,1.000,1.000,1.000" />
+          <row value="1.000,1.000,1.000,1.000,1.000,1.000" />
+          <row value="1.000,1.000,1.000,1.000,1.000,1.000" />
+          <row value="1.000,1.000,1.000,1.000,1.000,1.000" />
+          <row value="1.000,1.000,1.000,1.000,1.000,1.000" />
+          <row value="1.000,1.000,1.000,1.000,1.000,1.000" />
+          <row value="1.000,1.000,1.000,1.000,1.000,1.000" />
+          <row value="1.000,1.000,1.000,1.000,1.000,1.000" />
+          <row value="1.000,1.000,1.000,1.000,1.000,1.000" />
+          <row value="1.000,1.000,1.000,1.000,1.000,1.000" />
+          <row value="1.000,1.000,1.000,1.000,1.000,1.000" />
+        </data>
+      </table>
+      <table id="Rule81E4_DeductibleFactors" tableType="local">
+        <fields>
+          <field type="int" name="BG1" />
+          <field type="int" name="BG2" />
+          <field type="int" name="Other" />
+        </fields>
+        <rowKeys type="int" name="rowIndex">
+          <if>
+            <condition>
+              <comparison compare="eq">
+                <operand idref="ExtPropertyRiskPrivate.DeductibleSelected" type="string" />
+                <operand type="int" value="1000" />
+              </comparison>
+            </condition>
+            <then>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="250001" />
+                  </comparison>
+                </condition>
+                <then value="0" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="100001" />
+                  </comparison>
+                </condition>
+                <then value="1" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="50001" />
+                  </comparison>
+                </condition>
+                <then value="2" />
+              </if>
+              <if>
+                <condition idref="True" />
+                <then value="3" />
+              </if>
+            </then>
+          </if>
+          <if>
+            <condition>
+              <comparison compare="eq">
+                <operand idref="ExtPropertyRiskPrivate.DeductibleSelected" type="string" />
+                <operand type="int" value="2500" />
+              </comparison>
+            </condition>
+            <then>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="500001" />
+                  </comparison>
+                </condition>
+                <then value="4" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="250001" />
+                  </comparison>
+                </condition>
+                <then value="5" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="100001" />
+                  </comparison>
+                </condition>
+                <then value="6" />
+              </if>
+              <if>
+                <condition idref="True" />
+                <then value="7" />
+              </if>
+            </then>
+          </if>
+          <if>
+            <condition>
+              <comparison compare="eq">
+                <operand idref="ExtPropertyRiskPrivate.DeductibleSelected" type="string" />
+                <operand type="int" value="5000" />
+              </comparison>
+            </condition>
+            <then>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="1000001" />
+                  </comparison>
+                </condition>
+                <then value="8" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="500001" />
+                  </comparison>
+                </condition>
+                <then value="9" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="250001" />
+                  </comparison>
+                </condition>
+                <then value="10" />
+              </if>
+              <if>
+                <condition idref="True" />
+                <then value="11" />
+              </if>
+            </then>
+          </if>
+          <if>
+            <condition>
+              <comparison compare="eq">
+                <operand idref="ExtPropertyRiskPrivate.DeductibleSelected" type="string" />
+                <operand type="int" value="10000" />
+              </comparison>
+            </condition>
+            <then>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="5000001" />
+                  </comparison>
+                </condition>
+                <then value="12" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="1000001" />
+                  </comparison>
+                </condition>
+                <then value="13" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="500001" />
+                  </comparison>
+                </condition>
+                <then value="14" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="250001" />
+                  </comparison>
+                </condition>
+                <then value="15" />
+              </if>
+              <if>
+                <condition idref="True" />
+                <then value="16" />
+              </if>
+            </then>
+          </if>
+          <if>
+            <condition>
+              <comparison compare="eq">
+                <operand idref="ExtPropertyRiskPrivate.DeductibleSelected" type="string" />
+                <operand type="int" value="25000" />
+              </comparison>
+            </condition>
+            <then>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="10000001" />
+                  </comparison>
+                </condition>
+                <then value="17" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="5000001" />
+                  </comparison>
+                </condition>
+                <then value="18" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="1000001" />
+                  </comparison>
+                </condition>
+                <then value="19" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="500001" />
+                  </comparison>
+                </condition>
+                <then value="20" />
+              </if>
+              <if>
+                <condition idref="True" />
+                <then value="21" />
+              </if>
+            </then>
+          </if>
+          <if>
+            <condition>
+              <comparison compare="eq">
+                <operand idref="ExtPropertyRiskPrivate.DeductibleSelected" type="string" />
+                <operand type="int" value="50000" />
+              </comparison>
+            </condition>
+            <then>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="10000001" />
+                  </comparison>
+                </condition>
+                <then value="22" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="5500001" />
+                  </comparison>
+                </condition>
+                <then value="23" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="3500001" />
+                  </comparison>
+                </condition>
+                <then value="24" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="1000001" />
+                  </comparison>
+                </condition>
+                <then value="25" />
+              </if>
+              <if>
+                <condition idref="True" />
+                <then value="26" />
+              </if>
+            </then>
+          </if>
+          <if>
+            <condition>
+              <comparison compare="eq">
+                <operand idref="ExtPropertyRiskPrivate.DeductibleSelected" type="string" />
+                <operand type="int" value="75000" />
+              </comparison>
+            </condition>
+            <then>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="10000001" />
+                  </comparison>
+                </condition>
+                <then value="27" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="5500001" />
+                  </comparison>
+                </condition>
+                <then value="28" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="3500001" />
+                  </comparison>
+                </condition>
+                <then value="29" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="1000001" />
+                  </comparison>
+                </condition>
+                <then value="30" />
+              </if>
+              <if>
+                <condition idref="True" />
+                <then value="31" />
+              </if>
+            </then>
+          </if>
+          <if>
+            <condition idref="True">
+              <comparison compare="eq">
+                <operand idref="PropertyRiskInput.DeductibleBG1" type="string" />
+                <operand type="int" value="500" />
+              </comparison>
+            </condition>
+            <then value="32" />
+          </if>
+        </rowKeys>
+        <colKeys type="int" name="colIndex">
+          <if>
+            <condition value="1" />
+            <then value="0" />
+          </if>
+        </colKeys>
+        <data>
+          <row value=".99,.96,.96" />
+          <row value=".97,.93,.93" />
+          <row value=".96,.92,.92" />
+          <row value=".94,.89,.89" />
+          <row value=".96,.89,.89" />
+          <row value=".93,.82,.82" />
+          <row value=".90,.79,.79" />
+          <row value=".84,.71,.71" />
+          <row value=".95,.84,.84" />
+          <row value=".90,.74,.74" />
+          <row value=".87,.69,.69" />
+          <row value=".79,.59,.59" />
+          <row value=".94,.81,.81" />
+          <row value=".89,.69,.69" />
+          <row value=".83,.60,.60" />
+          <row value=".78,.54,.54" />
+          <row value=".67,.44,.44" />
+          <row value=".93,.71,.71" />
+          <row value=".87,.60,.60" />
+          <row value=".81,.52,.52" />
+          <row value=".71,.42,.42" />
+          <row value=".60,.32,.32" />
+          <row value=".90,.60,.60" />
+          <row value=".81,.48,.48" />
+          <row value=".77,.44,.44" />
+          <row value=".72,.39,.39" />
+          <row value=".53,.27,.27" />
+          <row value=".87,.54,.54" />
+          <row value=".77,.42,.42" />
+          <row value=".73,.38,.38" />
+          <row value=".66,.33,.33" />
+          <row value=".50,.25,.25" />
+          <row value="1.000,1.000,1.000" />
+        </data>
+      </table>
+      <table id="A_RuleCommunityGradingBG2Factors" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="Grade" type="int" find="eq">
+          <key value="1" />
+          <key value="2" />
+          <key value="3" />
+          <key value="4" />
+          <key value="5" />
+          <key value="6" />
+          <key value="7" />
+          <key value="8" />
+          <key value="9" />
+          <key value="10" />
+          <key value="99" default="1" />
+        </rowKeys>
+        <colKeys name="Territory" type="string" find="eq">
+          <key value="1" default="1" />
+          <key value="2" />
+        </colKeys>
+        <data>
+          <row value=".96,.89" />
+          <row value=".96,.89" />
+          <row value=".96,.89" />
+          <row value=".98,.93" />
+          <row value=".98,.93" />
+          <row value=".98,.93" />
+          <row value=".98,.93" />
+          <row value=".99,.98" />
+          <row value=".99,.98" />
+          <row value="1.00,1.00" />
+          <row value="1.00,1.00" />
+        </data>
+      </table>
+      <table id="A_RuleCommunityGradingEarthquakeFactors" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="Grade" type="int" find="eq">
+          <key value="1" />
+          <key value="2" />
+          <key value="3" />
+          <key value="4" />
+          <key value="5" />
+          <key value="6" />
+          <key value="7" />
+          <key value="8" />
+          <key value="9" />
+          <key value="10" />
+          <key value="99" default="1" />
+        </rowKeys>
+        <colKeys name="Territory" type="string" find="eq">
+          <key value="EntireState" default="1" />
+        </colKeys>
+        <data>
+          <row value=".90" />
+          <row value=".90" />
+          <row value=".90" />
+          <row value=".94" />
+          <row value=".94" />
+          <row value=".94" />
+          <row value=".94" />
+          <row value=".98" />
+          <row value=".98" />
+          <row value="1.00" />
+          <row value="1.00" />
+        </data>
+      </table>
+      <table id="Rule73E1a_Tier" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="TerritoryOrZone" type="int" find="range">
+          <key value="1" default="1" />
+        </rowKeys>
+        <data>
+          <row value="2" />
+        </data>
+      </table>
+      <table id="Rule82D_WindHailRateModificationFactors" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="Deductible" type="string" find="eq">
+          <key value="1" />
+          <key value="2" />
+          <key value="5" />
+        </rowKeys>
+        <rowKeys name="LocationAmountOfTotalInsurance" type="int" find="range">
+          <key value="2500001&gt;" />
+          <key value="1000001-2500000" />
+          <key value="250001-1000000" />
+          <key value="100001-250000" />
+          <key value="100000&lt;" />
+        </rowKeys>
+        <data>
+          <row value=".76" />
+          <row value=".82" />
+          <row value=".87" />
+          <row value=".94" />
+          <row value=".97" />
+          <row value=".72" />
+          <row value=".77" />
+          <row value=".81" />
+          <row value=".89" />
+          <row value=".94" />
+          <row value=".69" />
+          <row value=".71" />
+          <row value=".74" />
+          <row value=".80" />
+          <row value=".87" />
+        </data>
+      </table>
+      <table id="Rule70_BG2Territory" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="Zipcode" type="string" find="eq">
+          <key value="02801" />
+          <key value="02802" />
+          <key value="02804" />
+          <key value="02806" />
+          <key value="02807" />
+          <key value="02808" />
+          <key value="02809" />
+          <key value="02812" />
+          <key value="02813" />
+          <key value="02814" />
+          <key value="02815" />
+          <key value="02816" />
+          <key value="02817" />
+          <key value="02818" />
+          <key value="02822" />
+          <key value="02823" />
+          <key value="02824" />
+          <key value="02825" />
+          <key value="02826" />
+          <key value="02827" />
+          <key value="02828" />
+          <key value="02829" />
+          <key value="02830" />
+          <key value="02831" />
+          <key value="02832" />
+          <key value="02833" />
+          <key value="02835" />
+          <key value="02836" />
+          <key value="02837" />
+          <key value="02838" />
+          <key value="02839" />
+          <key value="02840" />
+          <key value="02841" />
+          <key value="02842" />
+          <key value="02852" />
+          <key value="02854" />
+          <key value="02857" />
+          <key value="02858" />
+          <key value="02859" />
+          <key value="02860" />
+          <key value="02861" />
+          <key value="02862" />
+          <key value="02863" />
+          <key value="02864" />
+          <key value="02865" />
+          <key value="02871" />
+          <key value="02872" />
+          <key value="02873" />
+          <key value="02874" />
+          <key value="02875" />
+          <key value="02876" />
+          <key value="02877" />
+          <key value="02878" />
+          <key value="02879" />
+          <key value="02880" />
+          <key value="02881" />
+          <key value="02882" />
+          <key value="02883" />
+          <key value="02885" />
+          <key value="02886" />
+          <key value="02887" />
+          <key value="02888" />
+          <key value="02889" />
+          <key value="02891" />
+          <key value="02892" />
+          <key value="02893" />
+          <key value="02894" />
+          <key value="02895" />
+          <key value="02896" />
+          <key value="02898" />
+          <key value="02901" />
+          <key value="02902" />
+          <key value="02903" />
+          <key value="02904" />
+          <key value="02905" />
+          <key value="02906" />
+          <key value="02907" />
+          <key value="02908" />
+          <key value="02909" />
+          <key value="02910" />
+          <key value="02911" />
+          <key value="02912" />
+          <key value="02914" />
+          <key value="02915" />
+          <key value="02916" />
+          <key value="02917" />
+          <key value="02918" />
+          <key value="02919" />
+          <key value="02920" />
+          <key value="02921" />
+          <key value="02940" />
+          <key value="Default" default="1" />
+        </rowKeys>
+        <data>
+          <row value="2" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="2" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="2" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="2" />
+          <row value="1" />
+          <row value="2" />
+          <row value="1" />
+          <row value="1" />
+          <row value="2" />
+          <row value="2" />
+          <row value="2" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="2" />
+          <row value="2" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="2" />
+          <row value="2" />
+          <row value="1" />
+          <row value="2" />
+          <row value="2" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="2" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+        </data>
+      </table>
+      <table id="Rule73D3_EarthquakeTerritory" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="Zipcode" type="string" find="eq">
+          <key value="Entire State" default="1" />
+        </rowKeys>
+        <data>
+          <row value="1" />
+        </data>
+      </table>
+      <table id="CPPModifiers" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="RiskType" type="string" find="eq">
+          <key value="A" />
+          <key value="C" />
+          <key value="IP" />
+          <key value="I" />
+          <key value="M" />
+          <key value="MH" />
+          <key value="O" />
+          <key value="S" />
+          <key value="Default" default="1" />
+        </rowKeys>
+        <data>
+          <row value="0.77" />
+          <row value="0.98" />
+          <row value="0.72" />
+          <row value="0.75" />
+          <row value="1.00" />
+          <row value="1.00" />
+          <row value="0.96" />
+          <row value="1.00" />
+          <row value="1.00" />
+        </data>
+      </table>
+      <private id="data.CPPModifiersIndicator" type="boolean" comment="">
+        <value value="1" />
+      </private>
+      <table id="StatCodeTerritory" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="Territory" type="string" find="eq">
+          <key value="Cranston" />
+          <key value="Pawtucket" />
+          <key value="Providence" />
+          <key value="Warwick" />
+          <key value="RemainderOfState" default="1" />
+        </rowKeys>
+        <colKeys name="County" type="string" find="eq">
+          <key value="Bristol" />
+          <key value="Kent" />
+          <key value="Newport" />
+          <key value="Providence" />
+          <key value="Washington" />
+          <key value="RemainderOfState" default="1" />
+        </colKeys>
+        <data>
+          <row value="010,020,030,041,050,999" />
+          <row value="010,020,030,042,050,999" />
+          <row value="010,020,030,043,050,999" />
+          <row value="010,021,030,040,050,999" />
+          <row value="010,020,030,040,050,999" />
+        </data>
+      </table>
+      <table id="Rule81E5b_WindstormOrHailDeductibleFactors" tableType="local">
+        <fields>
+          <field type="int" name="CreditFactor" />
+        </fields>
+        <rowKeys type="int" name="rowIndex">
+          <if>
+            <condition>
+              <comparison compare="eq">
+                <operand idref="RiskPropertyInput.DeductibleWindHail" type="int" />
+                <operand type="int" value="1000" />
+              </comparison>
+            </condition>
+            <then>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="250001" />
+                  </comparison>
+                </condition>
+                <then value="0" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="100001" />
+                  </comparison>
+                </condition>
+                <then value="1" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="50001" />
+                  </comparison>
+                </condition>
+                <then value="2" />
+              </if>
+              <if>
+                <condition idref="True" />
+                <then value="3" />
+              </if>
+            </then>
+          </if>
+          <if>
+            <condition>
+              <comparison compare="eq">
+                <operand idref="RiskPropertyInput.DeductibleWindHail" type="int" />
+                <operand type="int" value="2500" />
+              </comparison>
+            </condition>
+            <then>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="500001" />
+                  </comparison>
+                </condition>
+                <then value="4" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="250001" />
+                  </comparison>
+                </condition>
+                <then value="5" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="100001" />
+                  </comparison>
+                </condition>
+                <then value="6" />
+              </if>
+              <if>
+                <condition idref="True" />
+                <then value="7" />
+              </if>
+            </then>
+          </if>
+          <if>
+            <condition>
+              <comparison compare="eq">
+                <operand idref="RiskPropertyInput.DeductibleWindHail" type="int" />
+                <operand type="int" value="5000" />
+              </comparison>
+            </condition>
+            <then>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="1000001" />
+                  </comparison>
+                </condition>
+                <then value="8" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="500001" />
+                  </comparison>
+                </condition>
+                <then value="9" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="250001" />
+                  </comparison>
+                </condition>
+                <then value="10" />
+              </if>
+              <if>
+                <condition idref="True" />
+                <then value="11" />
+              </if>
+            </then>
+          </if>
+          <if>
+            <condition>
+              <comparison compare="eq">
+                <operand idref="RiskPropertyInput.DeductibleWindHail" type="int" />
+                <operand type="int" value="10000" />
+              </comparison>
+            </condition>
+            <then>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="5000001" />
+                  </comparison>
+                </condition>
+                <then value="12" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="1000001" />
+                  </comparison>
+                </condition>
+                <then value="13" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="500001" />
+                  </comparison>
+                </condition>
+                <then value="14" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="250001" />
+                  </comparison>
+                </condition>
+                <then value="15" />
+              </if>
+              <if>
+                <condition idref="True" />
+                <then value="16" />
+              </if>
+            </then>
+          </if>
+          <if>
+            <condition>
+              <comparison compare="eq">
+                <operand idref="RiskPropertyInput.DeductibleWindHail" type="int" />
+                <operand type="int" value="25000" />
+              </comparison>
+            </condition>
+            <then>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="10000001" />
+                  </comparison>
+                </condition>
+                <then value="17" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="5000001" />
+                  </comparison>
+                </condition>
+                <then value="18" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="1000001" />
+                  </comparison>
+                </condition>
+                <then value="19" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="500001" />
+                  </comparison>
+                </condition>
+                <then value="20" />
+              </if>
+              <if>
+                <condition idref="True" />
+                <then value="21" />
+              </if>
+            </then>
+          </if>
+          <if>
+            <condition>
+              <comparison compare="eq">
+                <operand idref="RiskPropertyInput.DeductibleWindHail" type="int" />
+                <operand type="int" value="50000" />
+              </comparison>
+            </condition>
+            <then>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="10000001" />
+                  </comparison>
+                </condition>
+                <then value="22" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="5500001" />
+                  </comparison>
+                </condition>
+                <then value="23" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="3500001" />
+                  </comparison>
+                </condition>
+                <then value="24" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="1000001" />
+                  </comparison>
+                </condition>
+                <then value="25" />
+              </if>
+              <if>
+                <condition idref="True" />
+                <then value="26" />
+              </if>
+            </then>
+          </if>
+          <if>
+            <condition>
+              <comparison compare="eq">
+                <operand idref="RiskPropertyInput.DeductibleWindHail" type="int" />
+                <operand type="int" value="75000" />
+              </comparison>
+            </condition>
+            <then>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="10000001" />
+                  </comparison>
+                </condition>
+                <then value="27" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="5500001" />
+                  </comparison>
+                </condition>
+                <then value="28" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="3500001" />
+                  </comparison>
+                </condition>
+                <then value="29" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="1000001" />
+                  </comparison>
+                </condition>
+                <then value="30" />
+              </if>
+              <if>
+                <condition idref="True" />
+                <then value="31" />
+              </if>
+            </then>
+          </if>
+          <if>
+            <condition idref="True">
+              <comparison compare="eq">
+                <operand idref="PropertyRiskInput.DeductibleBG1" type="string" />
+                <operand type="int" value="500" />
+              </comparison>
+            </condition>
+            <then value="32" />
+          </if>
+        </rowKeys>
+        <colKeys type="int" name="colIndex">
+          <if>
+            <condition value="1" />
+            <then value="0" />
+          </if>
+        </colKeys>
+        <data>
+          <row value=".98" />
+          <row value=".97" />
+          <row value=".96" />
+          <row value=".95" />
+          <row value=".95" />
+          <row value=".91" />
+          <row value=".90" />
+          <row value=".86" />
+          <row value=".92" />
+          <row value=".87" />
+          <row value=".85" />
+          <row value=".80" />
+          <row value=".91" />
+          <row value=".85" />
+          <row value=".80" />
+          <row value=".77" />
+          <row value=".72" />
+          <row value=".86" />
+          <row value=".80" />
+          <row value=".76" />
+          <row value=".71" />
+          <row value=".66" />
+          <row value=".80" />
+          <row value=".74" />
+          <row value=".72" />
+          <row value=".70" />
+          <row value=".64" />
+          <row value=".77" />
+          <row value=".71" />
+          <row value=".69" />
+          <row value=".67" />
+          <row value=".63" />
+          <row value="1.000" />
+        </data>
+      </table>
+      <table id="Rule81E4_DeductibleFactorsForSeasonalBG2" tableType="local">
+        <fields>
+          <field type="int" name="BG1" />
+          <field type="int" name="BG2" />
+          <field type="int" name="Other" />
+        </fields>
+        <rowKeys type="int" name="rowIndex">
+          <if>
+            <condition>
+              <comparison compare="eq">
+                <operand idref="RiskPropertyInput.Deductible" type="int" />
+                <operand type="int" value="1000" />
+              </comparison>
+            </condition>
+            <then>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="250001" />
+                  </comparison>
+                </condition>
+                <then value="0" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="100001" />
+                  </comparison>
+                </condition>
+                <then value="1" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="50001" />
+                  </comparison>
+                </condition>
+                <then value="2" />
+              </if>
+              <if>
+                <condition idref="True" />
+                <then value="3" />
+              </if>
+            </then>
+          </if>
+          <if>
+            <condition>
+              <comparison compare="eq">
+                <operand idref="RiskPropertyInput.Deductible" type="int" />
+                <operand type="int" value="2500" />
+              </comparison>
+            </condition>
+            <then>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="500001" />
+                  </comparison>
+                </condition>
+                <then value="4" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="250001" />
+                  </comparison>
+                </condition>
+                <then value="5" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="100001" />
+                  </comparison>
+                </condition>
+                <then value="6" />
+              </if>
+              <if>
+                <condition idref="True" />
+                <then value="7" />
+              </if>
+            </then>
+          </if>
+          <if>
+            <condition>
+              <comparison compare="eq">
+                <operand idref="RiskPropertyInput.Deductible" type="int" />
+                <operand type="int" value="5000" />
+              </comparison>
+            </condition>
+            <then>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="1000001" />
+                  </comparison>
+                </condition>
+                <then value="8" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="500001" />
+                  </comparison>
+                </condition>
+                <then value="9" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="250001" />
+                  </comparison>
+                </condition>
+                <then value="10" />
+              </if>
+              <if>
+                <condition idref="True" />
+                <then value="11" />
+              </if>
+            </then>
+          </if>
+          <if>
+            <condition>
+              <comparison compare="eq">
+                <operand idref="RiskPropertyInput.Deductible" type="int" />
+                <operand type="int" value="10000" />
+              </comparison>
+            </condition>
+            <then>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="5000001" />
+                  </comparison>
+                </condition>
+                <then value="12" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="1000001" />
+                  </comparison>
+                </condition>
+                <then value="13" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="500001" />
+                  </comparison>
+                </condition>
+                <then value="14" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="250001" />
+                  </comparison>
+                </condition>
+                <then value="15" />
+              </if>
+              <if>
+                <condition idref="True" />
+                <then value="16" />
+              </if>
+            </then>
+          </if>
+          <if>
+            <condition>
+              <comparison compare="eq">
+                <operand idref="RiskPropertyInput.Deductible" type="int" />
+                <operand type="int" value="25000" />
+              </comparison>
+            </condition>
+            <then>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="10000001" />
+                  </comparison>
+                </condition>
+                <then value="17" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="5000001" />
+                  </comparison>
+                </condition>
+                <then value="18" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="1000001" />
+                  </comparison>
+                </condition>
+                <then value="19" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="500001" />
+                  </comparison>
+                </condition>
+                <then value="20" />
+              </if>
+              <if>
+                <condition idref="True" />
+                <then value="21" />
+              </if>
+            </then>
+          </if>
+          <if>
+            <condition>
+              <comparison compare="eq">
+                <operand idref="RiskPropertyInput.Deductible" type="int" />
+                <operand type="int" value="50000" />
+              </comparison>
+            </condition>
+            <then>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="10000001" />
+                  </comparison>
+                </condition>
+                <then value="22" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="5500001" />
+                  </comparison>
+                </condition>
+                <then value="23" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="3500001" />
+                  </comparison>
+                </condition>
+                <then value="24" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="1000001" />
+                  </comparison>
+                </condition>
+                <then value="25" />
+              </if>
+              <if>
+                <condition idref="True" />
+                <then value="26" />
+              </if>
+            </then>
+          </if>
+          <if>
+            <condition>
+              <comparison compare="eq">
+                <operand idref="RiskPropertyInput.Deductible" type="int" />
+                <operand type="int" value="75000" />
+              </comparison>
+            </condition>
+            <then>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="10000001" />
+                  </comparison>
+                </condition>
+                <then value="27" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="5500001" />
+                  </comparison>
+                </condition>
+                <then value="28" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="3500001" />
+                  </comparison>
+                </condition>
+                <then value="29" />
+              </if>
+              <if>
+                <condition>
+                  <comparison compare="ge">
+                    <operand idref="BuildingPrivate.TotalLimits" type="int" />
+                    <operand type="int" value="1000001" />
+                  </comparison>
+                </condition>
+                <then value="30" />
+              </if>
+              <if>
+                <condition idref="True" />
+                <then value="31" />
+              </if>
+            </then>
+          </if>
+          <if>
+            <condition idref="True">
+              <comparison compare="eq">
+                <operand idref="PropertyRiskInput.DeductibleBG1" type="string" />
+                <operand type="int" value="500" />
+              </comparison>
+            </condition>
+            <then value="32" />
+          </if>
+        </rowKeys>
+        <colKeys type="int" name="colIndex">
+          <if>
+            <condition value="1" />
+            <then value="0" />
+          </if>
+        </colKeys>
+        <data>
+          <row value=".99,.96,.96" />
+          <row value=".97,.93,.93" />
+          <row value=".96,.92,.92" />
+          <row value=".94,.89,.89" />
+          <row value=".96,.89,.89" />
+          <row value=".93,.82,.82" />
+          <row value=".90,.79,.79" />
+          <row value=".84,.71,.71" />
+          <row value=".95,.84,.84" />
+          <row value=".90,.74,.74" />
+          <row value=".87,.69,.69" />
+          <row value=".79,.59,.59" />
+          <row value=".94,.81,.81" />
+          <row value=".89,.69,.69" />
+          <row value=".83,.60,.60" />
+          <row value=".78,.54,.54" />
+          <row value=".67,.44,.44" />
+          <row value=".93,.71,.71" />
+          <row value=".87,.60,.60" />
+          <row value=".81,.52,.52" />
+          <row value=".71,.42,.42" />
+          <row value=".60,.32,.32" />
+          <row value=".90,.60,.60" />
+          <row value=".81,.48,.48" />
+          <row value=".77,.44,.44" />
+          <row value=".72,.39,.39" />
+          <row value=".53,.27,.27" />
+          <row value=".87,.54,.54" />
+          <row value=".77,.42,.42" />
+          <row value=".73,.38,.38" />
+          <row value=".66,.33,.33" />
+          <row value=".50,.25,.25" />
+          <row value="1.000,1.000,1.000" />
+        </data>
+      </table>
+      <table id="TerrorismAdjustmentFactors" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="Tier" type="int" find="eq">
+          <key value="1" default="1" />
+        </rowKeys>
+        <data>
+          <row value=".50" />
+        </data>
+      </table>
+      <table id="TerrorismPercentOfFullValue" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="Percent" type="int" find="interpolate">
+          <key value="5" />
+          <key value="10" />
+          <key value="25" />
+          <key value="50" />
+        </rowKeys>
+        <colKeys name="Terrorism Limitation Of Coverage" type="string" find="eq">
+          <key value="Certified" />
+        </colKeys>
+        <data>
+          <row value="12.60" />
+          <row value="7.35" />
+          <row value="3.05" />
+          <row value="1.63" />
+        </data>
+      </table>
+      <table id="TerrorismRejectionAdjustmentFactors" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="Tier" type="int" find="eq">
+          <key value="1" default="1" />
+        </rowKeys>
+        <data>
+          <row value=".40" />
+        </data>
+      </table>
+      <table id="RuleA4D10b2a_PublicAndInstitutionalPropertyPlan" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="IncludingTheftBoolean" type="boolean" find="eq">
+          <key value="1" />
+          <key value="0" default="1" />
+        </rowKeys>
+        <rowKeys name="BuildingOrContents" type="string" find="eq">
+          <key value="B" />
+          <key value="C" />
+        </rowKeys>
+        <colKeys name="Construction" type="string" find="range">
+          <key value="ModifiedFireResistive,FireResistive" />
+          <key value="AllOther" default="1" />
+        </colKeys>
+        <data>
+          <row value=".012,.029" />
+          <row value="1.00,1.00" />
+          <row value=".008,.024" />
+          <row value=".007,.015" />
+        </data>
+      </table>
+      <table id="Rule50D2BaseRateAdjustmentFactorsTimeElement" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="CauseOfLoss" type="int" find="eq">
+          <key value="BG1" default="1" />
+          <key value="BG2" />
+        </rowKeys>
+        <data>
+          <row value=".80" />
+          <row value=".70" />
+        </data>
+      </table>
+      <table id="Rule72E2c3_TheftExclusionFactorPersonalProperty" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="OccupancyCategory" type="string" find="eq">
+          <key value="ResidentialApartmentsAndCondominiums" />
+          <key value="MotelsAndHotels" />
+          <key value="Contractors" />
+          <key value="AllOtherRisks" default="1" />
+        </rowKeys>
+        <data>
+          <row value=".85" />
+          <row value=".85" />
+          <row value=".30" />
+          <row value=".60" />
+        </data>
+      </table>
+      <table id="Rule72E2c_SpecialPersonalPropertyLossCost" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="OccupancyCategory" type="string" find="eq">
+          <key value="ResidentialApartmentsAndCondominiums" />
+          <key value="Offices" />
+          <key value="MercantileHigh" />
+          <key value="MercantileMedium" />
+          <key value="MercantileLow" />
+          <key value="MotelsAndHotels" />
+          <key value="InstitutionalHigh" />
+          <key value="InstitutionalLow" />
+          <key value="IndustrialAndProcessingHigh" />
+          <key value="IndustrialAndProcessingLow" />
+          <key value="ServiceHigh" />
+          <key value="ServiceLow" />
+          <key value="Contractors" default="1" />
+        </rowKeys>
+        <data>
+          <row value="0.336" />
+          <row value="0.147" />
+          <row value="0.215" />
+          <row value="0.185" />
+          <row value="0.141" />
+          <row value="0.103" />
+          <row value="0.101" />
+          <row value="0.074" />
+          <row value="0.210" />
+          <row value="0.162" />
+          <row value="0.178" />
+          <row value="0.135" />
+          <row value="0.219" />
+        </data>
+      </table>
+      <table id="Rule72E2c_SpecialTerritorialMultiplier" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="County" type="string" find="eq">
+          <key value="Providence" />
+          <key value="RemainderOfState" default="1" />
+        </rowKeys>
+        <data>
+          <row value="1.010" />
+          <row value="1.000" />
+        </data>
+      </table>
+      <table id="TerritoryLookupBG2" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="ZipCode" type="int" find="eq">
+          <key value="Default" default="1" />
+          <key value="02801" />
+          <key value="02802" />
+          <key value="02804" />
+          <key value="02806" />
+          <key value="02807" />
+          <key value="02808" />
+          <key value="02809" />
+          <key value="02812" />
+          <key value="02813" />
+          <key value="02814" />
+          <key value="02815" />
+          <key value="02816" />
+          <key value="02817" />
+          <key value="02818" />
+          <key value="02822" />
+          <key value="02823" />
+          <key value="02824" />
+          <key value="02825" />
+          <key value="02826" />
+          <key value="02827" />
+          <key value="02828" />
+          <key value="02829" />
+          <key value="02830" />
+          <key value="02831" />
+          <key value="02832" />
+          <key value="02833" />
+          <key value="02835" />
+          <key value="02836" />
+          <key value="02837" />
+          <key value="02838" />
+          <key value="02839" />
+          <key value="02840" />
+          <key value="02841" />
+          <key value="02842" />
+          <key value="02852" />
+          <key value="02857" />
+          <key value="02858" />
+          <key value="02859" />
+          <key value="02860" />
+          <key value="02861" />
+          <key value="02862" />
+          <key value="02863" />
+          <key value="02864" />
+          <key value="02865" />
+          <key value="02871" />
+          <key value="02872" />
+          <key value="02873" />
+          <key value="02874" />
+          <key value="02875" />
+          <key value="02876" />
+          <key value="02877" />
+          <key value="02878" />
+          <key value="02879" />
+          <key value="02880" />
+          <key value="02881" />
+          <key value="02882" />
+          <key value="02883" />
+          <key value="02885" />
+          <key value="02886" />
+          <key value="02887" />
+          <key value="02888" />
+          <key value="02889" />
+          <key value="02891" />
+          <key value="02892" />
+          <key value="02893" />
+          <key value="02894" />
+          <key value="02895" />
+          <key value="02896" />
+          <key value="02898" />
+          <key value="02901" />
+          <key value="02902" />
+          <key value="02903" />
+          <key value="02904" />
+          <key value="02905" />
+          <key value="02906" />
+          <key value="02907" />
+          <key value="02908" />
+          <key value="02909" />
+          <key value="02910" />
+          <key value="02911" />
+          <key value="02912" />
+          <key value="02914" />
+          <key value="02915" />
+          <key value="02916" />
+          <key value="02917" />
+          <key value="02918" />
+          <key value="02919" />
+          <key value="02920" />
+          <key value="02921" />
+          <key value="02940" />
+        </rowKeys>
+        <data>
+          <row value="0" />
+          <row value="2" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="2" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="2" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="2" />
+          <row value="1" />
+          <row value="2" />
+          <row value="1" />
+          <row value="1" />
+          <row value="2" />
+          <row value="2" />
+          <row value="2" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="2" />
+          <row value="2" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="2" />
+          <row value="2" />
+          <row value="1" />
+          <row value="2" />
+          <row value="2" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="2" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+          <row value="1" />
+        </data>
+      </table>
+      <table id="TerritoryLookupEQ" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="ZipCode" type="int" find="eq">
+          <key value="Default" default="1" />
+        </rowKeys>
+        <data>
+          <row value="1" />
+        </data>
+      </table>
+      <table id="EnhancedWindRatingProgramDistanceToCoastFactor" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="DistanceToCoast" type="string" find="eq">
+          <key value="0To500Feet" default="1" />
+          <key value="501To1000Feet" />
+          <key value="1001To1500Feet" />
+          <key value="1501To2000Feet" />
+          <key value="2001To2500Feet" />
+          <key value="2501FeetTo1mile" />
+          <key value="Over1mileTo2Miles" />
+          <key value="Over2MilesTo3Miles" />
+          <key value="Over3MilesTo4Miles" />
+          <key value="Over4MilesTo5Miles" />
+          <key value="Over5Miles" />
+        </rowKeys>
+        <data>
+          <row value="1.00" />
+          <row value="0.90" />
+          <row value="0.90" />
+          <row value="0.90" />
+          <row value="0.90" />
+          <row value="0.90" />
+          <row value="0.85" />
+          <row value="0.80" />
+          <row value="0.75" />
+          <row value="0.70" />
+          <row value="0.65" />
+        </data>
+      </table>
+      <table id="EnhancedWindRatingProgramYearBuiltFactor" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="County" type="string" find="range">
+          <key value="Remainder" default="1" />
+        </rowKeys>
+        <colKeys name="YearBuilt" type="int" find="range">
+          <key value="&lt;1995" />
+          <key value="1996" />
+          <key value="1997-2003" />
+          <key value="2004" />
+          <key value="2005&gt;" />
+        </colKeys>
+        <data>
+          <row value="1.00,0.95,0.90,0.80,0.70" />
+        </data>
+      </table>
+      <table id="GeographicWindHazardLevel" tableType="local">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="Territory" type="string" find="eq">
+          <key value="EntireState" default="1" />
+        </rowKeys>
+        <data>
+          <row value="High" />
+        </data>
+      </table>
+      <table id="Rule76C7a1_FloodPropertyDamageLossCosts" tableType="local" separator=",">
+        <fields>
+          <field type="int" name="Value" />
+        </fields>
+        <rowKeys name="County" type="string" find="range" pageKey="1">
+          <key value="EntireState" default="1" />
+        </rowKeys>
+        <rowKeys name="Item" type="string" find="eq">
+          <key value="B" default="1" />
+          <key value="C" />
+        </rowKeys>
+        <rowKeys name="Construction" type="string" find="range">
+          <key value="Frame,NonCombustible" />
+          <key value="JoistedMasonry,MasonryNonCombustible" />
+          <key value="ModifiedFireResistive,FireResistive" />
+        </rowKeys>
+        <colKeys name="FloodZone" type="string" find="eq">
+          <key value="A" />
+          <key value="X500" />
+          <key value="X" />
+          <key value="D" />
+        </colKeys>
+        <data>
+          <row value="0.848,0.217,0.068,0.031" />
+          <row value="0.628,0.161,0.050,0.023" />
+          <row value="0.471,0.120,0.038,0.017" />
+          <row value="1.619,0.575,0.171,0.088" />
+          <row value="1.199,0.426,0.126,0.065" />
+          <row value="0.900,0.319,0.095,0.049" />
+        </data>
+      </table>
+    </object>
+  </model>
+  <revisions />
+  <mapping mappingCount="17">
+    <reference name="Client Name" idref="Applicant.Name" />
+    <reference name="Policy Status" idref="PolicyInfo.Status" />
+    <reference name="Policy Number" idref="PolicyNumbers.PolicyNumber" />
+    <reference name="Effective Date" idref="PolicyInfo.EffectiveDate" />
+    <reference name="Expiration Date" idref="PolicyInfo.ExpirationDate" />
+    <reference name="Policy Premium" idref="Policy.TotalPremium" />
+    <reference name="Address" idref="Applicant.Address1" />
+    <reference name="Address2" idref="Applicant.Address2" />
+    <reference name="City" idref="Applicant.City" />
+    <reference name="State" idref="Applicant.State" />
+    <reference name="ZIP Code" idref="Applicant.ZipCode" />
+    <reference name="Phone Number" idref="Applicant.Phone" />
+    <reference name="Fax Number" idref="Applicant.Fax" />
+    <reference name="Producer" idref="Producer.Name" />
+    <reference name="Agency" idref="AgencyInfo.AgencyName" />
+    <reference name="Description" idref="PolicyInfo.Description" />
+    <reference name="TransactionDate" idref="PolicyInfo.TransactionDate" />
+  </mapping>
+</ManuScript>
