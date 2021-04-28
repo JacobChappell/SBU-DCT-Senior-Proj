@@ -198,8 +198,7 @@ Get-ChildItem -Path $clientPath | ForEach {
             $notesCheck = 0
             $modelCheck = 0
             $numFileError = 0
-            $modelChangeCheck
-
+            $modelChangeCheck = 0
 
             $filePath1 = $fileArr1[$p]
             $filePath2 = $fileArr2[$p]
@@ -242,23 +241,6 @@ Get-ChildItem -Path $clientPath | ForEach {
 
             $model1 = Select-Xml -Xml $fXMLFile -XPath "//model"
             $model2 = Select-Xml -Xml $sXMLFile -XPath "//model"
-            <#$model1 = foreach ($node in $fXMLFile.ManuScript.model) {
-                $xmlNode = [ordered] @{
-                    nodeName = $node.Name
-                }
-
-                for ($i = 0; $i -lt $node.object.count; $i++) {
-                    $xmlNode[$node.object.name[$i]] = $node.object.Value[$i]
-                }
-
-                [pscustomobject] $xmlNode
-            }
-            $model2 = $sXMLFile.SelectNodes('//model/*') | ForEach-Object {
-                $xmlNode2 += $_
-            }
-            $model2 = $sXMLFile.SelectNodes('//*')
-            Write-Host $xmlNode
-            Write-Host $model1 #>
             $modelComp = Compare-Object $model1 $model2 | Where-Object { ($_.SideIndicator -eq "=>") -or ($_.SideIndicator -eq "<=") }
             if ($modelComp -ne $null) {
                 if ($modelComp[0].SideIndicator -ne "==") {
@@ -391,11 +373,7 @@ Get-ChildItem -Path $clientPath | ForEach {
             $count = 0
             for ($k = 3+$specialCount; $k -lt $manuIDArr1.length; $k++) {
                 $newManuIDArr1[$count] = $manuIDArr1[$k]
-                #Write-Host $manuIDArr1[$k]
-                #Write-Host $maxVal[$count]
                 $newManuIDArr2[$count] = $manuIDArr2[$k]
-                #Write-Host $manuIDArr2[$k]
-                #Write-Host $recentVal[$count]
                 if (($manuIDArr1[$k] -ne $maxVal[$count]) -and ($manuIDArr2[$k] -ne $recentVal[$count])) {
                     $manuCheck = 1
                 }
