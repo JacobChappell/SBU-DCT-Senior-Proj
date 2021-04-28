@@ -151,9 +151,11 @@ function createFileList($arrList) {
 Get-ChildItem -Path $clientPath | ForEach {
     Write-Host ""
 
+
     $LobPath = $_.FullName
     $stateName = $_.Name
-    $outString = "Folder: " + $stateName + "`n"
+    $folder = "Folder: " + $stateName
+    $outString = ""
     $outString2 = "Folder: " + $stateName
     $newFiles = newestFileList($LobPath)
     $recentFiles = secNewestFileList($LobPath)
@@ -196,6 +198,7 @@ Get-ChildItem -Path $clientPath | ForEach {
             $notesCheck = 0
             $modelCheck = 0
             $numFileError = 0
+            $modelChangeCheck
 
 
             $filePath1 = $fileArr1[$p]
@@ -260,6 +263,9 @@ Get-ChildItem -Path $clientPath | ForEach {
             if ($modelComp -ne $null) {
                 if ($modelComp[0].SideIndicator -ne "==") {
                     $modelCheck = 1
+                }
+                if ($modelComp[1].InputObject -inotmatch $modelComp[0].InputObject) {
+                    $modelChangeCheck = 1
                 }
             }
 
@@ -385,7 +391,11 @@ Get-ChildItem -Path $clientPath | ForEach {
             $count = 0
             for ($k = 3+$specialCount; $k -lt $manuIDArr1.length; $k++) {
                 $newManuIDArr1[$count] = $manuIDArr1[$k]
+                #Write-Host $manuIDArr1[$k]
+                #Write-Host $maxVal[$count]
                 $newManuIDArr2[$count] = $manuIDArr2[$k]
+                #Write-Host $manuIDArr2[$k]
+                #Write-Host $recentVal[$count]
                 if (($manuIDArr1[$k] -ne $maxVal[$count]) -and ($manuIDArr2[$k] -ne $recentVal[$count])) {
                     $manuCheck = 1
                 }
@@ -433,12 +443,12 @@ Get-ChildItem -Path $clientPath | ForEach {
             if ($notesSec1 -inotmatch $notesSec2) {
                 $notesCheck = 1
             }
-
-        $outString = "Old File:" + $fileName2 + "`n" + "New File:" + $fileName1 + "`n"
+        
+        Write-Host $folder
+        $outString = "Old File:" + $fileName2 + "`n" + "New File:" + $fileName1
         $ifFlag++
         #check if there is only one file and if so print error
         if ($numFileError -eq 1) {
-            Write-Host $outString2
             Write-Host $fileName1
             Write-Host "There was only one file in the folder so there is no other file to compare" -ForegroundColor Yellow
         } elseif ($ifFlag -ne 0) {
@@ -484,8 +494,12 @@ Get-ChildItem -Path $clientPath | ForEach {
                 Write-Host "The note section(s) are different in the notes tag or there is no notes tag present in the xml file(s)" -ForegroundColor Red
             }
             #check if the new file's model section is the same as the recent file's model section
-            if ($modelCheck -eq 1 ) {
+            if ($modelCheck -eq 1 -and $modelChangeCheck -eq 0) {
                 Write-Host "The model section(s) are different" -ForegroundColor Red
+            }
+            #check if the new file's model section is the larger than the recent file's model section
+            if ($modelChangeCheck -eq 1 ) {
+                Write-Host "The new file's model section is larger than the recent file's model section" -ForegroundColor Green
             }
             Write-Host ""
         }
