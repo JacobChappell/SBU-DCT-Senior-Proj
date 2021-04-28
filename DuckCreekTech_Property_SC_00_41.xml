@@ -1,4 +1,4 @@
-﻿<ManuScript>
+<ManuScript>
   <properties manuscriptID="DuckCreekTech_Property_SC_00_41" versionID="DuckCreekTech_Property_SC_00_22_01" versionDate="2017-10-01" version="1" caption="DuckCreekTech  Property   SC   (00.41)   2017-10-01" image="" dataSchema="CommercialPropertySchema.xml" boolean="1" inherited="" fieldCache="0" cultureCode="en-US" cultureName="United States [english]" shortCircuitCond="True">
     <contexts>
       <context>Programmer</context>
