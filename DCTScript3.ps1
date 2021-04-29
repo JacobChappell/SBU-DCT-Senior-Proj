@@ -2,10 +2,10 @@ Write-Output "Third part:"
 
 
 #input from employee
-$clientName = Read-Host -Prompt "Enter client name (ex. Three) "
+$clientName = Read-Host -Prompt "Enter client name (ex. TESTCLIENT) "
 $clientLOB = Read-Host -Prompt "Enter client's LOB folder (ex. Property) "
-$clientPath = 'C:\Users\Family\Desktop\TempDCT\' + $clientName + '\'+ $clientLOB
-#$clientPath = "C:\SaaS\$clientName\Policy\ManuScripts\DCTTemplates\$clientLOB"
+#$clientPath = 'C:\Users\Family\Desktop\TempDCT\' + $clientName + '\'+ $clientLOB
+$clientPath = "C:\SaaS\$clientName\Policy\ManuScripts\DCTTemplates\$clientLOB"
 
 
 #create arraylist of file names
@@ -199,6 +199,7 @@ Get-ChildItem -Path $clientPath | ForEach {
             $modelCheck = 0
             $numFileError = 0
             $modelChangeCheck = 0
+            $modelFlag = 0
 
             $filePath1 = $fileArr1[$p]
             $filePath2 = $fileArr2[$p]
@@ -209,8 +210,10 @@ Get-ChildItem -Path $clientPath | ForEach {
             if ($fileName1 -eq $fileName2) {
                 $numFileError = 1
             }
-            [XML]$fXMLFile = Get-Content $filePath1
-            [XML]$sXMLFile = Get-Content $filePath2
+            try {
+                [XML]$fXMLFile = Get-Content $filePath1
+                [XML]$sXMLFile = Get-Content $filePath2
+            } catch { $nodeCheck = 1 }
 
             $testVar = Compare-Object -ReferenceObject ($filePath1) -DifferenceObject ($filePath2)
             if (($fpathName.Length -eq $spathName.Length-2) -or ($fpathName.Length-2 -eq $spathName.Length)) {
@@ -239,17 +242,19 @@ Get-ChildItem -Path $clientPath | ForEach {
                 $i++
             }
 
-            $model1 = Select-Xml -Xml $fXMLFile -XPath "//model"
-            $model2 = Select-Xml -Xml $sXMLFile -XPath "//model"
-            $modelComp = Compare-Object $model1 $model2 | Where-Object { ($_.SideIndicator -eq "=>") -or ($_.SideIndicator -eq "<=") }
-            if ($modelComp -ne $null) {
-                if ($modelComp[0].SideIndicator -ne "==") {
-                    $modelCheck = 1
+            try {
+                $model1 = Select-Xml -Xml $fXMLFile -XPath "//model"
+                $model2 = Select-Xml -Xml $sXMLFile -XPath "//model"
+                $modelComp = Compare-Object $model1 $model2 | Where-Object { ($_.SideIndicator -eq "=>") -or ($_.SideIndicator -eq "<=") }
+                if ($modelComp -ne $null) {
+                    if ($modelComp[0].SideIndicator -ne "==") {
+                        $modelCheck = 1
+                    }
+                    try {
+                        if ($modelComp[1].InputObject -notmatch $modelComp[0].InputObject) { $modelChangeCheck = 1 }
+                    } catch {}
                 }
-                if ($modelComp[1].InputObject -inotmatch $modelComp[0].InputObject) {
-                    $modelChangeCheck = 1
-                }
-            }
+            } catch { $modelFlag = 1 }
 
             $i = 0
             $j = 1
@@ -367,7 +372,7 @@ Get-ChildItem -Path $clientPath | ForEach {
             $manuIDArr1 = $manuID1.split("_")
             $manuIDArr2 = $manuID2.split("_")
             $specialCount = 0
-            if ($stateName -eq "US-INH" -or $stateName -eq "US" -or $manuID1 -match "Forms") {
+            if ($stateName -eq "US-INH" -or $stateName -eq "US" -or $manuID1 -match "Forms" -or $stateName -eq "Workflow") {
                 $specialCount = 1
             }
             $count = 0
@@ -418,9 +423,9 @@ Get-ChildItem -Path $clientPath | ForEach {
 
             $notesSec1 = $fXMLFile.ManuScript.properties.notes
             $notesSec2 = $sXMLFile.ManuScript.properties.notes
-            if ($notesSec1 -inotmatch $notesSec2) {
-                $notesCheck = 1
-            }
+            try {
+                if ($notesSec1 -notmatch $notesSec2) { $notesCheck = 1 }
+            } catch {}
         
         Write-Host $folder
         $outString = "Old File:" + $fileName2 + "`n" + "New File:" + $fileName1
@@ -471,13 +476,25 @@ Get-ChildItem -Path $clientPath | ForEach {
             if ($notesCheck -eq 1 ) {
                 Write-Host "The note section(s) are different in the notes tag or there is no notes tag present in the xml file(s)" -ForegroundColor Red
             }
+            #check if there is a problem with nodes not being opened/closed properly
+            if ($nodeCheck -eq 1 ) {
+                Write-Host "There were a problem with the files being converted to XML (possibly incorrect XML syntax)" -ForegroundColor RED
+            }
+            #check if there is a model section in both files
+            if ($modelFlag -eq 1 ) {
+                Write-Host "There were no model section(s) for the new and recent files" -ForegroundColor Yellow
+            }
             #check if the new file's model section is the same as the recent file's model section
-            if ($modelCheck -eq 1 -and $modelChangeCheck -eq 0) {
+            if ($modelCheck -eq 1) {
                 Write-Host "The model section(s) are different" -ForegroundColor Red
             }
             #check if the new file's model section is the larger than the recent file's model section
-            if ($modelChangeCheck -eq 1 ) {
+            if ($modelChangeCheck -eq 1) {
                 Write-Host "The new file's model section is larger than the recent file's model section" -ForegroundColor Green
+            }
+            #check if the new file's model section is the same as the recent file's model section
+            if ($modelCheck -eq 0 ) {
+                Write-Host "The new file's model section is the same as the recent file's model section" -ForegroundColor Green
             }
             Write-Host ""
         }
