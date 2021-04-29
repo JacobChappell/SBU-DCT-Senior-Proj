@@ -6,7 +6,7 @@ Write-Host "Fourth part:"
 $clientName = Read-Host -Prompt "Enter client name(ex. TESTCLIENT)"
 $clientLOB = Read-Host -Prompt "Enter LOB "
 $version = Read-Host -Prompt "Enter version Number (ex. 10_X_X_X)"
-#$clientPath = "C:\Users\ebpag\Desktop\DuckCreek\$clientName\$clientLOB\US-INH\*_Product_*.xml"
+#$clientPath = "C:\Users\Family\Desktop\TempDCT\$clientName\$clientLOB\US-INH\*_Product_*.xml"
 $clientPath = "C:\SaaS\$clientName\Policy\ManuScripts\DCTTemplates\$clientLOB\US-INH\*_Product_*.xml"
 
 
@@ -76,7 +76,7 @@ if($newPath -ne "") {
         $overrideCheck = 0
         #iterate through xml file
         $counter = 0
-        $valueArr = @($null, $null, $null, $null, $null, $null)
+        $valueArr = @($null, $null, $null, $null, $null, $null, $null, $null)
         foreach ($empDetail in $tableData.ManuScript.model.object.table) {
             $tableName = $empDetail.id
             $targetName = "Manuscripts"+$clientLOB
@@ -108,7 +108,7 @@ if($newPath -ne "") {
         if ($flag) {
             Write-Host "Manuscript table was successfully updated" -ForegroundColor Green
         } else {
-            Write-Host "Error: the following files did not match the given version" -ForegroundColor Red
+            Write-Host "Error: the following table values did not match the given version" -ForegroundColor Red
             Write-Host $checkLines
         }
         if ($overrideCheck -eq 1) {
