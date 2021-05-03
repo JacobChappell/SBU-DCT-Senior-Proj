@@ -1,17 +1,17 @@
-﻿            $outputswitch = Read-Host -Prompt 'Enter 1 for debugging info, 0 for basic output'
-            $LOB = Read-Host -Prompt 'Enter LOB'
-            #$LOBArray = Import-Csv C:\Users\colby.welch\Desktop\CSV.csv
+$outputswitch = Read-Host -Prompt 'Enter 1 for debugging info, 0 for basic output'
+Write-Output " "
+$csvswitch = Read-Host -Prompt 'Enter 1 to check a single state, or 0 to import csv file'
 
-            #$LOB = Foreach ($loopvar in $LOBArray){
+$LOBList = Import-Csv C:\Users\maxws\Desktop\SeniorProject\CSV.csv
 
-            $path = "C:\SaaS\TESTCLIENT\Policy\ManuScripts\DCTTemplates\Property\$LOB"
-            
-
-            #create arraylist of file names
+$path = "C:\SaaS\TESTCLIENT\Policy\ManuScripts\DCTTemplates\Property\$LOB"
+#create arraylist of file names
 #create global max variable to allow for 1st and 2nd newest files
 $maxVal = @($null,$null,$null,$null)
 $recentVal = @($null,$null,$null,$null)
-#funciton for the newest file in the list
+
+
+#function for the newest file in the list
 function newestFileList($clPath) {
     #usedNames will have a file name and the next index will have its maxversion array 
     $usedNames = [object][System.Collections.ArrayList]@()
@@ -59,6 +59,7 @@ function newestFileList($clPath) {
     return $output
 }
 
+
 #function to compare version number arrays
 #outputs 1 if first paramater is newer or 2 if second paramater is newer
 function compareVer($inArr) {
@@ -72,6 +73,7 @@ function compareVer($inArr) {
         }
     }
 }
+
 
 #function to get the 2nd newest file in the list
 function secNewestFileList($clPath) {
@@ -145,99 +147,185 @@ function createFileList($arrList) {
     return $outArr
 }
 
-            $fileForPath = newestFileList($path)
-            $fileForPath2 = secNewestFileList($path)
 
-            #$fileForPath = gci $path | sort LastWriteTime | select -last 1
-            #$fileForPath2 = gci $path | sort LastWriteTime | select -skip 1 -last 1
 
-            
+if($csvswitch -eq "1") #check a single state
+    {
 
-            $outputArr1 = @()
-            $outputArr2 = @()
-
-            Get-ChildItem -Path $path | ForEach { 
-            if($fileForPath -contains $_.BaseName) {
-                $outputArr1 += $_.Name
-                }
-            }
-
-            Get-ChildItem -Path $path | ForEach { 
-                if($fileForPath2 -contains $_.BaseName) {
-                    $outputArr2 += $_.Name
-                }
-            }
-
-            $temp = "C:\SaaS\TESTCLIENT\Policy\ManuScripts\DCTTemplates\Property\$LOB\$outputArr1"
-            $temp2 = "C:\SaaS\TESTCLIENT\Policy\ManuScripts\DCTTemplates\Property\$LOB\$outputArr2"
-
-            if($outputswitch -eq "1"){
-                Write-Output $outputArr1
-                Write-Output $outputArr2
-            }
-
-            #$temp = "C:\SaaS\TESTCLIENT\Policy\ManuScripts\DCTTemplates\Property\$loopvar\$fileForPath"
-            #$temp2 = "C:\SaaS\TESTCLIENT\Policy\ManuScripts\DCTTemplates\Property\$loopvar\$fileForPath2"
-            
-            #Write-Output $temp
-            #Write-Output $temp2
-
-            if (Test-Path $temp){
-                [xml]$File = Get-Content $temp 
-                [xml]$File2 = Get-Content $temp2
-            }
+    $LOB = Read-Host -Prompt 'Input LOB as state abbreviation'
+    Write-Output $LOB
                 
-            else{
-                Write-Output "Path Check Failed in file " #$loopvar
+    $fileForPath = newestFileList($path)
+    $fileForPath2 = secNewestFileList($path) 
+
+    $outputArr1 = @()
+    $outputArr2 = @()
+
+    Get-ChildItem -Path $path | ForEach { 
+    if($fileForPath -contains $_.BaseName) {
+        $outputArr1 += $_.Name
+            }
+        }
+
+    Get-ChildItem -Path $path | ForEach { 
+        if($fileForPath2 -contains $_.BaseName) {
+            $outputArr2 += $_.Name
+            }
+        }
+
+    $temp = "C:\SaaS\TESTCLIENT\Policy\ManuScripts\DCTTemplates\Property\$LOB\$outputArr1"
+    $temp2 = "C:\SaaS\TESTCLIENT\Policy\ManuScripts\DCTTemplates\Property\$LOB\$outputArr2"
+
+    if($outputswitch -eq "1"){
+        Write-Output $outputArr1
+        Write-Output $outputArr2
+        }
+
+    #$temp = "C:\SaaS\TESTCLIENT\Policy\ManuScripts\DCTTemplates\Property\$loopvar\$fileForPath"
+    #$temp2 = "C:\SaaS\TESTCLIENT\Policy\ManuScripts\DCTTemplates\Property\$loopvar\$fileForPath2"
+            
+    #Write-Output $temp
+    #Write-Output $temp2
+
+    if (Test-Path $temp){
+        [xml]$File = Get-Content $temp 
+        [xml]$File2 = Get-Content $temp2
+        }
+                
+    else{
+        Write-Output "Path Check Failed in file " #$loopvar
+        }
+
+    foreach($empDetail in $File.ManuScript.properties.keys.keyInfo){
+                
+        if($empDetail.name -eq "effectiveDateNew")
+            {
+                $date = $empDetail.value
+
+            }
+        }
+
+    foreach($empDetail in $File2.ManuScript.properties.keys.keyInfo){
+                
+        if($empDetail.name -eq "effectiveDateNew")
+            {
+                $date2 = $empDetail.value
+
+            }
+        }
+
+    if($outputswitch -eq "1"){
+        Write-Output $date
+        Write-Output $date2
+        }
+                
+    if ( $File -ne $null -and $File2 -ne $null){
+
+            if ($date2 -lt $date){
+                Write-Host -ForegroundColor Green "Effective Date Valid in file $LOB" `n
             }
 
-            foreach($empDetail in $File.ManuScript.properties.keys.keyInfo){
+            elseif(($date -eq $null) -or ($date2 -eq $null))
+            {
+                Write-Output "Date is null"
+            }
+
+            else
+            {
+                Write-Host -ForegroundColor Red "Invaild Effective Date in file $LOB" `n
+            }
+
+        }
+
+    } #if single state only
+
+
+    else #import csv
+            {
+                foreach ($state in $LOBList)
+                {
+                    $LOB = $state.state
+                    Write-Output $LOB
+
+                    $fileForPath = newestFileList($path)
+                    $fileForPath2 = secNewestFileList($path) 
+
+                    $outputArr1 = @()
+                    $outputArr2 = @()
+
+                    Get-ChildItem -Path $path | ForEach { 
+                    if($fileForPath -contains $_.BaseName) {
+                        $outputArr1 += $_.Name
+                            }
+                        }
+
+                    Get-ChildItem -Path $path | ForEach { 
+                        if($fileForPath2 -contains $_.BaseName) {
+                            $outputArr2 += $_.Name
+                            }
+                        }
+
+                    $temp = "C:\SaaS\TESTCLIENT\Policy\ManuScripts\DCTTemplates\Property\$LOB\$outputArr1"
+                    $temp2 = "C:\SaaS\TESTCLIENT\Policy\ManuScripts\DCTTemplates\Property\$LOB\$outputArr2"
+
+                    if($outputswitch -eq "1"){
+                        Write-Output $outputArr1
+                        Write-Output $outputArr2
+                        }
+
+                    if (Test-Path $temp){
+                        [xml]$File = Get-Content $temp 
+                        [xml]$File2 = Get-Content $temp2
+                        }
                 
-                if($empDetail.name -eq "effectiveDateNew")
-                    {
-                        $date = $empDetail.value
+                    else{
+                        Write-Output "Path Check Failed in file " #$loopvar
+                        }
+
+                    foreach($empDetail in $File.ManuScript.properties.keys.keyInfo){
+                
+                        if($empDetail.name -eq "effectiveDateNew")
+                            {
+                                $date = $empDetail.value
+
+                            }
+                        }
+
+                    foreach($empDetail in $File2.ManuScript.properties.keys.keyInfo){
+                
+                        if($empDetail.name -eq "effectiveDateNew")
+                            {
+                                $date2 = $empDetail.value
+
+                            }
+                        }
+
+                    if($outputswitch -eq "1"){
+                        Write-Output $date
+                        Write-Output $date2
+                        }
+                
+                    if ( $File -ne $null -and $File2 -ne $null){
+
+                            if ($date2 -lt $date){
+                                Write-Host -ForegroundColor Green "Effective Date Valid in file $LOB" `n
+                            }
+
+                            elseif(($date -eq $null) -or ($date2 -eq $null))
+                            {
+                                Write-Output "Date is null"
+                            }
+
+                            else
+                            {
+                                Write-Host -ForegroundColor Red "Invaild Effective Date in file $LOB" `n
+                            }
+
+                        }
 
                     }
-            }
-
-            foreach($empDetail in $File2.ManuScript.properties.keys.keyInfo){
-                
-                if($empDetail.name -eq "effectiveDateNew")
-                    {
-                        $date2 = $empDetail.value
-
-                    }
-            }
-
-            if($outputswitch -eq "1"){
-                Write-Output $date
-                Write-Output $date2
-                }
-                
-            if ( $File -ne $null -and $File2 -ne $null){
-
-                if ($date2 -lt $date){
-                    Write-Host -ForegroundColor Green "Effective Date Valid in file $LOB" `n
-                }
-
-                elseif(($date -eq $null) -or ($date2 -eq $null))
-                {
-                    Write-Output "Date is null"
-                }
-
-                else
-                {
-                    Write-Host -ForegroundColor Red "Invaild Effective Date in file $LOB" `n
-                }
-
-            }
-                    
-            else{
-                Write-Output "Invalid File"
-            }
+                }#else csv
 
 
             $File = $null
             $File2 = $null
-
-            #}
