@@ -1,10 +1,13 @@
-$outputswitch = Read-Host -Prompt 'Enter 1 for debugging info, 0 for basic output'
+﻿$outputswitch = Read-Host -Prompt 'Enter 1 for debugging info, 0 for basic output'
 Write-Output " "
 $csvswitch = Read-Host -Prompt 'Enter 1 to check a single state, or 0 to import csv file'
 
-$LOBList = Import-Csv C:\Users\maxws\Desktop\SeniorProject\CSV.csv
+if($csvswitch -eq '0')
+{
+    $LOBList = Import-Csv C:\Users\colby.welch\Desktop\CSV.csv
+}
 
-$path = "C:\SaaS\TESTCLIENT\Policy\ManuScripts\DCTTemplates\Property\$LOB"
+#$path = "C:\SaaS\TESTCLIENT\Policy\ManuScripts\DCTTemplates\Property\$LOB"
 #create arraylist of file names
 #create global max variable to allow for 1st and 2nd newest files
 $maxVal = @($null,$null,$null,$null)
@@ -154,6 +157,8 @@ if($csvswitch -eq "1") #check a single state
 
     $LOB = Read-Host -Prompt 'Input LOB as state abbreviation'
     Write-Output $LOB
+
+    $path = "C:\SaaS\TESTCLIENT\Policy\ManuScripts\DCTTemplates\Property\$LOB"
                 
     $fileForPath = newestFileList($path)
     $fileForPath2 = secNewestFileList($path) 
@@ -181,11 +186,6 @@ if($csvswitch -eq "1") #check a single state
         Write-Output $outputArr2
         }
 
-    #$temp = "C:\SaaS\TESTCLIENT\Policy\ManuScripts\DCTTemplates\Property\$loopvar\$fileForPath"
-    #$temp2 = "C:\SaaS\TESTCLIENT\Policy\ManuScripts\DCTTemplates\Property\$loopvar\$fileForPath2"
-            
-    #Write-Output $temp
-    #Write-Output $temp2
 
     if (Test-Path $temp){
         [xml]$File = Get-Content $temp 
@@ -246,6 +246,8 @@ if($csvswitch -eq "1") #check a single state
                 {
                     $LOB = $state.state
                     Write-Output $LOB
+
+                    $path = "C:\SaaS\TESTCLIENT\Policy\ManuScripts\DCTTemplates\Property\$LOB"
 
                     $fileForPath = newestFileList($path)
                     $fileForPath2 = secNewestFileList($path) 
