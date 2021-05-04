@@ -441,7 +441,7 @@ Get-ChildItem -Path $clientPath | ForEach {
             #check if the versionID's are correct (newer > older)
             $versionID1 = $fXMLFile.ManuScript.properties.versionID
             $versionID2 = $sXMLFile.ManuScript.properties.versionID
-            if ($versionID1 -le $versionID2) {
+            if ($versionID1 -ne $versionID2) {
                 $versionIDCheck = 1
             }
 
