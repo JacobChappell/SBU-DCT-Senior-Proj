@@ -8,15 +8,16 @@ $clientLOB = Read-Host -Prompt "Enter client's LOB folder (ex. Property) "
 $clientPath = "C:\SaaS\$clientName\Policy\ManuScripts\DCTTemplates\$clientLOB"
 
 
-#create arraylist of file names
-#create global max variable to allow for 1st and 2nd newest files
+#create global variables to allow for the new and most recent files
 $maxVal = @($null,$null,$null,$null)
 $recentVal = @($null,$null,$null,$null)
-#funciton for the newest file in the list
+#function for the newest file in the list
 function newestFileList($clPath) {
     #usedNames will have a file name and the next index will have its maxversion array 
     $usedNames = [object][System.Collections.ArrayList]@()
+    #grab each name to then use for comparisons and checks
     Get-ChildItem -Path $clPath | ForEach {
+        #set arrays for later use
         $maxVer = @($null,$null,$null,$null)
         $currentVer = @($null,$null,$null,$null)
         $doubleArr = @($currentVer, $maxVer)
@@ -43,19 +44,25 @@ function newestFileList($clPath) {
             $usedNames.Add($name)
             $usedNames.Add($currentVer)
         } else {
+            #prepare comparison
             $maxVer = $usedNames[$index + 1]
+            #compare current version to the max version
             $doubleArr[0] = $currentVer
             $doubleArr[1] = $maxVer
             $compVal = compareVer($doubleArr)
+            #check if the current was greater
             if ($compVal -eq 1){
+                #for loop to set the arrays to the current version
                 for ($j = 0; $j -lt $maxVer.Length; $j++) {
                     $maxVer[$j] = $currentVer[$j]
                     $maxVal[$j] = $currentVer[$j]
                 }
+                #add the max file version to the first used names array
                 $usedNames[$index + 1] = $maxVer
             }
         }
     }
+    #prepare the output using the createFileList function
     $output = createFileList($usedNames)
     return $output
 }
@@ -79,6 +86,7 @@ function secNewestFileList($clPath) {
     #usedNames will have a file name and the next index will have its maxversion array 
     $usedNames2 = [object][System.Collections.ArrayList]@()
     Get-ChildItem -Path $clPath | ForEach {
+        #set arrays for later use
         $compVer = @($null,$null,$null,$null)
         $currentVer = @($null,$null,$null,$null)
         $doubleArr1 = @($currentVer, $compVer)
@@ -106,24 +114,32 @@ function secNewestFileList($clPath) {
             $usedNames2.Add($name)
             $usedNames2.Add($currentVer)
         } else {
+            #prepare comparisons to check all of the versions to make sure they are correct
             $compVer = $usedNames2[$index + 1]
+            #compare the current version to most recent file version
             $doubleArr1[0] = $currentVer
             $doubleArr1[1] = $compVer
             $compVal = compareVer($doubleArr1)
+            #compare the current version to the max file version
             $doubleArr2[0] = $currentVer
             $doubleArr2[1] = $maxVal
             $compCheck = compareVer($doubleArr2)
+            #check if current version was greater than the recent file version
             if ($compVal -eq 1) {
+                #check if the current version was less than the max file version
                 if ($compCheck -eq 2) {
+                    #for loop to set the arrays to the current version
                     for ($j = 0;$j -lt $compVer.Length;$j++) {
                         $compVer[$j] = $currentVer[$j]
                         $recentVal[$j] = $currentVer[$j]
                     }
+                    #add the most recent file version to the second names array
                     $usedNames2[$index + 1] = $compVer
                 }
             }
         }
     }
+    #prepare output using createFileList function
     $output = createFileList($usedNames2)
     return $output
 }
@@ -131,18 +147,27 @@ function secNewestFileList($clPath) {
 
 #combines array containing file names and its most recent version into single array
 function createFileList($arrList) {
+    #variable for grabbing all the outputs
     $outArr = [System.Collections.ArrayList]@()
+    #for loop to iterate through the entire input list to set variables
     for ($i = 0; $i -lt $arrList.count; $i+=2) {
+        #grab version numbers from the input list
         $versionString = ""
         $verArr = $arrList[$i + 1]
-            for ($j = 0; $j -lt $verArr.count;$j++) {
-                if($verArr[$j] -ne $null){
-                    $versionString += "_" + $verArr[$j]
-                }
+        #for loop to iterate through version numbers
+        for ($j = 0; $j -lt $verArr.count;$j++) {
+            #check if version array position is null
+            if($verArr[$j] -ne $null){
+                #set variable to the specific version array position
+                $versionString += "_" + $verArr[$j]
             }
-        $fileName = $arrList[$i] + $versionString 
+        }
+        #prepare the specific array position with the version for print
+        $fileName = $arrList[$i] + $versionString
+        #add the whole file name to the output array
         $outArr.Add($fileName)
     }
+    #return the output array of finalized list of files
     return $outArr
 }
 
@@ -151,32 +176,40 @@ function createFileList($arrList) {
 Get-ChildItem -Path $clientPath | ForEach {
     Write-Host ""
 
-
+    #grab the LOB & state names
     $LobPath = $_.FullName
     $stateName = $_.Name
+    #print variable for the folder names
     $folder = "Folder: " + $stateName
     $outString = ""
     $outString2 = "Folder: " + $stateName
+    #grabbing the new and recent files
     $newFiles = newestFileList($LobPath)
     $recentFiles = secNewestFileList($LobPath)
+    #error catch in case the files were empty for any reason
     if (($newFiles -ne "") -or ($recentFiles -ne "")) {
+        #create variables and arrays to use later on in the code
+        #variable to check if there were any files or not (error catching)
         $ifFlag = 0
+        #arrays for file information
         $fileArr1 = @()
         $fileArr2 = @()
         $outputArr1 = @()
         $outputArr2 = @()
+        #variables for file paths and names
         $filePath1 = ""
         $filePath2 = ""
         $fileName1 = ""
         $fileName2 = ""
 
+        #grab the new file information
         Get-ChildItem -Path $LobPath | ForEach { 
             if($newFiles -contains $_.BaseName) {
                 $fileArr1 += $_.FullName
                 $outputArr1 += $_.BaseName
             }
         }
-
+        #grab the recent file information
         Get-ChildItem -Path $LobPath | ForEach { 
             if($recentFiles -contains $_.BaseName) {
                 $fileArr2 += $_.FullName
@@ -184,7 +217,9 @@ Get-ChildItem -Path $clientPath | ForEach {
             }
         }
 
+        #for loop that will iterate through the state folders
         for ($p = 0; $p -lt $fileArr1.Length; $p++) {
+            #create variables for each different type of error catch in ManuScript part 3
             $emptyTagCheck = 0
             $numLineCheck = 0
             $possEmptyTag = 0
@@ -200,26 +235,34 @@ Get-ChildItem -Path $clientPath | ForEach {
             $numFileError = 0
             $modelChangeCheck = 0
             $modelFlag = 0
-
+            
+            #grab the new and most recent files from the array to:
+            #set paths of each file to use later on
             $filePath1 = $fileArr1[$p]
             $filePath2 = $fileArr2[$p]
+            #set names of each file to use later on
             $fileName1 = $outputArr1[$p]
             $fileName2 = $outputArr2[$p]
+            #grab the contents of each file to use later on
             $fpathName = Get-Content $filePath1
             $spathName = Get-Content $filePath2
+            #check if the file names are the same
             if ($fileName1 -eq $fileName2) {
                 $numFileError = 1
             }
+            #typecast the content of both files to XML for later use
             try {
                 [XML]$fXMLFile = Get-Content $filePath1
                 [XML]$sXMLFile = Get-Content $filePath2
             } catch { $nodeCheck = 1 }
 
+            #compare the number of lines in the new and most recent files
             $testVar = Compare-Object -ReferenceObject ($filePath1) -DifferenceObject ($filePath2)
             if (($fpathName.Length -eq $spathName.Length-2) -or ($fpathName.Length-2 -eq $spathName.Length)) {
                 $numLineCheck = 1
             }
 
+            #make arrays for both the InputObject & SideIndicator for every file
             $i = 0
             $varIOArr = @()
             $varSIArr = @()
@@ -228,7 +271,8 @@ Get-ChildItem -Path $clientPath | ForEach {
                 $varSIArr += $testVar[$i].SideIndicator
                 $i++
             }
-
+            
+            #separate the InputObec & SideIndicator arrays into the newer and older file arrays
             $i = 0
             $varIONewFile = @()
             $varIOOldFile = @()
@@ -242,6 +286,8 @@ Get-ChildItem -Path $clientPath | ForEach {
                 $i++
             }
 
+            #check if the model sections are different 
+            #also check if the model sections are correct (newer should contain more than the older)
             try {
                 $model1 = Select-Xml -Xml $fXMLFile -XPath "//model"
                 $model2 = Select-Xml -Xml $sXMLFile -XPath "//model"
@@ -256,6 +302,7 @@ Get-ChildItem -Path $clientPath | ForEach {
                 }
             } catch { $modelFlag = 1 }
 
+            #check if there are any empty tags in either file
             $i = 0
             $j = 1
             $k = 2
@@ -296,7 +343,7 @@ Get-ChildItem -Path $clientPath | ForEach {
                 $k += 2
             }
 
-
+            #check if the keyinfo sections are correct (newer > older)
             $dateArrNew1 = @($null, $null, $null, $null)
             $dateArrNew2 = @($null, $null, $null, $null)
             $dateArrRen1 = @($null, $null, $null, $null)
@@ -363,7 +410,7 @@ Get-ChildItem -Path $clientPath | ForEach {
                 }
             }
 
-
+            #check if the manuscriptID's are correct (newer > older)
             $newManuIDArr1 = @($null, $null, $null, $null)
             $newManuIDArr2 = @($null, $null, $null, $null)
             $doubleArr = @($newManuIDArr1, $newManuIDArr2)
@@ -391,14 +438,14 @@ Get-ChildItem -Path $clientPath | ForEach {
                 $manuCheck = 1
             }
 
-
+            #check if the versionID's are correct (newer > older)
             $versionID1 = $fXMLFile.ManuScript.properties.versionID
             $versionID2 = $sXMLFile.ManuScript.properties.versionID
-            if ($versionID1 -ne $versionID2) {
+            if ($versionID1 -le $versionID2) {
                 $versionIDCheck = 1
             }
 
-
+            #check if the versionDate's are correct (newer > older)
             $versDateArr1 = @($null, $null, $null, $null)
             $versDateArr1 = @($null, $null, $null, $null)
             $versionDate1 = $fXMLFile.ManuScript.properties.versionDate
@@ -421,12 +468,14 @@ Get-ChildItem -Path $clientPath | ForEach {
             $splitVersDateArr1 = $null
             $splitVersDateArr2 = $null
 
+            #notes comparison by going grabbing the specific tags and checking if the newer file contains the older file's notes
             $notesSec1 = $fXMLFile.ManuScript.properties.notes
             $notesSec2 = $sXMLFile.ManuScript.properties.notes
             try {
                 if ($notesSec1 -notmatch $notesSec2) { $notesCheck = 1 }
             } catch {}
         
+        #print the stateName and file names
         Write-Host $folder
         $outString = "Old File:" + $fileName2 + "`n" + "New File:" + $fileName1
         $ifFlag++
