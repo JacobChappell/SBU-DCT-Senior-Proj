@@ -4,9 +4,19 @@ Write-Host "Manuscript Catalog: Part 3"
 
 #input from employee
 $clientName = Read-Host -Prompt "Enter client name (ex. TESTCLIENT) "
-#$filePath = 'C:\Users\ezekial.page\Desktop\ManuScriptCatalog.xml'
+#$filePath1 = 'C:\Users\ebpag\Desktop\DuckCreek\TESTCLIENT\MS_Catalog\ManuScriptCatalog.xml'
+#$filePath2 = 'C:\Users\ebpag\Desktop\DuckCreek\TESTCLIENT\MS_Catalog\ManuScriptCatalog - Copy.xml'
 $filePath1 = "C:\SaaS\$clientName\shared\ManuScriptCatalog.xml"
-$filePath2 = "C:\SaaS\$clientName\shared\ReferenceManuScriptCatalog.xml"
+$filePath2 = "C:\SaaS\$clientName\shared\ManuScriptCatalog - Copy.xml"
 
+#convert both catalog files to xml objects
 [XML] $inFile1 = Get-Content $filePath1
 [XML] $inFile2 = Get-Content $filePath2
+
+$model1 = Select-Xml -Xml $inFile1 -XPath "//entry"
+$model2 = Select-Xml -Xml $inFile2 -XPath "//entry"
+$modelComp = Compare-Object $model1 $model2 | Where-Object { ($_.SideIndicator -eq "=>") -or ($_.SideIndicator -eq "<=") }
+Write-Host $modelComp
+if ($modelComp -eq $null) {
+    Write-Host "There were no changes" -ForegroundColor -Red
+}
